@@ -93,7 +93,7 @@ class AppServiceProvider extends ServiceProvider
     {
         LanguageSwitch::configureUsing(function (LanguageSwitch $switch) {
             $switch
-                ->locales(['ru', 'uz', 'en'])
+                ->locales(['en'])
                 ->labels([
 //                    'ru' => __('app.label.ru'),
 //                    'uz' => __('app.label.uz'),

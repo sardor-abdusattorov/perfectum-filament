@@ -6,7 +6,7 @@ use App\Models\Settings;
 use App\Models\SiteSettings;
 use Illuminate\Database\Seeder;
 
-class InformationsSeeder extends Seeder
+class SettingsSeeder extends Seeder
 {
     public function run(): void
     {
@@ -80,6 +80,6 @@ class InformationsSeeder extends Seeder
         clear_settings_cache();
         clear_site_settings_cache();
 
-        $this->command?->info('Imported informations: ' . (count($structured) + count($contacts)) . ' keys.');
+        $this->command?->info('Imported settings: ' . (count($structured) + count($contacts)) . ' keys.');
     }
 }

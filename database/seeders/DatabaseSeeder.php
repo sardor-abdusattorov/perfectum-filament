@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
             SiteTranslationsSeeder::class,
             FaqsSeeder::class,
             NumberFiltersSeeder::class,
-            InformationsSeeder::class,
+            SettingsSeeder::class,
         ]);
     }
 }

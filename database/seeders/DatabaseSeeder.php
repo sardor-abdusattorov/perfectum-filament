@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
             FaqsSeeder::class,
             NumberFiltersSeeder::class,
             SettingsSeeder::class,
+            SocialsSeeder::class,
         ]);
     }
 }

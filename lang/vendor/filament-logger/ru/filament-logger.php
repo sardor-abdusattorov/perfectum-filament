@@ -1,19 +1,13 @@
 <?php
 
 return [
-
-    /*
-    |--------------------------------------------------------------------------
-    | Navigation & Resource
-    |--------------------------------------------------------------------------
-    */
-
-    'nav.group' => 'Настройки',
-    'nav.log.label' => 'Лог действий',
+    'nav.group' => 'Администрирование',
+    'nav.log.label' => 'Журнал действий',
     'nav.log.icon' => 'heroicon-o-clipboard-document-list',
-    'resource.label.log' => 'Лога действий',
-    'resource.label.logs' => 'Журнал активности',
-    'resource.label.user' => 'Юзер',
+
+    'resource.label.log' => 'Запись журнала',
+    'resource.label.logs' => 'Журнал действий',
+    'resource.label.user' => 'Пользователь',
     'resource.label.subject' => 'Объект',
     'resource.label.subject_type' => 'Тип объекта',
     'resource.label.description' => 'Описание',
@@ -21,4 +15,25 @@ return [
     'resource.label.event' => 'Событие',
     'resource.label.logged_at' => 'Время',
     'resource.label.properties' => 'Свойства',
+    'resource.label.old' => 'Было',
+    'resource.label.new' => 'Стало',
+    'resource.label.old_value' => 'Старое значение',
+    'resource.label.new_value' => 'Новое значение',
+    'resource.label.properties_hint' => 'Ключ или значение',
+    'resource.label.old_attributes' => 'Старый атрибут или значение: ',
+    'resource.label.new_attributes' => 'Новый атрибут или значение: ',
+
+    'tabs.all' => 'Вся активность',
+    'tabs.high_risk' => 'Высокий риск',
+    'tabs.destructive' => 'Удаления',
+    'tabs.auth_issues' => 'Проблемы авторизации',
+    'tabs.failed_logins' => 'Неудачные входы',
+    'tabs.destructive_recent' => 'Недавние удаления',
+    'tabs.auth_anomalies' => 'Аномалии входа',
+
+    'dates.today' => 'Сегодня',
+    'dates.last_24_hours' => 'Последние 24 часа',
+    'dates.last_7_days' => 'Последние 7 дней',
+    'dates.last_30_days' => 'Последние 30 дней',
+    'dates.this_month' => 'Этот месяц',
 ];

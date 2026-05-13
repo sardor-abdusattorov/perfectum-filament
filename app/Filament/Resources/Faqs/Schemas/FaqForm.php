@@ -3,6 +3,8 @@
 namespace App\Filament\Resources\Faqs\Schemas;
 
 use AbdulmajeedJamaan\FilamentTranslatableTabs\TranslatableTabs;
+use App\Filament\Support\ImageUpload;
+use App\Filament\Support\TextEditor;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
@@ -25,21 +27,20 @@ class FaqForm
                                     ->label(__('app.label.question'))
                                     ->required(),
 
-                                RichEditor::make('answer')
+                                TextEditor::make('answer')
                                     ->label(__('app.label.answer'))
                                     ->helperText(__('app.helper.text_displayed_on_site'))
-                                    ->columnSpanFull(),
+                                    ->extraInputAttributes([
+                                        'style' => 'min-height: 10rem; max-height: 30vh; overflow-y: auto;',
+                                    ]),
 
                                 TextInput::make('slug')
                                     ->label(__('app.label.slug'))
                                     ->helperText(__('app.helper.unique_translation_identifier')),
                             ]),
 
-                        FileUpload::make('image')
-                            ->label(__('app.label.image'))
-                            ->image()
-                            ->directory('faqs')
-                            ->imageEditor(),
+                        ImageUpload::make('news', field: 'image')
+                            ->label(__('app.label.image')),
 
                         TextInput::make('sort')
                             ->label(__('app.label.sort'))

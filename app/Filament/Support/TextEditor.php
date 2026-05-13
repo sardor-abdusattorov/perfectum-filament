@@ -22,6 +22,7 @@ class TextEditor
             ->fileAttachmentsDisk('public')
             ->fileAttachmentsDirectory(fn () => 'uploads/attachments/' . now()->format('Y/m'))
             ->fileAttachmentsVisibility('public')
+            ->columnSpanFull()
             ->toolbarButtons([
                 ['bold', 'italic', 'underline', 'strike', 'subscript', 'superscript', 'link'],
                 ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'paragraph'],

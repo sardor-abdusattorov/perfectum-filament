@@ -23,7 +23,10 @@ class FaqsTable
             ->columns([
                 ImageColumn::make('image')
                     ->label(__('app.label.image'))
-                    ->defaultImageUrl(asset('no_image.png'))
+                    ->disk('public')
+                    ->square()
+                    ->imageHeight(75)
+                    ->defaultImageUrl(asset('/images/no_image.png'))
                     ->circular(),
 
                 TextColumn::make('question')
@@ -53,8 +56,7 @@ class FaqsTable
                     ->label(__('app.label.created_at'))
                     ->dateTime()
                     ->wrap()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->sortable(),
             ])
             ->filters([
                 SelectFilter::make('is_published')

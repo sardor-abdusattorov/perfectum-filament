@@ -3,6 +3,7 @@
 namespace App\Filament\Pages;
 
 use AbdulmajeedJamaan\FilamentTranslatableTabs\TranslatableTabs;
+use App\Filament\Support\TextEditor;
 use App\Models\Settings as SettingsModel;
 use Dotswan\MapPicker\Fields\Map;
 use Filament\Actions\Action;
@@ -121,7 +122,7 @@ class Settings extends Page implements HasForms
                     ->label(__('app.label.seo_og_image'))
                     ->image()
                     ->imageEditor()
-                    ->directory('images')
+                    ->directory('settings/seo')
                     ->disk('public')
                     ->maxSize(2048)
                     ->previewable()
@@ -156,10 +157,12 @@ class Settings extends Page implements HasForms
                             ->label(__('app.label.footer_text'))
                             ->rows(3),
 
-                        Textarea::make('footer.free_numbers_text')
+                        TextEditor::make('footer.free_numbers_text')
                             ->label(__('app.label.footer_free_numbers_text'))
-                            ->rows(4)
-                            ->helperText(__('app.helper.html_allowed')),
+                            ->helperText(__('app.helper.html_allowed'))
+                            ->extraInputAttributes([
+                                'style' => 'min-height: 12rem; max-height: 35vh; overflow-y: auto;',
+                            ]),
                     ]),
             ]);
     }
@@ -193,7 +196,7 @@ class Settings extends Page implements HasForms
                     ->label(__('app.label.logo_header'))
                     ->image()
                     ->imageEditor()
-                    ->directory('branding')
+                    ->directory('settings/branding')
                     ->disk('public')
                     ->maxSize(2048)
                     ->previewable()
@@ -203,7 +206,7 @@ class Settings extends Page implements HasForms
                     ->label(__('app.label.logo_footer'))
                     ->image()
                     ->imageEditor()
-                    ->directory('branding')
+                    ->directory('settings/branding')
                     ->disk('public')
                     ->maxSize(2048)
                     ->previewable()

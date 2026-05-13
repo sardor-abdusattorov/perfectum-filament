@@ -37,28 +37,4 @@ class SiteSettings extends Model
 
         return $query->value('value');
     }
-
-    public static function getEmbedUrl(string $name): ?string
-    {
-        $url = static::getValue($name);
-
-        if (! $url) {
-            return null;
-        }
-
-        return static::normalizeEmbedUrl($url);
-    }
-
-    public static function normalizeEmbedUrl(string $url): string
-    {
-        if (str_contains($url, '/embed/')) {
-            return $url;
-        }
-
-        if (preg_match('/(?:youtu\.be\/|youtube\.com\/watch\?v=|v=)([^&\n?#]+)/', $url, $m)) {
-            return 'https://www.youtube.com/embed/' . $m[1];
-        }
-
-        return $url;
-    }
 }

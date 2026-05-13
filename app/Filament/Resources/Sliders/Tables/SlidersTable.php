@@ -23,6 +23,7 @@ class SlidersTable
             ->columns([
                 ImageColumn::make('main_image')
                     ->label(__('app.label.main_image'))
+                    ->defaultImageUrl(asset('no_image.png'))
                     ->square(),
 
                 TextColumn::make('title')

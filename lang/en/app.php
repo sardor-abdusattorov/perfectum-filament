@@ -65,6 +65,7 @@ return [
         'unique_setting_identifier' => 'Unique setting identifier',
         'setting_value_pairs' => 'Key-value pairs for this setting',
         'if_disabled_setting_not_used' => 'If disabled — setting will not be used',
+        'if_disabled_hidden' => 'If disabled — won\'t be shown on the site',
         'link_target' => 'URL the slide button leads to',
     ],
     'status' => [

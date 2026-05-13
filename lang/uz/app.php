@@ -65,6 +65,7 @@ return [
         'unique_setting_identifier' => 'Sozlamaning noyob identifikatori',
         'setting_value_pairs' => 'Ushbu sozlama uchun kalit-qiymat juftliklari',
         'if_disabled_setting_not_used' => 'O‘chirilgan bo‘lsa — sozlama ishlatilmaydi',
+        'if_disabled_hidden' => 'O‘chirilgan bo‘lsa — saytda ko‘rsatilmaydi',
         'link_target' => 'Slayd tugmasi olib boradigan URL',
     ],
     'status' => [

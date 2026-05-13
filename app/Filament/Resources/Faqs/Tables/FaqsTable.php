@@ -23,6 +23,7 @@ class FaqsTable
             ->columns([
                 ImageColumn::make('image')
                     ->label(__('app.label.image'))
+                    ->defaultImageUrl(asset('no_image.png'))
                     ->circular(),
 
                 TextColumn::make('question')

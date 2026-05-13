@@ -13,6 +13,7 @@ return [
     'resource.label.description' => 'Описание',
     'resource.label.type' => 'Тип',
     'resource.label.event' => 'Событие',
+    'resource.label.risk' => 'Риск',
     'resource.label.logged_at' => 'Время',
     'resource.label.properties' => 'Свойства',
     'resource.label.old' => 'Было',

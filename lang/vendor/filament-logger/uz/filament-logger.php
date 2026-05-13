@@ -13,6 +13,7 @@ return [
     'resource.label.description' => 'Tavsif',
     'resource.label.type' => 'Turi',
     'resource.label.event' => 'Hodisa',
+    'resource.label.risk' => 'Xavf',
     'resource.label.logged_at' => 'Vaqt',
     'resource.label.properties' => 'Xususiyatlar',
     'resource.label.old' => 'Edi',

@@ -13,6 +13,7 @@ return [
     'resource.label.description' => 'Description',
     'resource.label.type' => 'Type',
     'resource.label.event' => 'Event',
+    'resource.label.risk' => 'Risk',
     'resource.label.logged_at' => 'Logged at',
     'resource.label.properties' => 'Properties',
     'resource.label.old' => 'Old',

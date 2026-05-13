@@ -17,6 +17,7 @@ return new class extends Migration
             $table->json('description')->nullable();
             $table->json('button_text')->nullable();
             $table->string('main_image')->nullable();
+            $table->string('mobile_image')->nullable();
             $table->string('link')->nullable();
             $table->unsignedInteger('sort')->default(0)->index();
             $table->boolean('is_published')->default(true);

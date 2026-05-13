@@ -26,20 +26,32 @@ class SlidersTable
                     ->disk('public')
                     ->square()
                     ->imageHeight(75)
-                    ->defaultImageUrl(asset('/images/no_image.png'))
-                    ->square(),
+                    ->defaultImageUrl(asset('/images/no_image.png')),
 
-                TextColumn::make('question')
-                    ->label(__('app.label.question'))
+                ImageColumn::make('mobile_image')
+                    ->label(__('app.label.mobile_image'))
+                    ->disk('public')
+                    ->square()
+                    ->imageHeight(75)
+                    ->defaultImageUrl(asset('/images/no_image.png'))
+                    ->toggleable(isToggledHiddenByDefault: true),
+
+                TextColumn::make('title')
+                    ->label(__('app.label.title'))
                     ->searchable()
                     ->default(__('app.label.translation_missing'))
                     ->wrap(),
 
-                TextColumn::make('answer')
-                    ->label(__('app.label.answer'))
-                    ->html()
+                TextColumn::make('description')
+                    ->label(__('app.label.description'))
+                    ->limit(60)
                     ->wrap()
                     ->default(__('app.label.translation_missing'))
+                    ->toggleable(isToggledHiddenByDefault: true),
+
+                TextColumn::make('link')
+                    ->label(__('app.label.link'))
+                    ->limit(40)
                     ->toggleable(isToggledHiddenByDefault: true),
 
                 TextColumn::make('sort')
@@ -58,7 +70,8 @@ class SlidersTable
                     ->label(__('app.label.created_at'))
                     ->dateTime()
                     ->wrap()
-                    ->sortable(),
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 SelectFilter::make('is_published')

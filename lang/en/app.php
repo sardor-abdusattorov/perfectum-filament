@@ -51,6 +51,7 @@ return [
         'description' => 'Description',
         'button_text' => 'Button text',
         'main_image' => 'Main image',
+        'mobile_image' => 'Mobile image',
         'link' => 'Link',
         'sort' => 'Sort',
         'status' => 'Status',
@@ -68,6 +69,7 @@ return [
         'if_disabled_setting_not_used' => 'If disabled — setting will not be used',
         'if_disabled_hidden' => 'If disabled — won\'t be shown on the site',
         'link_target' => 'URL the slide button leads to',
+        'mobile_image' => 'Shown on small screens (phones). Leave empty to use the main image.',
     ],
     'status' => [
         'published' => 'Published',

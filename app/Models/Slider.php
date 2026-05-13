@@ -11,7 +11,7 @@ class Slider extends Model
 
     protected $table = 'sliders';
 
-    protected $fillable = ['title', 'description', 'button_text', 'main_image', 'link', 'sort', 'is_published'];
+    protected $fillable = ['title', 'description', 'button_text', 'main_image', 'mobile_image', 'link', 'sort', 'is_published'];
 
     public $translatable = ['title', 'description', 'button_text'];
 

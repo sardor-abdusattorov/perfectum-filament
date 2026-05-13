@@ -35,8 +35,12 @@ class SliderForm
                                     ->label(__('app.label.button_text')),
                             ]),
 
-                        ImageUpload::make('main_image', field: 'sliders')
+                        ImageUpload::make('sliders', field: 'main_image')
                             ->label(__('app.label.main_image')),
+
+                        ImageUpload::make('sliders', field: 'mobile_image')
+                            ->label(__('app.label.mobile_image'))
+                            ->helperText(__('app.helper.mobile_image')),
 
                         TextInput::make('link')
                             ->label(__('app.label.link'))

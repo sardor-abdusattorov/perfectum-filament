@@ -51,6 +51,7 @@ return [
         'description' => 'Tavsif',
         'button_text' => 'Tugma matni',
         'main_image' => 'Asosiy rasm',
+        'mobile_image' => 'Mobil uchun rasm',
         'link' => 'Havola',
         'sort' => 'Tartib',
         'status' => 'Holat',
@@ -68,6 +69,7 @@ return [
         'if_disabled_setting_not_used' => 'O‘chirilgan bo‘lsa — sozlama ishlatilmaydi',
         'if_disabled_hidden' => 'O‘chirilgan bo‘lsa — saytda ko‘rsatilmaydi',
         'link_target' => 'Slayd tugmasi olib boradigan URL',
+        'mobile_image' => 'Kichik ekranlarda (telefonlarda) ko‘rsatiladi. Bo‘sh qoldirilsa — asosiy rasm ishlatiladi.',
     ],
     'status' => [
         'published' => 'Chop etilgan',

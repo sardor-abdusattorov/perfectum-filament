@@ -42,25 +42,30 @@
 .fi-fo-rich-editor.fullscreen {
     position: fixed !important;
     inset: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    max-height: 100vh !important;
     z-index: 9999 !important;
-    background: rgb(244, 244, 245);
     display: flex !important;
     flex-direction: column !important;
-    padding: 0;
+    background: white !important;
+    overflow: hidden !important;
+    border: none !important;
     border-radius: 0 !important;
+}
+
+.fi-fo-rich-editor.fullscreen * {
+    max-height: none !important;
+}
+
+.fi-fo-rich-editor.fullscreen > *:not(.fi-fo-rich-editor-toolbar) {
+    flex: 1 1 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 0 !important;
+    width: 100% !important;
     overflow: hidden !important;
 }
 
-.dark .fi-fo-rich-editor.fullscreen {
-    background: rgb(17, 17, 20);
-    color: rgb(244, 244, 245);
-}
-
 .fi-fo-rich-editor.fullscreen .fi-fo-rich-editor-toolbar {
-    flex: 0 0 auto;
+    flex: 0 0 auto !important;
     position: sticky;
     top: 0;
     z-index: 2;
@@ -69,31 +74,31 @@
     padding: 0.5rem 1rem;
 }
 
-.dark .fi-fo-rich-editor.fullscreen .fi-fo-rich-editor-toolbar {
-    background: rgb(24, 24, 27);
-    border-bottom-color: rgb(63, 63, 70);
-}
-
 .fi-fo-rich-editor.fullscreen .ProseMirror,
-.fi-fo-rich-editor.fullscreen [contenteditable],
+.fi-fo-rich-editor.fullscreen [contenteditable="true"],
 .fi-fo-rich-editor.fullscreen .tiptap {
     flex: 1 1 auto !important;
     min-height: 0 !important;
-    max-height: none !important;
-    height: auto !important;
+    height: 100% !important;
+    width: 100% !important;
     overflow-y: auto !important;
-    background: white;
-    max-width: 56rem;
-    width: 100%;
-    margin: 1.5rem auto !important;
-    padding: 3rem 4rem !important;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 2rem 3rem !important;
+    background: white !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    max-width: none !important;
 }
 
+.dark .fi-fo-rich-editor.fullscreen,
+.dark .fi-fo-rich-editor.fullscreen .fi-fo-rich-editor-toolbar,
 .dark .fi-fo-rich-editor.fullscreen .ProseMirror,
-.dark .fi-fo-rich-editor.fullscreen [contenteditable],
+.dark .fi-fo-rich-editor.fullscreen [contenteditable="true"],
 .dark .fi-fo-rich-editor.fullscreen .tiptap {
-    background: rgb(24, 24, 27);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
+    background: rgb(24, 24, 27) !important;
+    color: rgb(244, 244, 245);
+}
+
+.dark .fi-fo-rich-editor.fullscreen .fi-fo-rich-editor-toolbar {
+    border-bottom-color: rgb(63, 63, 70);
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\FreeNumberFilters\Tables;
+namespace App\Filament\Resources\NumberFilters\Tables;
 
-use App\Enums\FreeNumberFilterType;
+use App\Enums\NumberFilterType;
 use App\Enums\PublishedStatus;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
@@ -14,7 +14,7 @@ use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 
-class FreeNumberFiltersTable
+class NumberFiltersTable
 {
     public static function configure(Table $table): Table
     {
@@ -34,11 +34,11 @@ class FreeNumberFiltersTable
                 TextColumn::make('data_type')
                     ->label(__('app.label.data_type'))
                     ->badge()
-                    ->formatStateUsing(fn (?FreeNumberFilterType $state) => $state?->label())
-                    ->color(fn (?FreeNumberFilterType $state) => match ($state) {
-                        FreeNumberFilterType::Number => 'info',
-                        FreeNumberFilterType::Prefix => 'warning',
-                        FreeNumberFilterType::Price  => 'success',
+                    ->formatStateUsing(fn (?NumberFilterType $state) => $state?->label())
+                    ->color(fn (?NumberFilterType $state) => match ($state) {
+                        NumberFilterType::Number => 'info',
+                        NumberFilterType::Prefix => 'warning',
+                        NumberFilterType::Price  => 'success',
                         default                      => 'gray',
                     })
                     ->sortable(),
@@ -65,7 +65,7 @@ class FreeNumberFiltersTable
             ->filters([
                 SelectFilter::make('data_type')
                     ->label(__('app.label.data_type'))
-                    ->options(FreeNumberFilterType::getOptions())
+                    ->options(NumberFilterType::getOptions())
                     ->preload(),
 
                 SelectFilter::make('is_published')

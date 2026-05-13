@@ -2,17 +2,17 @@
 
 namespace App\Models;
 
-use App\Enums\FreeNumberFilterType;
+use App\Enums\NumberFilterType;
 use Illuminate\Database\Eloquent\Model;
 
-class FreeNumberFilter extends Model
+class NumberFilter extends Model
 {
-    protected $table = 'free_number_filters';
+    protected $table = 'number_filters';
 
     protected $fillable = ['name', 'value', 'data_type', 'sort', 'is_published'];
 
     protected $casts = [
-        'data_type'    => FreeNumberFilterType::class,
+        'data_type'    => NumberFilterType::class,
         'is_published' => 'boolean',
         'sort'         => 'integer',
     ];

@@ -55,8 +55,8 @@ return [
         'link' => 'Link',
         'sort' => 'Sort',
         'status' => 'Status',
-        'free_number_filters_single' => 'Free number filter',
-        'free_number_filters_plural' => 'Free number filters',
+        'number_filters_single' => 'Free number filter',
+        'number_filters_plural' => 'Free number filters',
         'data_type' => 'Filter type',
     ],
     'helper' => [
@@ -73,15 +73,15 @@ return [
         'if_disabled_hidden' => 'If disabled — won\'t be shown on the site',
         'link_target' => 'URL the slide button leads to',
         'mobile_image' => 'Shown on small screens (phones). Leave empty to use the main image.',
-        'free_number_filter_name' => 'Label shown to the visitor in the filter dropdown',
-        'free_number_filter_value' => 'Value sent to the billing API (number pattern, prefix or price)',
-        'free_number_filter_type' => 'Determines which dropdown shows this option: number pattern, operator prefix or price tier',
+        'number_filter_name' => 'Label shown to the visitor in the filter dropdown',
+        'number_filter_value' => 'Value sent to the billing API (number pattern, prefix or price)',
+        'number_filter_type' => 'Determines which dropdown shows this option: number pattern, operator prefix or price tier',
     ],
     'status' => [
         'published' => 'Published',
         'unpublished' => 'Unpublished',
     ],
-    'free_number_filter_type' => [
+    'number_filter_type' => [
         'number' => 'Number pattern',
         'prefix' => 'Prefix',
         'price' => 'Price',

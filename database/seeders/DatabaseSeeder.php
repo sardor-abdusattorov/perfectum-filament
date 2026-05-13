@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             SiteTranslationsFromLegacySeeder::class,
             FaqsFromLegacySeeder::class,
+            NumberFiltersFromLegacySeeder::class,
         ]);
     }
 }

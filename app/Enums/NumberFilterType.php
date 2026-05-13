@@ -9,7 +9,7 @@ namespace App\Enums;
  *  Prefix  — префикс/оператор (90, 91, 93 и т.п.)
  *  Price   — ценовая категория
  */
-enum FreeNumberFilterType: int
+enum NumberFilterType: int
 {
     case Number = 1;
     case Prefix = 2;
@@ -18,9 +18,9 @@ enum FreeNumberFilterType: int
     public function label(): string
     {
         return match ($this) {
-            self::Number => __('app.free_number_filter_type.number'),
-            self::Prefix => __('app.free_number_filter_type.prefix'),
-            self::Price  => __('app.free_number_filter_type.price'),
+            self::Number => __('app.number_filter_type.number'),
+            self::Prefix => __('app.number_filter_type.prefix'),
+            self::Price  => __('app.number_filter_type.price'),
         };
     }
 

@@ -55,6 +55,9 @@ return [
         'link' => 'Havola',
         'sort' => 'Tartib',
         'status' => 'Holat',
+        'number_filters_single' => 'Raqam filtri',
+        'number_filters_plural' => 'Raqam filtrlari',
+        'data_type' => 'Filtr turi',
     ],
     'helper' => [
         'unique_translation_identifier' => 'Tarjimaning noyob identifikatori',
@@ -70,9 +73,17 @@ return [
         'if_disabled_hidden' => 'O‘chirilgan bo‘lsa — saytda ko‘rsatilmaydi',
         'link_target' => 'Slayd tugmasi olib boradigan URL',
         'mobile_image' => 'Kichik ekranlarda (telefonlarda) ko‘rsatiladi. Bo‘sh qoldirilsa — asosiy rasm ishlatiladi.',
+        'number_filter_name' => 'Tashrif buyuruvchiga filtr ro‘yxatida ko‘rinadigan yorliq',
+        'number_filter_value' => 'Billing tizimiga jo‘natiladigan qiymat (raqam shakli, prefiks yoki narx)',
+        'number_filter_type' => 'Variant qaysi filtrda chiqishini belgilaydi: raqam shakli, operator prefiksi yoki narx toifasi',
     ],
     'status' => [
         'published' => 'Chop etilgan',
         'unpublished' => 'Chop etilmagan',
+    ],
+    'number_filter_type' => [
+        'number' => 'Raqam shakli',
+        'prefix' => 'Prefiks',
+        'price' => 'Narx',
     ],
 ];

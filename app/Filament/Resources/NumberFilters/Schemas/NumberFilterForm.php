@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Filament\Resources\FreeNumberFilters\Schemas;
+namespace App\Filament\Resources\NumberFilters\Schemas;
 
-use App\Enums\FreeNumberFilterType;
+use App\Enums\NumberFilterType;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 
-class FreeNumberFilterForm
+class NumberFilterForm
 {
     public static function configure(Schema $schema): Schema
     {
@@ -20,20 +20,20 @@ class FreeNumberFilterForm
                     ->schema([
                         TextInput::make('name')
                             ->label(__('app.label.name'))
-                            ->helperText(__('app.helper.free_number_filter_name'))
+                            ->helperText(__('app.helper.number_filter_name'))
                             ->required()
                             ->maxLength(255),
 
                         TextInput::make('value')
                             ->label(__('app.label.value'))
-                            ->helperText(__('app.helper.free_number_filter_value'))
+                            ->helperText(__('app.helper.number_filter_value'))
                             ->required()
                             ->maxLength(255),
 
                         Select::make('data_type')
                             ->label(__('app.label.data_type'))
-                            ->helperText(__('app.helper.free_number_filter_type'))
-                            ->options(FreeNumberFilterType::getOptions())
+                            ->helperText(__('app.helper.number_filter_type'))
+                            ->options(NumberFilterType::getOptions())
                             ->native(false)
                             ->required(),
 

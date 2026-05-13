@@ -6,6 +6,7 @@ use AbdulmajeedJamaan\FilamentTranslatableTabs\TranslatableTabs;
 use App\Policies\ActivityPolicy;
 use BezhanSalleh\FilamentShield\Facades\FilamentShield;
 use BezhanSalleh\LanguageSwitch\LanguageSwitch;
+use Filament\Facades\Filament;
 use Filament\Support\Facades\FilamentView;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Table;
@@ -60,7 +61,8 @@ class AppServiceProvider extends ServiceProvider
         $this->configureLimit();
         $this->configureLanguageSwitch();
         $this->configureTranslatableTabs();
-        $this->translateFilamentLoggerConfig();
+
+        Filament::serving(fn () => $this->translateFilamentLoggerConfig());
     }
 
     private function translateFilamentLoggerConfig(): void

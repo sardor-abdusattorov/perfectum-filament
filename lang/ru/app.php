@@ -55,6 +55,9 @@ return [
         'link' => 'Ссылка',
         'sort' => 'Сортировка',
         'status' => 'Статус',
+        'free_number_filters_single' => 'Фильтр свободных номеров',
+        'free_number_filters_plural' => 'Фильтры свободных номеров',
+        'data_type' => 'Тип фильтра',
     ],
     'helper' => [
         'unique_translation_identifier' => 'Уникальный идентификатор перевода',

@@ -110,8 +110,9 @@ class AppServiceProvider extends ServiceProvider
                 ->localesLabels([
                     'ru' => __('app.label.ru'),
                     'uz' => __('app.label.uz'),
+                    'en' => __('app.label.en'),
                 ])
-                ->locales(['ru', 'uz'])
+                ->locales(['ru', 'uz', 'en'])
                 ->addDirectionByLocale()
                 ->addEmptyBadgeWhenAllFieldsAreEmpty(emptyLabel: __('app.label.empty'))
                 ->addSetActiveTabThatHasValue();

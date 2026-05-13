@@ -30,8 +30,6 @@ RUN docker-php-ext-configure gd --with-jpeg --with-webp --with-freetype \
         sockets \
         exif
 
-RUN pecl install redis && docker-php-ext-enable redis
-
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 RUN groupmod -o -g ${GID} www-data \
@@ -39,11 +37,6 @@ RUN groupmod -o -g ${GID} www-data \
 
 COPY docker/php/php.ini /usr/local/etc/php/conf.d/zz-app.ini
 
-COPY docker/php/entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN sed -i 's/\r$//' /usr/local/bin/entrypoint.sh \
-    && chmod +x /usr/local/bin/entrypoint.sh
+WORKDIR /var/www/html
 
-WORKDIR /var/www/backend
-
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 CMD ["php-fpm"]

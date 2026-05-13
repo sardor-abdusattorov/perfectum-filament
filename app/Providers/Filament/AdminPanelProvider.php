@@ -32,7 +32,8 @@ class AdminPanelProvider extends PanelProvider
         return $panel
             ->default()
             ->id('admin')
-            ->path('admin')
+            ->path('')
+            ->domain(env('FILAMENT_DOMAIN', 'admin.localhost'))
             ->authGuard('web')
             ->passwordReset()
             ->login()

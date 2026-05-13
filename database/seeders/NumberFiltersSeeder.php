@@ -5,22 +5,7 @@ namespace Database\Seeders;
 use App\Enums\NumberFilterType;
 use App\Models\NumberFilter;
 use Illuminate\Database\Seeder;
-
-/**
- * Импорт 130 фильтров «свободных номеров» из старой
- * perfectum_db.free_numbers_filters в текущую number_filters.
- *
- * Маппинг:
- *   data_type=1 -> NumberFilterType::Number  (3 записи)
- *   data_type=2 -> NumberFilterType::Prefix  (123 записи)
- *   data_type=3 -> NumberFilterType::Price   (4 записи)
- *
- * id перенумеровываются с 1 (БД присвоит сама). sort = индекс
- * в массиве (1..130), что сохраняет визуальный порядок дампа.
- *
- * Идемпотентен: updateOrCreate по (data_type, value).
- */
-class NumberFiltersFromLegacySeeder extends Seeder
+class NumberFiltersSeeder extends Seeder
 {
     public function run(): void
     {
@@ -71,6 +56,6 @@ class NumberFiltersFromLegacySeeder extends Seeder
             );
         }
 
-        $this->command?->info('Imported ' . count($rows) . ' number filters from legacy.');
+        $this->command?->info('Imported ' . count($rows) . ' number filters.');
     }
 }

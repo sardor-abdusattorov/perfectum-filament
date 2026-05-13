@@ -5,21 +5,7 @@ namespace Database\Seeders;
 use App\Models\SiteTranslation;
 use Illuminate\Database\Seeder;
 
-/**
- * Импорт 80 переводов из старой perfectum_db.language_lines
- * в текущую site_translations.
- *
- * Маппинг колонок:
- *   group  -> category    (все записи в исходнике group='*', переименовали в 'common')
- *   key    -> key
- *   text   -> value        (JSON {uz, ru, en?} — Spatie HasTranslations пишет как есть)
- *   -      -> is_published (по умолчанию TRUE)
- *
- * Идемпотентен: updateOrCreate по (category, key).
- * В исходнике есть дубль ключа 'connect_anyway' (id 16 и 38) —
- * второе значение перезапишет первое.
- */
-class SiteTranslationsFromLegacySeeder extends Seeder
+class SiteTranslationsSeeder extends Seeder
 {
     public function run(): void
     {

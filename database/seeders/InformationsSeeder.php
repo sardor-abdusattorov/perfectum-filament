@@ -6,7 +6,7 @@ use App\Models\Settings;
 use App\Models\SiteSettings;
 use Illuminate\Database\Seeder;
 
-class InformationsFromLegacySeeder extends Seeder
+class InformationsSeeder extends Seeder
 {
     public function run(): void
     {
@@ -35,8 +35,8 @@ class InformationsFromLegacySeeder extends Seeder
                 'ru' => '<p><a href="http://www.perfectum.uz/service-show/nomer-v-rassrocku"><span style="color:rgb(230,0,0);">«Номер в рассрочку»</span></a><span style="color:rgb(77,77,77);">&nbsp;</span><span style="color:hsl(0,0%,30%);">(на 6 или 12 мес.) номиналом от 100 000 сум</span><br><br><span style="color:hsl(0,0%,30%);">Акция</span><span style="color:rgb(98,98,98);">&nbsp;</span><a href="https://www.perfectum.uz/actions-show/akciya-skidki-na-nomera-do-90-prodolzaetsya-1"><span style="color:rgb(230,0,0);">«Скидки на номера до -90%!»</span></a><br><br><span style="color:hsl(240,75%,60%);">50% скидка на красивые номера:&nbsp;</span><br><span style="color:hsl(0,0%,30%);">50 000 000 сум (было 100 000 000 сум): 98 020 2222, 98 727 0000, 98 727 2222, 98 877 0000</span></p>',
                 'uz' => '<p><a href="http://www.perfectum.uz/service-show/nomer-v-rassrocku"><span style="color:rgb(230,0,0);">«Muddatli to\'lovga raqam»</span></a><span style="color:rgb(116,116,116);"> </span><span style="color:hsl(0,0%,30%);">(6 yoki 12 oyga) nominal qiymati 100 000 so\'mdan va yuqori!</span><br><br><span style="color:hsl(0,0%,30%);">Aksiya -</span><span style="color:rgb(116,116,116);"> </span><a href="https://perfectum.uz/actions-show/raqamlarga-chegirmalar-90-gacha-aksiyasi-davom-etadi-1"><span style="color:rgb(230,0,0);">«Raqamlarga chegirmalar!»</span></a><br><br><span style="color:hsl(240,75%,60%);">50% chegirma chiroyli raqamlarga:</span><br>50 000 000 so‘m (oldin 100 000 000 so‘m edi): 98 020 2222, 98 727 0000, 98 727 2222, 98 877 0000;</p>',
             ],
-            'branding.logo_header' => 'branding/legacy/logo-header.png',
-            'branding.logo_footer' => 'branding/legacy/logo-footer.png',
+            'branding.logo_header' => null,
+            'branding.logo_footer' => null,
             'map.coordinates' => [
                 'lat' => 41.29751400,
                 'lng' => 69.28066500,

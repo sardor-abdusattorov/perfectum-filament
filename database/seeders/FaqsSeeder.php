@@ -4,24 +4,9 @@ namespace Database\Seeders;
 
 use App\Models\Faq;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
-/**
- * Импорт FAQ из старой perfectum_db.faqs (4 записи) в текущую faqs.
- *
- * Маппинг колонок:
- *   order      -> sort
- *   is_active  -> is_published
- *   user_question / user_question_id / mail_sent -> отброшены (legacy)
- *
- * Слаги остаются translatable (как сейчас в модели Faq):
- *   slug -> ['ru' => '...', 'uz' => '...']
- *
- * Идемпотентен: updateOrCreate по id. Старые id сохраняются —
- * после запуска нужно сдвинуть sequence в PG, иначе следующее
- * создание из Filament даст конфликт PK:
- *   SELECT setval('faqs_id_seq', (SELECT MAX(id) FROM faqs));
- */
-class FaqsFromLegacySeeder extends Seeder
+class FaqsSeeder extends Seeder
 {
     public function run(): void
     {
@@ -114,11 +99,10 @@ class FaqsFromLegacySeeder extends Seeder
             );
         }
 
-        // PG: после ручных id двинуть sequence, иначе следующая запись через UI упадёт по PK.
-        if (\DB::getDriverName() === 'pgsql') {
-            \DB::statement("SELECT setval('faqs_id_seq', (SELECT COALESCE(MAX(id), 1) FROM faqs))");
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement("SELECT setval('faqs_id_seq', (SELECT COALESCE(MAX(id), 1) FROM faqs))");
         }
 
-        $this->command?->info('Imported ' . count($faqs) . ' FAQs from legacy.');
+        $this->command?->info('Imported ' . count($faqs) . ' FAQs.');
     }
 }

@@ -10,10 +10,10 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             UserSeeder::class,
-            SiteTranslationsFromLegacySeeder::class,
-            FaqsFromLegacySeeder::class,
-            NumberFiltersFromLegacySeeder::class,
-            InformationsFromLegacySeeder::class,
+            SiteTranslationsSeeder::class,
+            FaqsSeeder::class,
+            NumberFiltersSeeder::class,
+            InformationsSeeder::class,
         ]);
     }
 }

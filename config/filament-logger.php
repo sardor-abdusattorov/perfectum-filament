@@ -87,48 +87,48 @@ return [
 
     'activity_filters' => [
         'date_presets' => [
-            'today' => __('filament-logger.dates.today'),
-            'last_24_hours' => __('filament-logger.dates.last_24_hours'),
-            'last_7_days' => __('filament-logger.dates.last_7_days'),
-            'last_30_days' => __('filament-logger.dates.last_30_days'),
-            'this_month' => __('filament-logger.dates.this_month'),
+            'today' => __('filament-logger::filament-logger.dates.today'),
+            'last_24_hours' => __('filament-logger::filament-logger.dates.last_24_hours'),
+            'last_7_days' => __('filament-logger::filament-logger.dates.last_7_days'),
+            'last_30_days' => __('filament-logger::filament-logger.dates.last_30_days'),
+            'this_month' => __('filament-logger::filament-logger.dates.this_month'),
         ],
         'saved' => [
             'all' => [
-                'label' => __('filament-logger.tabs.all'),
+                'label' => __('filament-logger::filament-logger.tabs.all'),
                 'icon' => 'heroicon-o-bars-3-bottom-left',
             ],
             'high_risk' => [
-                'label' => __('filament-logger.tabs.high_risk'),
+                'label' => __('filament-logger::filament-logger.tabs.high_risk'),
                 'icon' => 'heroicon-o-shield-exclamation',
                 'risk' => ['high'],
             ],
             'destructive' => [
-                'label' => __('filament-logger.tabs.destructive'),
+                'label' => __('filament-logger::filament-logger.tabs.destructive'),
                 'icon' => 'heroicon-o-trash',
                 'events' => ['Deleted', \MrAdder\FilamentLogger\Support\ActivityEvents::FORCE_DELETED],
             ],
             'auth_issues' => [
-                'label' => __('filament-logger.tabs.auth_issues'),
+                'label' => __('filament-logger::filament-logger.tabs.auth_issues'),
                 'icon' => 'heroicon-o-lock-closed',
                 'log_names' => ['Access'],
                 'events' => [\MrAdder\FilamentLogger\Support\ActivityEvents::FAILED_LOGIN, 'Lockout'],
             ],
             'failed_logins' => [
-                'label' => __('filament-logger.tabs.failed_logins'),
+                'label' => __('filament-logger::filament-logger.tabs.failed_logins'),
                 'icon' => 'heroicon-o-exclamation-triangle',
                 'log_names' => ['Access'],
                 'events' => [\MrAdder\FilamentLogger\Support\ActivityEvents::FAILED_LOGIN],
                 'date_preset' => 'last_7_days',
             ],
             'destructive_recent' => [
-                'label' => __('filament-logger.tabs.destructive_recent'),
+                'label' => __('filament-logger::filament-logger.tabs.destructive_recent'),
                 'icon' => 'heroicon-o-fire',
                 'events' => ['Deleted', \MrAdder\FilamentLogger\Support\ActivityEvents::FORCE_DELETED],
                 'date_preset' => 'last_7_days',
             ],
             'auth_anomalies' => [
-                'label' => __('filament-logger.tabs.auth_anomalies'),
+                'label' => __('filament-logger::filament-logger.tabs.auth_anomalies'),
                 'icon' => 'heroicon-o-finger-print',
                 'log_names' => ['Access'],
                 'events' => [\MrAdder\FilamentLogger\Support\ActivityEvents::FAILED_LOGIN, 'Lockout', 'Two Factor Recovery'],

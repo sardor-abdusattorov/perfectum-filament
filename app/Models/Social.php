@@ -8,7 +8,7 @@ class Social extends Model
 {
     protected $table = 'socials';
 
-    protected $fillable = ['name', 'url', 'icon', 'sort', 'is_published'];
+    protected $fillable = ['name', 'url', 'image', 'sort', 'is_published'];
 
     protected $casts = [
         'is_published' => 'boolean',

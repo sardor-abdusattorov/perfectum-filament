@@ -94,6 +94,7 @@ return [
         'number_filter_type' => 'Variant qaysi filtrda chiqishini belgilaydi: raqam shakli, operator prefiksi yoki narx toifasi',
         'html_allowed' => 'HTML belgilashga ruxsat berilgan',
         'social_name' => 'Ixtiyoriy nom, masalan «Bizning Telegram kanali»',
+        'social_image' => 'SVG / PNG / WebP ikonka, 512 KB gacha',
     ],
     'status' => [
         'published' => 'Chop etilgan',

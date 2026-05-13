@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->string('url');
-            $table->string('icon');
+            $table->string('image')->nullable();
             $table->unsignedInteger('sort')->default(0);
             $table->boolean('is_published')->default(true);
             $table->timestamps();

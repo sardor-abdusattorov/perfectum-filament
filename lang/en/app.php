@@ -94,6 +94,7 @@ return [
         'number_filter_type' => 'Determines which dropdown shows this option: number pattern, operator prefix or price tier',
         'html_allowed' => 'HTML markup is allowed',
         'social_name' => 'Optional display name, e.g. "Our Telegram channel"',
+        'social_image' => 'SVG / PNG / WebP icon, up to 512 KB',
     ],
     'status' => [
         'published' => 'Published',

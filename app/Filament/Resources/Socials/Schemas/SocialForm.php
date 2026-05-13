@@ -2,7 +2,7 @@
 
 namespace App\Filament\Resources\Socials\Schemas;
 
-use Filament\Forms\Components\Select;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Section;
@@ -17,13 +17,17 @@ class SocialForm
             ->components([
                 Section::make(__('app.label.basic_information'))
                     ->schema([
-                        Select::make('icon')
+                        FileUpload::make('image')
                             ->label(__('app.label.icon'))
-                            ->options(static::iconOptions())
-                            ->required()
-                            ->searchable()
-                            ->native(false)
-                            ->allowHtml(),
+                            ->disk('public')
+                            ->directory('socials')
+                            ->visibility('public')
+                            ->image()
+                            ->acceptedFileTypes(['image/svg+xml', 'image/png', 'image/webp'])
+                            ->maxSize(512)
+                            ->previewable()
+                            ->downloadable()
+                            ->helperText(__('app.helper.social_image')),
 
                         TextInput::make('name')
                             ->label(__('app.label.name'))
@@ -48,43 +52,5 @@ class SocialForm
                             ->default(true),
                     ]),
             ]);
-    }
-
-    protected static function iconOptions(): array
-    {
-        $icons = [
-            'fab fa-facebook-f' => 'Facebook',
-            'fab fa-instagram' => 'Instagram',
-            'fab fa-telegram' => 'Telegram',
-            'fab fa-x-twitter' => 'X (Twitter)',
-            'fab fa-twitter' => 'Twitter (legacy)',
-            'fab fa-linkedin-in' => 'LinkedIn',
-            'fab fa-youtube' => 'YouTube',
-            'fab fa-tiktok' => 'TikTok',
-            'fab fa-vk' => 'VKontakte',
-            'fab fa-odnoklassniki' => 'Odnoklassniki',
-            'fab fa-whatsapp' => 'WhatsApp',
-            'fab fa-viber' => 'Viber',
-            'fab fa-pinterest-p' => 'Pinterest',
-            'fab fa-snapchat' => 'Snapchat',
-            'fab fa-discord' => 'Discord',
-            'fab fa-github' => 'GitHub',
-            'fab fa-gitlab' => 'GitLab',
-            'fab fa-medium' => 'Medium',
-            'fab fa-twitch' => 'Twitch',
-            'fab fa-reddit' => 'Reddit',
-            'fab fa-spotify' => 'Spotify',
-            'fab fa-soundcloud' => 'SoundCloud',
-            'fab fa-dribbble' => 'Dribbble',
-            'fab fa-behance' => 'Behance',
-        ];
-
-        $options = [];
-
-        foreach ($icons as $class => $label) {
-            $options[$class] = "<i class=\"{$class}\" style=\"width:1.25rem;text-align:center;margin-right:0.5rem;\"></i> {$label}";
-        }
-
-        return $options;
     }
 }

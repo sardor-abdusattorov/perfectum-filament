@@ -8,6 +8,7 @@ use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Filters\SelectFilter;
@@ -20,12 +21,12 @@ class SocialsTable
         return $table
             ->defaultSort('sort')
             ->columns([
-                TextColumn::make('icon')
+                ImageColumn::make('image')
                     ->label(__('app.label.icon'))
-                    ->formatStateUsing(fn (?string $state) => $state
-                        ? "<i class=\"{$state}\" style=\"font-size:1.5rem;\"></i>"
-                        : '')
-                    ->html(),
+                    ->disk('public')
+                    ->square()
+                    ->imageHeight(40)
+                    ->defaultImageUrl(asset('/images/no_image.png')),
 
                 TextColumn::make('name')
                     ->label(__('app.label.name'))

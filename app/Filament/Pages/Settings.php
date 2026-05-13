@@ -174,13 +174,13 @@ class Settings extends Page implements HasForms
                     ->zoom(13)
                     ->minZoom(3)
                     ->maxZoom(19)
-                    ->draggable()
-                    ->clickable()
-                    ->showMarker()
-                    ->showZoomControl()
-                    ->showFullscreenControl()
-                    ->showMyLocationButton()
-                    ->detectRetina()
+                    ->draggable(true)
+                    ->clickable(true)
+                    ->showMarker(true)
+                    ->showZoomControl(true)
+                    ->showFullscreenControl(true)
+                    ->showMyLocationButton(true)
+                    ->detectRetina(true)
                     ->extraStyles(['min-height: 60vh', 'border-radius: 0.5rem']),
             ]);
     }

@@ -58,6 +58,10 @@ return [
         'number_filters_single' => 'Raqam filtri',
         'number_filters_plural' => 'Raqam filtrlari',
         'data_type' => 'Filtr turi',
+        'socials_single' => 'Ijtimoiy tarmoq',
+        'socials_plural' => 'Ijtimoiy tarmoqlar',
+        'icon' => 'Ikonka',
+        'url' => 'URL',
         'tab_contacts' => 'Kontaktlar',
         'tab_map' => 'Xarita',
         'tab_branding' => 'Brendlash',
@@ -89,6 +93,7 @@ return [
         'number_filter_value' => 'Billing tizimiga jo‘natiladigan qiymat (raqam shakli, prefiks yoki narx)',
         'number_filter_type' => 'Variant qaysi filtrda chiqishini belgilaydi: raqam shakli, operator prefiksi yoki narx toifasi',
         'html_allowed' => 'HTML belgilashga ruxsat berilgan',
+        'social_name' => 'Ixtiyoriy nom, masalan «Bizning Telegram kanali»',
     ],
     'status' => [
         'published' => 'Chop etilgan',

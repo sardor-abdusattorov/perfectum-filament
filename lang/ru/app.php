@@ -58,6 +58,10 @@ return [
         'number_filters_single' => 'Фильтр номеров',
         'number_filters_plural' => 'Фильтры номеров',
         'data_type' => 'Тип фильтра',
+        'socials_single' => 'Соц-сеть',
+        'socials_plural' => 'Соц-сети',
+        'icon' => 'Иконка',
+        'url' => 'URL',
         'tab_contacts' => 'Контакты',
         'tab_map' => 'Карта',
         'tab_branding' => 'Брендинг',
@@ -89,6 +93,7 @@ return [
         'number_filter_value' => 'Значение, отправляемое в биллинг (паттерн номера, префикс или цена)',
         'number_filter_type' => 'Определяет, в каком фильтре сайта появится опция: образец номера, префикс оператора или ценовая категория',
         'html_allowed' => 'Разрешена HTML-разметка',
+        'social_name' => 'Необязательное название, например «Наш Telegram-канал»',
     ],
     'status' => [
         'published' => 'Опубликовано',

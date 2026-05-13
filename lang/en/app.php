@@ -58,6 +58,10 @@ return [
         'number_filters_single' => 'Free number filter',
         'number_filters_plural' => 'Free number filters',
         'data_type' => 'Filter type',
+        'socials_single' => 'Social link',
+        'socials_plural' => 'Social links',
+        'icon' => 'Icon',
+        'url' => 'URL',
         'tab_contacts' => 'Contacts',
         'tab_map' => 'Map',
         'tab_branding' => 'Branding',
@@ -89,6 +93,7 @@ return [
         'number_filter_value' => 'Value sent to the billing API (number pattern, prefix or price)',
         'number_filter_type' => 'Determines which dropdown shows this option: number pattern, operator prefix or price tier',
         'html_allowed' => 'HTML markup is allowed',
+        'social_name' => 'Optional display name, e.g. "Our Telegram channel"',
     ],
     'status' => [
         'published' => 'Published',

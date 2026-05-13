@@ -182,7 +182,7 @@ return [
     ],
 
     'activity_resource' => \App\Filament\Resources\ActivityResource::class,
-    'scoped_to_tenant' => true,
+    'scoped_to_tenant' => false,
     'navigation_sort' => 999,
 
     'resources' => [

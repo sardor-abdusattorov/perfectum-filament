@@ -36,6 +36,7 @@ RUN groupmod -o -g ${GID} www-data \
     && usermod  -o -u ${UID} -g www-data www-data
 
 COPY docker/php/php.ini /usr/local/etc/php/conf.d/zz-app.ini
+COPY docker/php/www.conf /usr/local/etc/php-fpm.d/zz-www.conf
 
 WORKDIR /var/www/html
 

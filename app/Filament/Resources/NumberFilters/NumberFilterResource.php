@@ -19,7 +19,7 @@ class NumberFilterResource extends Resource
 {
     protected static ?string $model = NumberFilter::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedHashtag;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedFunnel;
 
     public static function getNavigationGroup(): ?string
     {

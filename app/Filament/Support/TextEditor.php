@@ -6,16 +6,6 @@ use Filament\Forms\Components\RichEditor as FilamentRichEditor;
 
 class TextEditor
 {
-    /**
-     * Pre-configured RichEditor with file attachments stored in public disk.
-     *
-     * Saves to: storage/app/public/attachments/2025/03/
-     * Public URL: /storage/attachments/2025/03/
-     *
-     * Usage:
-     *   TextEditor::make('content')
-     *   TextEditor::make('bio')->extraInputAttributes(['style' => 'min-height: 8rem;'])
-     */
     public static function make(string $field): FilamentRichEditor
     {
         return FilamentRichEditor::make($field)

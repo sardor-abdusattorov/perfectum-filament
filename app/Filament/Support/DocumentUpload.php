@@ -6,15 +6,6 @@ use Filament\Forms\Components\FileUpload;
 
 class DocumentUpload
 {
-    /**
-     * Standard document/PDF upload field for a model.
-     *
-     * Usage:
-     *   DocumentUpload::make('programmes', field: 'visitor_guide_url')
-     *
-     * Saves to: storage/app/public/uploads/{model}/2025/03/{uuid}.pdf
-     * Public URL: /storage/uploads/{model}/2025/03/{uuid}.pdf
-     */
     public static function make(string $model, string $field = 'file'): FileUpload
     {
         return FileUpload::make($field)

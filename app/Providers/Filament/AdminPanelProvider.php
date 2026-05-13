@@ -70,6 +70,9 @@ class AdminPanelProvider extends PanelProvider
             ->widgets([
 
             ])
+            ->resources([
+
+            ])
             ->plugins([
 
                 FilamentShieldPlugin::make()

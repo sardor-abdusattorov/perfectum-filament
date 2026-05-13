@@ -171,13 +171,16 @@ class Settings extends Page implements HasForms
                 Map::make('map.coordinates')
                     ->label(__('app.label.map_coordinates'))
                     ->defaultLocation(latitude: 41.311081, longitude: 69.240562)
-                    ->defaultZoom(13)
+                    ->zoom(13)
+                    ->minZoom(3)
+                    ->maxZoom(19)
                     ->draggable()
                     ->clickable()
                     ->showMarker()
                     ->showZoomControl()
                     ->showFullscreenControl()
                     ->showMyLocationButton()
+                    ->detectRetina()
                     ->extraStyles(['min-height: 60vh', 'border-radius: 0.5rem']),
             ]);
     }

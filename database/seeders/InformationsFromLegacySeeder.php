@@ -37,7 +37,6 @@ class InformationsFromLegacySeeder extends Seeder
             ],
             'branding.logo_header' => 'branding/legacy/logo-header.png',
             'branding.logo_footer' => 'branding/legacy/logo-footer.png',
-            'branding.favicon' => 'branding/legacy/favicon.ico',
             'map.coordinates' => [
                 'lat' => 41.29751400,
                 'lng' => 69.28066500,

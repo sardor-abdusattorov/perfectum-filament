@@ -70,7 +70,6 @@ return [
         'map_coordinates' => 'Xaritadagi koordinatalar',
         'logo_header' => 'Yuqori logotip',
         'logo_footer' => 'Pastki logotip',
-        'favicon' => 'Favicon',
     ],
     'helper' => [
         'unique_translation_identifier' => 'Tarjimaning noyob identifikatori',

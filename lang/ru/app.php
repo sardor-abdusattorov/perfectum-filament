@@ -70,7 +70,6 @@ return [
         'map_coordinates' => 'Координаты на карте',
         'logo_header' => 'Логотип в шапке',
         'logo_footer' => 'Логотип в футере',
-        'favicon' => 'Favicon',
     ],
     'helper' => [
         'unique_translation_identifier' => 'Уникальный идентификатор перевода',

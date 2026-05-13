@@ -171,7 +171,7 @@ class Settings extends Page implements HasForms
                 Map::make('map.coordinates')
                     ->label(__('app.label.map_coordinates'))
                     ->defaultLocation(latitude: 41.311081, longitude: 69.240562)
-                    ->zoom(13)
+                    ->zoom(17)
                     ->minZoom(3)
                     ->maxZoom(19)
                     ->draggable(true)
@@ -206,16 +206,6 @@ class Settings extends Page implements HasForms
                     ->directory('branding')
                     ->disk('public')
                     ->maxSize(2048)
-                    ->previewable()
-                    ->downloadable(),
-
-                FileUpload::make('branding.favicon')
-                    ->label(__('app.label.favicon'))
-                    ->image()
-                    ->directory('branding')
-                    ->disk('public')
-                    ->maxSize(512)
-                    ->acceptedFileTypes(['image/png', 'image/x-icon', 'image/svg+xml'])
                     ->previewable()
                     ->downloadable(),
             ]);

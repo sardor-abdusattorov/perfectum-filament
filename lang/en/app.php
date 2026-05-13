@@ -70,7 +70,6 @@ return [
         'map_coordinates' => 'Coordinates on the map',
         'logo_header' => 'Header logo',
         'logo_footer' => 'Footer logo',
-        'favicon' => 'Favicon',
     ],
     'helper' => [
         'unique_translation_identifier' => 'Unique translation identifier',

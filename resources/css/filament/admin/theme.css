@@ -4,7 +4,6 @@
 @source '../../../../resources/views/filament/**/*';
 @source '../../../../resources/views/livewire/**/*';
 
-/* Slim Scrollbar Styles */
 * {
     scrollbar-width: thin;
     scrollbar-color: rgb(var(--primary-400)) transparent;
@@ -28,7 +27,6 @@
     background-color: rgb(var(--primary-500));
 }
 
-/* Dark mode scrollbar */
 .dark * {
     scrollbar-color: rgb(var(--primary-500)) transparent;
 }
@@ -41,46 +39,45 @@
     background-color: rgb(var(--primary-400));
 }
 
-/* ----------------------------------------------------------------------------
- * RichEditor (TipTap) fullscreen fix
- *
- * Когда поле задаёт через extraInputAttributes inline-стиль вроде
- *   style="min-height: 10rem; max-height: 30vh; overflow-y: auto;"
- * этот max-height продолжает действовать и в native fullscreen,
- * поэтому контент сжат сверху, а остальной экран остаётся пустым.
- *
- * Псевдокласс :fullscreen срабатывает только в реальном полноэкранном
- * режиме браузера — на обычный вид правила не влияют.
- * -------------------------------------------------------------------------- */
-
-.fi-fo-rich-editor:fullscreen,
-.fi-fo-rich-editor :fullscreen {
+.fi-fo-rich-editor.fullscreen {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    z-index: 9999 !important;
     background: white;
     display: flex !important;
     flex-direction: column !important;
-    width: 100vw;
-    height: 100vh;
-    max-height: 100vh !important;
-    padding: 0.5rem 1rem;
+    padding: 0;
+    border-radius: 0 !important;
 }
 
-.dark .fi-fo-rich-editor:fullscreen,
-.dark .fi-fo-rich-editor :fullscreen {
+.dark .fi-fo-rich-editor.fullscreen {
     background: rgb(24, 24, 27);
     color: rgb(244, 244, 245);
 }
 
-/* Снимаем inline-ограничения по высоте у contenteditable / TipTap области
- * только в полноэкранном режиме — пусть растягивается на оставшееся место. */
-.fi-fo-rich-editor:fullscreen [contenteditable],
-.fi-fo-rich-editor:fullscreen .tiptap,
-.fi-fo-rich-editor:fullscreen .ProseMirror,
-.fi-fo-rich-editor :fullscreen [contenteditable],
-.fi-fo-rich-editor :fullscreen .tiptap,
-.fi-fo-rich-editor :fullscreen .ProseMirror {
+.fi-fo-rich-editor.fullscreen .fi-fo-rich-editor-toolbar {
+    flex: 0 0 auto;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: inherit;
+    border-bottom: 1px solid rgb(229, 231, 235);
+}
+
+.dark .fi-fo-rich-editor.fullscreen .fi-fo-rich-editor-toolbar {
+    border-bottom-color: rgb(63, 63, 70);
+}
+
+.fi-fo-rich-editor.fullscreen .ProseMirror,
+.fi-fo-rich-editor.fullscreen [contenteditable],
+.fi-fo-rich-editor.fullscreen .tiptap {
     flex: 1 1 auto !important;
     min-height: 0 !important;
     max-height: none !important;
     height: auto !important;
     overflow-y: auto !important;
+    padding: 1.5rem 2rem !important;
 }

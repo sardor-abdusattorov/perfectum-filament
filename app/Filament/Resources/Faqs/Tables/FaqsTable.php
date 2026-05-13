@@ -32,12 +32,14 @@ class FaqsTable
                 TextColumn::make('question')
                     ->label(__('app.label.question'))
                     ->searchable()
+                    ->default(__('app.label.empty'))
                     ->wrap(),
 
                 TextColumn::make('answer')
                     ->label(__('app.label.answer'))
-                    ->limit(60)
+                    ->html()
                     ->wrap()
+                    ->default(__('app.label.empty'))
                     ->toggleable(isToggledHiddenByDefault: true),
 
                 TextColumn::make('sort')

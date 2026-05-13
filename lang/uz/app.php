@@ -2,6 +2,7 @@
 
 return [
     'label' => [
+        'translation_missing' => 'Tarjima kiritilmagan',
         'main_settings' => 'Asosiy sozlamalar',
         'email' => 'Email',
         'password' => 'Parol',

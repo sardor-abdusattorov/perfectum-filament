@@ -29,20 +29,17 @@ class SlidersTable
                     ->defaultImageUrl(asset('/images/no_image.png'))
                     ->square(),
 
-                TextColumn::make('title')
-                    ->label(__('app.label.title'))
+                TextColumn::make('question')
+                    ->label(__('app.label.question'))
                     ->searchable()
+                    ->default(__('app.label.translation_missing'))
                     ->wrap(),
 
-                TextColumn::make('description')
-                    ->label(__('app.label.description'))
-                    ->limit(60)
+                TextColumn::make('answer')
+                    ->label(__('app.label.answer'))
+                    ->html()
                     ->wrap()
-                    ->toggleable(isToggledHiddenByDefault: true),
-
-                TextColumn::make('link')
-                    ->label(__('app.label.link'))
-                    ->limit(40)
+                    ->default(__('app.label.translation_missing'))
                     ->toggleable(isToggledHiddenByDefault: true),
 
                 TextColumn::make('sort')
@@ -61,8 +58,7 @@ class SlidersTable
                     ->label(__('app.label.created_at'))
                     ->dateTime()
                     ->wrap()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->sortable(),
             ])
             ->filters([
                 SelectFilter::make('is_published')

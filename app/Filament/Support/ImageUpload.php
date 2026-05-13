@@ -28,7 +28,7 @@ class ImageUpload
             ->imageEditor()
             ->previewable()
             ->downloadable()
-            ->maxSize(6144) // 6 MB — единый лимит для всех изображений в админке
+            ->maxSize(6144)
             ->nullable();
     }
 }

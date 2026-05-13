@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Sliders\Schemas;
 
 use AbdulmajeedJamaan\FilamentTranslatableTabs\TranslatableTabs;
+use App\Filament\Support\ImageUpload;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
@@ -34,11 +35,8 @@ class SliderForm
                                     ->label(__('app.label.button_text')),
                             ]),
 
-                        FileUpload::make('main_image')
-                            ->label(__('app.label.main_image'))
-                            ->image()
-                            ->directory('sliders')
-                            ->imageEditor(),
+                        ImageUpload::make('main_image', field: 'sliders')
+                            ->label(__('app.label.main_image')),
 
                         TextInput::make('link')
                             ->label(__('app.label.link'))

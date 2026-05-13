@@ -2,6 +2,7 @@
 
 return [
     'label' => [
+        'translation_missing' => 'Перевод не задан',
         'main_settings' => 'Основные настройки',
         'email' => 'Email',
         'password' => 'Пароль',

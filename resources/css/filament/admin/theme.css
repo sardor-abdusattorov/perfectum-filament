@@ -40,3 +40,47 @@
 .dark *::-webkit-scrollbar-thumb:hover {
     background-color: rgb(var(--primary-400));
 }
+
+/* ----------------------------------------------------------------------------
+ * RichEditor (TipTap) fullscreen fix
+ *
+ * Когда поле задаёт через extraInputAttributes inline-стиль вроде
+ *   style="min-height: 10rem; max-height: 30vh; overflow-y: auto;"
+ * этот max-height продолжает действовать и в native fullscreen,
+ * поэтому контент сжат сверху, а остальной экран остаётся пустым.
+ *
+ * Псевдокласс :fullscreen срабатывает только в реальном полноэкранном
+ * режиме браузера — на обычный вид правила не влияют.
+ * -------------------------------------------------------------------------- */
+
+.fi-fo-rich-editor:fullscreen,
+.fi-fo-rich-editor :fullscreen {
+    background: white;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh !important;
+    padding: 0.5rem 1rem;
+}
+
+.dark .fi-fo-rich-editor:fullscreen,
+.dark .fi-fo-rich-editor :fullscreen {
+    background: rgb(24, 24, 27);
+    color: rgb(244, 244, 245);
+}
+
+/* Снимаем inline-ограничения по высоте у contenteditable / TipTap области
+ * только в полноэкранном режиме — пусть растягивается на оставшееся место. */
+.fi-fo-rich-editor:fullscreen [contenteditable],
+.fi-fo-rich-editor:fullscreen .tiptap,
+.fi-fo-rich-editor:fullscreen .ProseMirror,
+.fi-fo-rich-editor :fullscreen [contenteditable],
+.fi-fo-rich-editor :fullscreen .tiptap,
+.fi-fo-rich-editor :fullscreen .ProseMirror {
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    height: auto !important;
+    overflow-y: auto !important;
+}

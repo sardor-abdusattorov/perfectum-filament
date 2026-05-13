@@ -33,10 +33,7 @@ class TextEditor
                 ['table', 'attachFiles'],
                 ['grid'],
                 ['undo', 'redo'],
-                // 'fullscreen' отключён: в Filament 5 RichEditor (TipTap) делает себя
-                // position:fixed, но родительские TranslatableTabs/Section с overflow
-                // и z-index ломают раскладку — контент сжимается вверху, остальное
-                // поле белое. Развернуть окно браузером (F11) — рабочая альтернатива.
+                ['fullscreen'],
             ]);
     }
 }

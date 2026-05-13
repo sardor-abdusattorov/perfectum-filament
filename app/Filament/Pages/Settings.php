@@ -4,6 +4,7 @@ namespace App\Filament\Pages;
 
 use AbdulmajeedJamaan\FilamentTranslatableTabs\TranslatableTabs;
 use App\Models\Settings as SettingsModel;
+use Dotswan\MapPicker\Fields\Map;
 use Filament\Actions\Action;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Textarea;
@@ -16,6 +17,7 @@ use Filament\Pages\Concerns\InteractsWithFormActions;
 use Filament\Pages\Page;
 use Filament\Schemas\Components\Tabs;
 use Filament\Schemas\Schema;
+use Illuminate\Support\Facades\DB;
 
 class Settings extends Page implements HasForms
 {
@@ -60,17 +62,14 @@ class Settings extends Page implements HasForms
 
     protected function getForms(): array
     {
-        return [
-            'form',
-        ];
+        return ['form'];
     }
 
     protected function getSettingsData(): array
     {
         $data = [];
-        $settings = SettingsModel::all();
 
-        foreach ($settings as $setting) {
+        foreach (SettingsModel::all() as $setting) {
             data_set($data, $setting->key, $setting->value);
         }
 
@@ -81,59 +80,156 @@ class Settings extends Page implements HasForms
     {
         return $schema
             ->components([
-                Tabs::make(__('app.label.settings'))
+                Tabs::make('settings')
                     ->schema([
-                        Tabs\Tab::make(__('app.label.tab_seo'))
-                            ->schema([
-                                TranslatableTabs::make('seo_translations')
-                                    ->schema([
-                                        TextInput::make('seo.title')
-                                            ->label(__('app.label.seo_title'))
-                                            ->required(),
-
-                                        Textarea::make('seo.description')
-                                            ->label(__('app.label.seo_description'))
-                                            ->rows(4)
-                                            ->required(),
-
-                                        Textarea::make('seo.keywords')
-                                            ->label(__('app.label.seo_keywords'))
-                                            ->rows(4),
-                                    ]),
-
-                                Toggle::make('seo.indexing_enabled')
-                                    ->label(__('app.label.seo_indexing_enabled'))
-                                    ->helperText(__('app.helper.seo_indexing_enabled'))
-                                    ->default(true),
-
-                                FileUpload::make('seo.og_image')
-                                    ->label(__('app.label.seo_og_image'))
-                                    ->image()
-                                    ->imageEditor()
-                                    ->directory('images')
-                                    ->disk('public')
-                                    ->maxSize(2048)
-                                    ->previewable()
-                                    ->downloadable()
-                                    ->acceptedFileTypes(['image/png', 'image/jpeg'])
-                                    ->helperText(__('app.helper.seo_og_image')),
-                            ]),
-
-                        Tabs\Tab::make(__('app.label.tab_metrics'))
-                            ->schema([
-                                Textarea::make('metrics.yandex')
-                                    ->label(__('app.label.metrics_yandex'))
-                                    ->rows(6)
-                                    ->helperText(__('app.helper.metrics_yandex')),
-
-                                Textarea::make('metrics.google')
-                                    ->label(__('app.label.metrics_google'))
-                                    ->rows(6)
-                                    ->helperText(__('app.helper.metrics_google')),
-                            ]),
+                        $this->seoTab(),
+                        $this->contactsTab(),
+                        $this->mapTab(),
+                        $this->brandingTab(),
+                        $this->metricsTab(),
                     ]),
             ])
             ->statePath('data');
+    }
+
+    protected function seoTab(): Tabs\Tab
+    {
+        return Tabs\Tab::make(__('app.label.tab_seo'))
+            ->schema([
+                TranslatableTabs::make('seo_translations')
+                    ->schema([
+                        TextInput::make('seo.title')
+                            ->label(__('app.label.seo_title'))
+                            ->required(),
+
+                        Textarea::make('seo.description')
+                            ->label(__('app.label.seo_description'))
+                            ->rows(4)
+                            ->required(),
+
+                        Textarea::make('seo.keywords')
+                            ->label(__('app.label.seo_keywords'))
+                            ->rows(4),
+                    ]),
+
+                Toggle::make('seo.indexing_enabled')
+                    ->label(__('app.label.seo_indexing_enabled'))
+                    ->helperText(__('app.helper.seo_indexing_enabled'))
+                    ->default(true),
+
+                FileUpload::make('seo.og_image')
+                    ->label(__('app.label.seo_og_image'))
+                    ->image()
+                    ->imageEditor()
+                    ->directory('images')
+                    ->disk('public')
+                    ->maxSize(2048)
+                    ->previewable()
+                    ->downloadable()
+                    ->acceptedFileTypes(['image/png', 'image/jpeg'])
+                    ->helperText(__('app.helper.seo_og_image')),
+            ]);
+    }
+
+    protected function contactsTab(): Tabs\Tab
+    {
+        return Tabs\Tab::make(__('app.label.tab_contacts'))
+            ->schema([
+                TranslatableTabs::make('contacts_translations')
+                    ->schema([
+                        TextInput::make('site.name')
+                            ->label(__('app.label.site_name')),
+
+                        Textarea::make('site.description')
+                            ->label(__('app.label.site_description'))
+                            ->rows(6),
+
+                        Textarea::make('contacts.address')
+                            ->label(__('app.label.contacts_address'))
+                            ->rows(2),
+
+                        Textarea::make('contacts.working_plan')
+                            ->label(__('app.label.contacts_working_plan'))
+                            ->rows(2),
+
+                        Textarea::make('footer.text')
+                            ->label(__('app.label.footer_text'))
+                            ->rows(3),
+
+                        Textarea::make('footer.free_numbers_text')
+                            ->label(__('app.label.footer_free_numbers_text'))
+                            ->rows(4)
+                            ->helperText(__('app.helper.html_allowed')),
+                    ]),
+            ]);
+    }
+
+    protected function mapTab(): Tabs\Tab
+    {
+        return Tabs\Tab::make(__('app.label.tab_map'))
+            ->schema([
+                Map::make('map.coordinates')
+                    ->label(__('app.label.map_coordinates'))
+                    ->defaultLocation([41.311081, 69.240562])
+                    ->defaultZoom(13)
+                    ->draggable()
+                    ->showMarker()
+                    ->showZoomControl()
+                    ->showFullscreenControl()
+                    ->extraStyles(['min-height: 60vh', 'border-radius: 0.5rem']),
+            ]);
+    }
+
+    protected function brandingTab(): Tabs\Tab
+    {
+        return Tabs\Tab::make(__('app.label.tab_branding'))
+            ->schema([
+                FileUpload::make('branding.logo_header')
+                    ->label(__('app.label.logo_header'))
+                    ->image()
+                    ->imageEditor()
+                    ->directory('branding')
+                    ->disk('public')
+                    ->maxSize(2048)
+                    ->previewable()
+                    ->downloadable(),
+
+                FileUpload::make('branding.logo_footer')
+                    ->label(__('app.label.logo_footer'))
+                    ->image()
+                    ->imageEditor()
+                    ->directory('branding')
+                    ->disk('public')
+                    ->maxSize(2048)
+                    ->previewable()
+                    ->downloadable(),
+
+                FileUpload::make('branding.favicon')
+                    ->label(__('app.label.favicon'))
+                    ->image()
+                    ->directory('branding')
+                    ->disk('public')
+                    ->maxSize(512)
+                    ->acceptedFileTypes(['image/png', 'image/x-icon', 'image/svg+xml'])
+                    ->previewable()
+                    ->downloadable(),
+            ]);
+    }
+
+    protected function metricsTab(): Tabs\Tab
+    {
+        return Tabs\Tab::make(__('app.label.tab_metrics'))
+            ->schema([
+                Textarea::make('metrics.yandex')
+                    ->label(__('app.label.metrics_yandex'))
+                    ->rows(6)
+                    ->helperText(__('app.helper.metrics_yandex')),
+
+                Textarea::make('metrics.google')
+                    ->label(__('app.label.metrics_google'))
+                    ->rows(6)
+                    ->helperText(__('app.helper.metrics_google')),
+            ]);
     }
 
     protected function getFormActions(): array
@@ -149,7 +245,9 @@ class Settings extends Page implements HasForms
     {
         $data = $this->form->getState();
 
-        $this->saveSettings($data);
+        DB::transaction(fn () => $this->saveSettings($data));
+
+        clear_settings_cache();
 
         Notification::make()
             ->title(__('filament-panels::resources/pages/edit-record.notifications.saved.title'))
@@ -160,15 +258,15 @@ class Settings extends Page implements HasForms
     protected function saveSettings(array $data, string $prefix = ''): void
     {
         foreach ($data as $key => $value) {
-            $fullKey = $prefix ? "{$prefix}.{$key}" : $key;
+            $fullKey = $prefix === '' ? $key : "{$prefix}.{$key}";
 
-            if (is_array($value) && ! $this->isAssociativeArray($value)) {
-                SettingsModel::set($fullKey, $value);
-            } elseif (is_array($value)) {
+            if (is_array($value) && $this->isAssociativeArray($value)) {
                 $this->saveSettings($value, $fullKey);
-            } else {
-                SettingsModel::set($fullKey, $value);
+
+                continue;
             }
+
+            SettingsModel::set($fullKey, $value);
         }
     }
 

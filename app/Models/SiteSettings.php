@@ -14,9 +14,17 @@ class SiteSettings extends Model
         'is_published' => 'boolean',
     ];
 
+    protected static function booted(): void
+    {
+        $forget = fn (self $model) => clear_site_settings_cache($model->getOriginal('name') ?: $model->name);
+
+        static::saved($forget);
+        static::deleted($forget);
+    }
+
     public static function get(string $name): ?string
     {
-        return static::where('name', $name)->value('value');
+        return static::query()->where('name', $name)->value('value');
     }
 
     public static function getValue(string $name, bool $onlyPublished = true): ?string
@@ -34,7 +42,7 @@ class SiteSettings extends Model
     {
         $url = static::getValue($name);
 
-        if (!$url) {
+        if (! $url) {
             return null;
         }
 

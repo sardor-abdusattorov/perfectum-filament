@@ -12,9 +12,6 @@ class Settings extends Model
 
     protected $fillable = ['key', 'value'];
 
-    /**
-     * Get the value attribute - decode JSON if it's a valid JSON string
-     */
     public function getValueAttribute($value)
     {
         if ($value === null) {
@@ -23,43 +20,31 @@ class Settings extends Model
 
         $decoded = json_decode($value, true);
 
-        if (json_last_error() === JSON_ERROR_NONE && is_array($decoded)) {
-            return $decoded;
-        }
-
         if (json_last_error() === JSON_ERROR_NONE) {
             return $decoded;
         }
 
-        // Otherwise return as-is
         return $value;
     }
 
-    /**
-     * Set the value attribute - encode arrays to JSON, store strings as-is
-     */
-    public function setValueAttribute($value)
+    public function setValueAttribute($value): void
     {
         $this->attributes['value'] = json_encode($value, JSON_UNESCAPED_UNICODE);
     }
+
     public static function get(string $key, mixed $default = null): mixed
     {
         return Cache::remember("settings.{$key}", 86400, function () use ($key, $default) {
-            $setting = static::where('key', $key)->first();
-
-            return $setting ? $setting->value : $default;
+            return static::query()->where('key', $key)->first()?->value ?? $default;
         });
     }
 
     public static function set(string $key, mixed $value): void
     {
-        static::updateOrCreate(
-            ['key' => $key],
-            ['value' => $value]
-        );
+        static::updateOrCreate(['key' => $key], ['value' => $value]);
     }
 
-    public static function getOgImage()
+    public static function getOgImage(): ?string
     {
         $path = settings('seo.og_image');
 

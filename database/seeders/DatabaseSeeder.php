@@ -6,16 +6,14 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
-    public function run()
+    public function run(): void
     {
         $this->call([
             UserSeeder::class,
             SiteTranslationsFromLegacySeeder::class,
             FaqsFromLegacySeeder::class,
             NumberFiltersFromLegacySeeder::class,
+            InformationsFromLegacySeeder::class,
         ]);
     }
 }

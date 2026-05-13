@@ -70,9 +70,6 @@ class AdminPanelProvider extends PanelProvider
             ->widgets([
 
             ])
-            ->resources([
-                config('filament-logger.activity_resource'),
-            ])
             ->plugins([
 
                 FilamentShieldPlugin::make()

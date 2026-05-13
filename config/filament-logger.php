@@ -181,9 +181,9 @@ return [
         'color' => 'primary',
     ],
 
-    'activity_resource' => \MrAdder\FilamentLogger\Resources\ActivityResource::class,
+    'activity_resource' => \App\Filament\Resources\ActivityResource::class,
     'scoped_to_tenant' => true,
-    'navigation_sort' => null,
+    'navigation_sort' => 999,
 
     'resources' => [
         'enabled' => true,

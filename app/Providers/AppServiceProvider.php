@@ -60,6 +60,22 @@ class AppServiceProvider extends ServiceProvider
         $this->configureLimit();
         $this->configureLanguageSwitch();
         $this->configureTranslatableTabs();
+        $this->translateFilamentLoggerConfig();
+    }
+
+    private function translateFilamentLoggerConfig(): void
+    {
+        $tabs = ['all', 'high_risk', 'destructive', 'auth_issues', 'failed_logins', 'destructive_recent', 'auth_anomalies'];
+
+        foreach ($tabs as $key) {
+            config(["filament-logger.activity_filters.saved.{$key}.label" => __("filament-logger::filament-logger.tabs.{$key}")]);
+        }
+
+        $dates = ['today', 'last_24_hours', 'last_7_days', 'last_30_days', 'this_month'];
+
+        foreach ($dates as $key) {
+            config(["filament-logger.activity_filters.date_presets.{$key}" => __("filament-logger::filament-logger.dates.{$key}")]);
+        }
     }
 
     private function configureDB(): void

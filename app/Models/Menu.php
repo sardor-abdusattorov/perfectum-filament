@@ -54,7 +54,7 @@ class Menu extends Model
     public function getLinkAttribute(): string
     {
         if ($this->page_id && $this->page) {
-            return url("/pages/{$this->page->slug}");
+            return $this->page->url;
         }
 
         return (string) $this->url;

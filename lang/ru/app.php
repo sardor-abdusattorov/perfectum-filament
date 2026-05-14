@@ -80,6 +80,7 @@ return [
         'menus_single' => 'Меню',
         'menus_plural' => 'Меню',
         'slug' => 'Slug',
+        'section' => 'Раздел',
         'template' => 'Шаблон',
         'parent_page' => 'Родительская страница',
         'content' => 'Контент',
@@ -128,6 +129,12 @@ return [
     ],
     'page_template' => [
         'default' => 'Обычная страница',
+    ],
+    'page_section' => [
+        'pages' => 'Страницы',
+        'helpers' => 'Помощь',
+        'legal' => 'Правовая информация',
+        'info' => 'Информация',
     ],
     'page_settings' => [
         'tariffs' => 'Тарифы',

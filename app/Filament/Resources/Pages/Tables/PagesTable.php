@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Pages\Tables;
 
+use App\Enums\PageSection;
 use App\Enums\PublishedStatus;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
@@ -34,6 +35,11 @@ class PagesTable
                     ->default(__('app.label.empty'))
                     ->wrap(),
 
+                TextColumn::make('section')
+                    ->label(__('app.label.section'))
+                    ->badge()
+                    ->sortable(),
+
                 TextColumn::make('slug')
                     ->label(__('app.label.slug'))
                     ->searchable()
@@ -64,6 +70,10 @@ class PagesTable
                     ->sortable(),
             ])
             ->filters([
+                SelectFilter::make('section')
+                    ->label(__('app.label.section'))
+                    ->options(PageSection::getOptions()),
+
                 SelectFilter::make('is_published')
                     ->label(__('app.label.status'))
                     ->options(PublishedStatus::getStatusOptions())

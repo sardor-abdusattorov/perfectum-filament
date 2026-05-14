@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Pages\Schemas;
 
 use AbdulmajeedJamaan\FilamentTranslatableTabs\TranslatableTabs;
+use App\Enums\PageSection;
 use App\Filament\Support\ImageUpload;
 use App\Filament\Support\TextEditor;
 use App\Models\Page;
@@ -11,7 +12,10 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Section;
+use Filament\Schemas\Components\Utilities\Get;
+use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
+use Illuminate\Validation\Rules\Unique;
 
 class PageForm
 {
@@ -22,12 +26,24 @@ class PageForm
             ->components([
                 Section::make(__('app.label.basic_information'))
                     ->schema([
+                        Select::make('section')
+                            ->label(__('app.label.section'))
+                            ->options(PageSection::class)
+                            ->default(PageSection::Pages->value)
+                            ->required()
+                            ->selectablePlaceholder(false)
+                            ->live()
+                            ->afterStateUpdated(fn (Set $set) => $set('parent_id', null)),
+
                         TextInput::make('slug')
                             ->label(__('app.label.slug'))
                             ->helperText(__('app.helper.page_slug'))
                             ->required()
-                            ->unique(ignoreRecord: true)
-                            ->maxLength(255),
+                            ->maxLength(255)
+                            ->unique(
+                                ignoreRecord: true,
+                                modifyRuleUsing: fn (Unique $rule, Get $get) => $rule->where('section', $get('section')),
+                            ),
 
                         Select::make('template')
                             ->label(__('app.label.template'))
@@ -38,13 +54,11 @@ class PageForm
 
                         Select::make('parent_id')
                             ->label(__('app.label.parent_page'))
-                            ->relationship(
-                                'parent',
-                                'slug',
-                                fn ($query, ?Page $record) => $record
-                                    ? $query->whereKeyNot($record->getKey())
-                                    : $query,
-                            )
+                            ->options(fn (Get $get, ?Page $record): array => Page::query()
+                                ->where('section', $get('section'))
+                                ->when($record, fn ($query) => $query->whereKeyNot($record->getKey()))
+                                ->pluck('slug', 'id')
+                                ->toArray())
                             ->searchable()
                             ->preload(),
 

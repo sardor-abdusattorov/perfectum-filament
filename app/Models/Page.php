@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\PageSection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -15,6 +16,7 @@ class Page extends Model
 
     protected $fillable = [
         'parent_id',
+        'section',
         'slug',
         'template',
         'title',
@@ -29,9 +31,15 @@ class Page extends Model
     public $translatable = ['title', 'content', 'meta_title', 'meta_description'];
 
     protected $casts = [
+        'section' => PageSection::class,
         'is_published' => 'boolean',
         'sort' => 'integer',
     ];
+
+    public function getUrlAttribute(): string
+    {
+        return url("/{$this->section->value}/{$this->slug}");
+    }
 
     public function parent(): BelongsTo
     {

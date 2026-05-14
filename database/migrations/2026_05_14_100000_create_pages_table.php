@@ -11,7 +11,8 @@ return new class extends Migration
         Schema::create('pages', function (Blueprint $table) {
             $table->id();
             $table->foreignId('parent_id')->nullable()->constrained('pages')->nullOnDelete();
-            $table->string('slug')->unique();
+            $table->string('section')->default('pages')->index();
+            $table->string('slug');
             $table->string('template')->default('default')->index();
             $table->json('title');
             $table->json('content')->nullable();
@@ -21,6 +22,8 @@ return new class extends Migration
             $table->unsignedInteger('sort')->default(0)->index();
             $table->boolean('is_published')->default(true)->index();
             $table->timestamps();
+
+            $table->unique(['section', 'slug']);
         });
     }
 

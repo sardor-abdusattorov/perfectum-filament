@@ -80,6 +80,7 @@ return [
         'menus_single' => 'Menyu',
         'menus_plural' => 'Menyular',
         'slug' => 'Slug',
+        'section' => 'Bo‘lim',
         'template' => 'Shablon',
         'parent_page' => 'Asosiy sahifa',
         'content' => 'Kontent',
@@ -128,6 +129,12 @@ return [
     ],
     'page_template' => [
         'default' => 'Oddiy sahifa',
+    ],
+    'page_section' => [
+        'pages' => 'Sahifalar',
+        'helpers' => 'Yordam',
+        'legal' => 'Huquqiy ma‘lumot',
+        'info' => 'Ma‘lumot',
     ],
     'page_settings' => [
         'tariffs' => 'Tariflar',

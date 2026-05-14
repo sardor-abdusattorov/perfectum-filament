@@ -80,6 +80,7 @@ return [
         'menus_single' => 'Menu',
         'menus_plural' => 'Menus',
         'slug' => 'Slug',
+        'section' => 'Section',
         'template' => 'Template',
         'parent_page' => 'Parent page',
         'content' => 'Content',
@@ -128,6 +129,12 @@ return [
     ],
     'page_template' => [
         'default' => 'Regular page',
+    ],
+    'page_section' => [
+        'pages' => 'Pages',
+        'helpers' => 'Help',
+        'legal' => 'Legal',
+        'info' => 'Information',
     ],
     'page_settings' => [
         'tariffs' => 'Tariffs',

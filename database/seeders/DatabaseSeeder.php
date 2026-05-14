@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
             SocialsSeeder::class,
             PageSettingsSeeder::class,
             CareersSeeder::class,
+            TendersSeeder::class,
             MenusSeeder::class,
         ]);
     }

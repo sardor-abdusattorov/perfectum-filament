@@ -168,6 +168,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  var langSwitch = document.querySelector(".new-header__language");
+  if (langSwitch) {
+    var langToggle = langSwitch.querySelector(".new-header__language-toggle");
+    var langItem = langSwitch.querySelector("ul li");
+    if (langToggle && langItem) {
+      langToggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        langItem.classList.toggle("open");
+      });
+      document.addEventListener("click", function (e) {
+        if (!langSwitch.contains(e.target)) {
+          langItem.classList.remove("open");
+        }
+      });
+    }
+  }
+
   // Mobile dropdown
   document.querySelectorAll("a[data-get-dropdown]").forEach(function (trigger) {
     trigger.addEventListener("click", function (e) {

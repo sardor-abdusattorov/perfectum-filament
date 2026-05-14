@@ -60,9 +60,14 @@
                             </ul>
                         </div>
                         <div class="new-header__language">
+                            @php
+                                $currentLocale = LaravelLocalization::getCurrentLocale();
+                                $supportedLocales = LaravelLocalization::getSupportedLocales();
+                                $localeLabels = ['uz' => "O'zb", 'ru' => 'Рус', 'en' => 'Eng'];
+                            @endphp
                             <ul>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" class="new-header__language-toggle">
                                         <svg width="16" height="16" viewbox="0 0 16 16" fill="none"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_4008_1099)">
@@ -90,11 +95,18 @@
                                                     <rect width="16" height="16" fill="white"></rect>
                                                 </clippath>
                                             </defs>
-                                        </svg> O&#039;zb </a>
+                                        </svg> {{ $localeLabels[$currentLocale] ?? strtoupper($currentLocale) }} </a>
                                     <ol>
-                                        <li>
-                                            <a href="static-pages/yuridiceskie-dokumenty.html"> Рус </a>
-                                        </li>
+                                        @foreach ($supportedLocales as $code => $properties)
+                                            @if ($code !== $currentLocale)
+                                                <li>
+                                                    <a rel="alternate" hreflang="{{ $code }}"
+                                                       href="{{ LaravelLocalization::getLocalizedURL($code) }}">
+                                                        {{ $localeLabels[$code] ?? strtoupper($code) }}
+                                                    </a>
+                                                </li>
+                                            @endif
+                                        @endforeach
                                     </ol>
                                 </li>
                             </ul>

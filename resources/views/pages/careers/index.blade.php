@@ -14,9 +14,9 @@
             </div>
             <div class="section__grid">
                 @forelse ($careers as $career)
-                    <a href="{{ $career->url }}">
+                    <a href="{{ route('careers.show', $career->slug) }}" class="card pa-0">
                         <div class="card__content pa-20">
-                            <h3 class="card__title mb-10" style="font-weight: 600">
+                            <h3 class="card__title mb-10">
                                 {{ $career->title }}
                             </h3>
                             <h4 class="card__subtitle">{{ $career->description }}</h4>

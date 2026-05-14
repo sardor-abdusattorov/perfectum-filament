@@ -23,10 +23,9 @@ class EditCareer extends EditRecord
     protected function mutateFormDataBeforeSave(array $data): array
     {
         if (empty($data['slug'])) {
-            $source = $data['title']['en']
-                ?? $data['title']['ru']
-                ?? $data['title']['uz']
-                ?? '';
+            $source = ! empty($data['title']['en'])
+                ? $data['title']['en']
+                : ($data['title']['ru'] ?? '');
 
             if ($source !== '') {
                 $data['slug'] = mb_substr(Str::slug($source), 0, 64);

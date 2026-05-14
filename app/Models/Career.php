@@ -34,8 +34,4 @@ class Career extends Model
         return $this->morphMany(File::class, 'fileable')->orderBy('sort');
     }
 
-    public function getUrlAttribute(): string
-    {
-        return url("/careers/{$this->slug}");
-    }
 }

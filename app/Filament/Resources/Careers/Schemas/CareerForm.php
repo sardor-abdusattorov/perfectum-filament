@@ -38,7 +38,7 @@ class CareerForm
 
                                         Textarea::make('description')
                                             ->label(__('app.label.description'))
-                                            ->rows(2),
+                                            ->rows(4),
 
                                         TextEditor::make('careers', 'content')
                                             ->label(__('app.label.content'))

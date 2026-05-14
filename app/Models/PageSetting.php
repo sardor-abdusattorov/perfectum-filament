@@ -20,11 +20,4 @@ class PageSetting extends Model
         'name' => PageSettingKey::class,
         'is_published' => 'boolean',
     ];
-
-    public static function get(PageSettingKey|string $key): ?self
-    {
-        $name = $key instanceof PageSettingKey ? $key->value : $key;
-
-        return static::query()->where('name', $name)->first();
-    }
 }

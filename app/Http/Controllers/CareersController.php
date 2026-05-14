@@ -11,7 +11,7 @@ class CareersController extends Controller
 {
     public function index(): View
     {
-        $page = PageSetting::get(PageSettingKey::Careers);
+        $page = PageSetting::where('name', PageSettingKey::Careers)->first();
 
         $careers = Career::query()
             ->where('is_published', true)

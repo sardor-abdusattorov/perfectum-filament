@@ -6,6 +6,7 @@ use Filament\Support\Contracts\HasLabel;
 
 enum PageSettingKey: string implements HasLabel
 {
+    case home = 'home';
     case Tariffs = 'tariffs';
     case Services = 'services';
     case News = 'news';

@@ -63,7 +63,6 @@
                             @php
                                 $currentLocale = LaravelLocalization::getCurrentLocale();
                                 $supportedLocales = LaravelLocalization::getSupportedLocales();
-                                $localeLabels = ['uz' => "O'zb", 'ru' => 'Рус', 'en' => 'Eng'];
                             @endphp
                             <ul>
                                 <li>
@@ -95,14 +94,42 @@
                                                     <rect width="16" height="16" fill="white"></rect>
                                                 </clippath>
                                             </defs>
-                                        </svg> {{ $localeLabels[$currentLocale] ?? strtoupper($currentLocale) }} </a>
+                                        </svg>
+                                        {{ $supportedLocales[$currentLocale]['short'] ?? strtoupper($currentLocale) }}
+                                    </a>
                                     <ol>
                                         @foreach ($supportedLocales as $code => $properties)
                                             @if ($code !== $currentLocale)
                                                 <li>
                                                     <a rel="alternate" hreflang="{{ $code }}"
                                                        href="{{ LaravelLocalization::getLocalizedURL($code) }}">
-                                                        {{ $localeLabels[$code] ?? strtoupper($code) }}
+                                                        {{ $properties['short'] ?? strtoupper($code) }}
+                                                    </a>
+                                                </li>
+                                            @endif
+                                        @endforeach
+                                    </ol>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="new-header__language">
+                            @php
+                                $currentLocale = LaravelLocalization::getCurrentLocale();
+                                $supportedLocales = LaravelLocalization::getSupportedLocales();
+                            @endphp
+                            <ul>
+                                <li>
+                                    <a href="#" class="new-header__language-toggle">
+                                        <i class="fa-light fa-globe" aria-hidden="true"></i>
+                                        {{ $supportedLocales[$currentLocale]['short'] ?? strtoupper($currentLocale) }}
+                                    </a>
+                                    <ol>
+                                        @foreach ($supportedLocales as $code => $properties)
+                                            @if ($code !== $currentLocale)
+                                                <li>
+                                                    <a rel="alternate" hreflang="{{ $code }}"
+                                                       href="{{ LaravelLocalization::getLocalizedURL($code) }}">
+                                                        {{ $properties['short'] ?? strtoupper($code) }}
                                                     </a>
                                                 </li>
                                             @endif

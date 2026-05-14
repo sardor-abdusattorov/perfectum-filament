@@ -6,8 +6,8 @@ return [
     // These are sorted by the native name, which is the order you might show them in a language selector.
     // Regional languages are sorted by their base language, so "British English" sorts as "English, British"
     'supportedLocales' => [
-        'uz' => ['name' => 'Uzbek (Latin)',  'script' => 'Latn', 'native' => 'oʼzbekcha', 'regional' => 'uz_UZ'],
-        'ru' => ['name' => 'Russian',        'script' => 'Cyrl', 'native' => 'русский',   'regional' => 'ru_RU'],
+        'uz' => ['name' => 'Uzbek (Latin)', 'script' => 'Latn', 'native' => 'oʼzbekcha', 'short' => "O'zb", 'regional' => 'uz_UZ'],
+        'ru' => ['name' => 'Russian',       'script' => 'Cyrl', 'native' => 'русский',   'short' => 'Рус',  'regional' => 'ru_RU'],
     ],
 
     // Requires middleware `LaravelSessionRedirect.php`.

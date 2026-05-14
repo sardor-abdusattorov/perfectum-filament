@@ -11,6 +11,25 @@ class SettingsSeeder extends Seeder
     public function run(): void
     {
         $structured = [
+            'seo.title' => [
+                'ru' => 'Perfectum — оператор связи 5G Standalone в Узбекистане',
+                'uz' => 'Perfectum — Oʻzbekistondagi 5G Standalone aloqa operatori',
+                'en' => 'Perfectum — 5G Standalone telecom operator in Uzbekistan',
+            ],
+            'seo.description' => [
+                'ru' => 'Perfectum — высокоскоростной мобильный и домашний интернет на базе сети 5G Standalone. Тарифы, красивые номера, зона покрытия по всему Узбекистану.',
+                'uz' => 'Perfectum — 5G Standalone tarmogʻiga asoslangan yuqori tezlikdagi mobil va uy interneti. Tariflar, chiroyli raqamlar va Oʻzbekiston boʻylab qamrov hududi.',
+                'en' => 'Perfectum — high-speed mobile and home internet powered by a 5G Standalone network. Tariffs, premium numbers and coverage across Uzbekistan.',
+            ],
+            'seo.keywords' => [
+                'ru' => 'Perfectum, 5G, 5G Standalone, интернет, мобильная связь, тарифы, красивые номера, Узбекистан, Ташкент',
+                'uz' => 'Perfectum, 5G, 5G Standalone, internet, mobil aloqa, tariflar, chiroyli raqamlar, Oʻzbekiston, Toshkent',
+                'en' => 'Perfectum, 5G, 5G Standalone, internet, mobile, tariffs, premium numbers, Uzbekistan, Tashkent',
+            ],
+            'seo.indexing_enabled' => true,
+            'seo.og_image' => null,
+            'metrics.yandex' => null,
+            'metrics.google' => null,
             'site.name' => [
                 'ru' => 'Perfectum',
                 'uz' => 'Perfectum',

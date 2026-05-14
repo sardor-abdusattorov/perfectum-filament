@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\PageSettings;
 
+use App\Filament\Resources\PageSettings\Pages\CreatePageSetting;
 use App\Filament\Resources\PageSettings\Pages\EditPageSetting;
 use App\Filament\Resources\PageSettings\Pages\ListPageSettings;
 use App\Filament\Resources\PageSettings\Pages\ViewPageSetting;
@@ -9,7 +10,6 @@ use App\Filament\Resources\PageSettings\Schemas\PageSettingForm;
 use App\Filament\Resources\PageSettings\Tables\PageSettingsTable;
 use App\Models\PageSetting;
 use BackedEnum;
-use Illuminate\Database\Eloquent\Model;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -23,7 +23,7 @@ class PageSettingResource extends Resource
 
     public static function getNavigationGroup(): ?string
     {
-        return __('app.label.administration');
+        return __('app.label.resources');
     }
 
     public static function getModelLabel(): string
@@ -38,27 +38,12 @@ class PageSettingResource extends Resource
 
     public static function getNavigationSort(): int
     {
-        return 5;
+        return 3;
     }
 
     public static function getNavigationBadge(): ?string
     {
         return (string) static::$model::count();
-    }
-
-    public static function canCreate(): bool
-    {
-        return false;
-    }
-
-    public static function canDelete(Model $record): bool
-    {
-        return false;
-    }
-
-    public static function canDeleteAny(): bool
-    {
-        return false;
     }
 
     public static function form(Schema $schema): Schema
@@ -82,6 +67,7 @@ class PageSettingResource extends Resource
     {
         return [
             'index' => ListPageSettings::route('/'),
+            'create' => CreatePageSetting::route('/create'),
             'view' => ViewPageSetting::route('/{record}'),
             'edit' => EditPageSetting::route('/{record}/edit'),
         ];

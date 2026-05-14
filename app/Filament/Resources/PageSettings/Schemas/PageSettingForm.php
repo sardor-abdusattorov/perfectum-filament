@@ -23,8 +23,9 @@ class PageSettingForm
                         Select::make('name')
                             ->label(__('app.label.page_settings_single'))
                             ->options(PageSettingKey::class)
-                            ->disabled()
-                            ->dehydrated(false),
+                            ->required()
+                            ->unique(ignoreRecord: true)
+                            ->selectablePlaceholder(false),
 
                         TranslatableTabs::make('translations')
                             ->schema([

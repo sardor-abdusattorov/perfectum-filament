@@ -13,9 +13,9 @@ class PageSettingsSeeder extends Seeder
         $rows = [
             PageSettingKey::Tariffs->value => [
                 'title' => [
-                    'ru' => 'Тарифы',
-                    'uz' => 'Tariflar',
-                    'en' => 'Tariffs',
+                    'ru' => 'Тарифы | Perfectum',
+                    'uz' => 'Tariflar | Perfectum',
+                    'en' => 'Tariffs | Perfectum',
                 ],
                 'description' => [
                     'ru' => 'Выберите подходящий тарифный план',
@@ -25,9 +25,9 @@ class PageSettingsSeeder extends Seeder
             ],
             PageSettingKey::Services->value => [
                 'title' => [
-                    'ru' => 'Услуги',
-                    'uz' => 'Xizmatlar',
-                    'en' => 'Services',
+                    'ru' => 'Услуги | Perfectum',
+                    'uz' => 'Xizmatlar | Perfectum',
+                    'en' => 'Services | Perfectum',
                 ],
                 'description' => [
                     'ru' => 'Дополнительные услуги и опции',
@@ -37,9 +37,9 @@ class PageSettingsSeeder extends Seeder
             ],
             PageSettingKey::News->value => [
                 'title' => [
-                    'ru' => 'Новости',
-                    'uz' => 'Yangiliklar',
-                    'en' => 'News',
+                    'ru' => 'Новости | Perfectum',
+                    'uz' => 'Yangiliklar | Perfectum',
+                    'en' => 'News | Perfectum',
                 ],
                 'description' => [
                     'ru' => 'Последние новости и события компании',
@@ -49,9 +49,9 @@ class PageSettingsSeeder extends Seeder
             ],
             PageSettingKey::Faq->value => [
                 'title' => [
-                    'ru' => 'Часто задаваемые вопросы',
-                    'uz' => 'Ko‘p so‘raladigan savollar',
-                    'en' => 'Frequently asked questions',
+                    'ru' => 'Часто задаваемые вопросы | Perfectum',
+                    'uz' => 'Ko‘p so‘raladigan savollar | Perfectum',
+                    'en' => 'Frequently asked questions | Perfectum',
                 ],
                 'description' => [
                     'ru' => 'Ответы на популярные вопросы',
@@ -61,9 +61,9 @@ class PageSettingsSeeder extends Seeder
             ],
             PageSettingKey::Coverage->value => [
                 'title' => [
-                    'ru' => 'Зона покрытия',
-                    'uz' => 'Qamrov hududi',
-                    'en' => 'Coverage area',
+                    'ru' => 'Зона покрытия | Perfectum',
+                    'uz' => 'Qamrov hududi | Perfectum',
+                    'en' => 'Coverage area | Perfectum',
                 ],
                 'description' => [
                     'ru' => 'Проверьте покрытие сети в вашем районе',
@@ -73,9 +73,9 @@ class PageSettingsSeeder extends Seeder
             ],
             PageSettingKey::FreeNumbers->value => [
                 'title' => [
-                    'ru' => 'Свободные номера',
-                    'uz' => 'Bo‘sh raqamlar',
-                    'en' => 'Free numbers',
+                    'ru' => 'Свободные номера | Perfectum',
+                    'uz' => 'Bo‘sh raqamlar | Perfectum',
+                    'en' => 'Free numbers | Perfectum',
                 ],
                 'description' => [
                     'ru' => 'Подберите красивый номер для себя',
@@ -85,9 +85,9 @@ class PageSettingsSeeder extends Seeder
             ],
             PageSettingKey::Career->value => [
                 'title' => [
-                    'ru' => 'Карьера',
-                    'uz' => 'Karyera',
-                    'en' => 'Career',
+                    'ru' => 'Карьера | Perfectum',
+                    'uz' => 'Karyera | Perfectum',
+                    'en' => 'Career | Perfectum',
                 ],
                 'description' => [
                     'ru' => 'Открытые вакансии и работа в команде',
@@ -97,9 +97,9 @@ class PageSettingsSeeder extends Seeder
             ],
             PageSettingKey::Contacts->value => [
                 'title' => [
-                    'ru' => 'Контакты',
-                    'uz' => 'Kontaktlar',
-                    'en' => 'Contacts',
+                    'ru' => 'Контакты | Perfectum',
+                    'uz' => 'Kontaktlar | Perfectum',
+                    'en' => 'Contacts | Perfectum',
                 ],
                 'description' => [
                     'ru' => 'Свяжитесь с нами удобным способом',

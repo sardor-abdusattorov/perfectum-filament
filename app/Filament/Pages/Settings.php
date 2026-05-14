@@ -157,7 +157,7 @@ class Settings extends Page implements HasForms
                             ->label(__('app.label.footer_text'))
                             ->rows(3),
 
-                        TextEditor::make('footer.free_numbers_text')
+                        TextEditor::make('footer.free_numbers_text', 'settings')
                             ->label(__('app.label.footer_free_numbers_text'))
                             ->helperText(__('app.helper.html_allowed'))
                             ->extraInputAttributes([

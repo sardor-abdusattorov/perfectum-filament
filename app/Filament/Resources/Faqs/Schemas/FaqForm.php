@@ -25,7 +25,7 @@ class FaqForm
                                     ->label(__('app.label.question'))
                                     ->required(),
 
-                                TextEditor::make('answer')
+                                TextEditor::make('answer', 'faqs')
                                     ->label(__('app.label.answer'))
                                     ->helperText(__('app.helper.text_displayed_on_site'))
                                     ->extraInputAttributes([

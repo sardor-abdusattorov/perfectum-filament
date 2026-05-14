@@ -6,11 +6,11 @@ use Filament\Forms\Components\RichEditor as FilamentRichEditor;
 
 class TextEditor
 {
-    public static function make(string $field): FilamentRichEditor
+    public static function make(string $field, string $folder): FilamentRichEditor
     {
         return FilamentRichEditor::make($field)
             ->fileAttachmentsDisk('public')
-            ->fileAttachmentsDirectory(fn () => 'uploads/attachments/' . now()->format('Y/m'))
+            ->fileAttachmentsDirectory(fn () => "uploads/attachments/{$folder}/" . now()->format('Y/m'))
             ->fileAttachmentsVisibility('public')
             ->columnSpanFull()
             ->toolbarButtons([

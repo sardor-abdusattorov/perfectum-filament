@@ -12,17 +12,17 @@
 
             <div class="section__top-secondary section__top-flex">
                 <h2 class="block__title">
-                    {{ translator('app', 'careers_title') }}
+                    {{ $page?->title }}
                 </h2>
             </div>
             <div class="section__grid">
-                @forelse ($careers as $career)
-                    <a href="{{ route('careers.show', $career->slug) }}" class="card pa-0">
+                @forelse ($tenders as $tender)
+                    <a href="{{ route('tenders.show', $tender->slug) }}" class="card pa-0">
                         <div class="card__content pa-20">
                             <h3 class="card__title mb-10">
-                                {{ $career->title }}
+                                {{ $tender->title }}
                             </h3>
-                            <h4 class="card__subtitle">{{ $career->description }}</h4>
+                            <h4 class="card__subtitle">{{ $tender->description }}</h4>
                         </div>
                     </a>
                 @empty

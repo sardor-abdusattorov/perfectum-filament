@@ -4,6 +4,7 @@ use App\Enums\PageSection;
 use App\Http\Controllers\CareersController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\TendersController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -18,6 +19,11 @@ Route::group(
         Route::prefix('careers')->name('careers.')->group(function () {
             Route::get('/', [CareersController::class, 'index'])->name('index');
             Route::get('/{slug}', [CareersController::class, 'show'])->name('show');
+        });
+
+        Route::prefix('tenders')->name('tenders.')->group(function () {
+            Route::get('/', [TendersController::class, 'index'])->name('index');
+            Route::get('/{slug}', [TendersController::class, 'show'])->name('show');
         });
 
         Route::get('/{section}/{slug}', [PagesController::class, 'show'])

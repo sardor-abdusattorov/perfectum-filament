@@ -11,16 +11,12 @@ class DocumentUpload
         return FileUpload::make($field)
             ->label('Документ')
             ->disk('public')
-            ->directory(fn () => "documents/{$model}/" . now()->format('Y/m'))
+            ->directory(fn () => "uploads/files/{$model}/" . now()->format('Y/m'))
             ->visibility('public')
             ->acceptedFileTypes([
                 'application/pdf',
-
-                // Word
                 'application/msword',
                 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-
-                // Excel
                 'application/vnd.ms-excel',
                 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
             ])

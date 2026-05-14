@@ -12,7 +12,7 @@ class ImageUpload
         return FileUpload::make($field)
             ->label(__('app.label.image'))
             ->disk('public')
-            ->directory(fn () => "uploads/{$folder}/".now()->format('Y/m'))
+            ->directory(fn () => "uploads/images/{$folder}/".now()->format('Y/m'))
             ->visibility('public')
             ->image()
             ->imageEditor()

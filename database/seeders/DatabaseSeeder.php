@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
             NumberFiltersSeeder::class,
             SettingsSeeder::class,
             SocialsSeeder::class,
+            PageSettingsSeeder::class,
         ]);
     }
 }

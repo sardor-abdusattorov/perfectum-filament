@@ -67,7 +67,6 @@ return [
         'tab_map' => 'Xarita',
         'tab_branding' => 'Brendlash',
         'site_name' => 'Sayt nomi',
-        'site_description' => 'Sayt tavsifi',
         'contacts_address' => 'Manzil',
         'contacts_working_plan' => 'Ish vaqti',
         'footer_text' => 'Pastki qism matni',

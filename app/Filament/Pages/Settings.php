@@ -141,10 +141,6 @@ class Settings extends Page implements HasForms
                         TextInput::make('site.name')
                             ->label(__('app.label.site_name')),
 
-                        Textarea::make('site.description')
-                            ->label(__('app.label.site_description'))
-                            ->rows(6),
-
                         Textarea::make('contacts.address')
                             ->label(__('app.label.contacts_address'))
                             ->rows(2),

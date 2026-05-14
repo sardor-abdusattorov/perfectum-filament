@@ -67,7 +67,6 @@ return [
         'tab_map' => 'Карта',
         'tab_branding' => 'Брендинг',
         'site_name' => 'Название сайта',
-        'site_description' => 'Описание сайта',
         'contacts_address' => 'Адрес',
         'contacts_working_plan' => 'График работы',
         'footer_text' => 'Текст футера',

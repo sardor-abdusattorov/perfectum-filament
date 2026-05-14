@@ -67,7 +67,6 @@ return [
         'tab_map' => 'Map',
         'tab_branding' => 'Branding',
         'site_name' => 'Site name',
-        'site_description' => 'Site description',
         'contacts_address' => 'Address',
         'contacts_working_plan' => 'Working hours',
         'footer_text' => 'Footer text',

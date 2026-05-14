@@ -10,13 +10,13 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             UserSeeder::class,
-            SiteTranslationsSeeder::class,
             FaqsSeeder::class,
             NumberFiltersSeeder::class,
             SettingsSeeder::class,
             SocialsSeeder::class,
             PageSettingsSeeder::class,
             CareersSeeder::class,
+            MenusSeeder::class,
         ]);
     }
 }

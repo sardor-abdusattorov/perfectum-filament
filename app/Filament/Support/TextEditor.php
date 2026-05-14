@@ -6,7 +6,7 @@ use Filament\Forms\Components\RichEditor as FilamentRichEditor;
 
 class TextEditor
 {
-    public static function make(string $field, string $folder): FilamentRichEditor
+    public static function make(string $folder, string $field): FilamentRichEditor
     {
         return FilamentRichEditor::make($field)
             ->fileAttachmentsDisk('public')

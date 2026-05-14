@@ -40,7 +40,7 @@ class CareerForm
                                             ->label(__('app.label.description'))
                                             ->rows(2),
 
-                                        TextEditor::make('content', 'careers')
+                                        TextEditor::make('careers', 'content')
                                             ->label(__('app.label.content'))
                                             ->helperText(__('app.helper.text_displayed_on_site'))
                                             ->extraInputAttributes([

@@ -46,6 +46,7 @@ return [
         'question' => 'Question',
         'answer' => 'Answer',
         'image' => 'Image',
+        'document' => 'Document',
         'title' => 'Title',
         'description' => 'Description',
         'button_text' => 'Button text',

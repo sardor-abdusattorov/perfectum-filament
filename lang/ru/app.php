@@ -46,6 +46,7 @@ return [
         'question' => 'Вопрос',
         'answer' => 'Ответ',
         'image' => 'Изображение',
+        'document' => 'Документ',
         'title' => 'Заголовок',
         'description' => 'Описание',
         'button_text' => 'Текст кнопки',

@@ -9,7 +9,7 @@ class DocumentUpload
     public static function make(string $folder, string $field = 'file'): FileUpload
     {
         return FileUpload::make($field)
-            ->label('Документ')
+            ->label(__('app.label.document'))
             ->disk('public')
             ->directory(fn () => "uploads/files/{$folder}/" . now()->format('Y/m'))
             ->visibility('public')

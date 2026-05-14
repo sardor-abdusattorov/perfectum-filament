@@ -46,6 +46,7 @@ return [
         'question' => 'Savol',
         'answer' => 'Javob',
         'image' => 'Rasm',
+        'document' => 'Hujjat',
         'title' => 'Sarlavha',
         'description' => 'Tavsif',
         'button_text' => 'Tugma matni',

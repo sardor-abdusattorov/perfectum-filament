@@ -72,7 +72,7 @@ class PageForm
                                             ->label(__('app.label.title'))
                                             ->required(),
 
-                                        TextEditor::make('content', 'pages')
+                                        TextEditor::make('pages', 'content')
                                             ->label(__('app.label.content'))
                                             ->helperText(__('app.helper.text_displayed_on_site'))
                                             ->extraInputAttributes([

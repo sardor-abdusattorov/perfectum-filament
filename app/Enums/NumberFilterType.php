@@ -2,13 +2,6 @@
 
 namespace App\Enums;
 
-/**
- * Тип значения фильтра «Свободных номеров».
- *
- *  Number  — паттерн самого номера (например, 99-XX-XX)
- *  Prefix  — префикс/оператор (90, 91, 93 и т.п.)
- *  Price   — ценовая категория
- */
 enum NumberFilterType: int
 {
     case Number = 1;

@@ -14,7 +14,6 @@ enum MenuPosition: string implements HasLabel
     {
         return __("app.menu_position.{$this->value}");
     }
-
     public static function getOptions(): array
     {
         return collect(self::cases())

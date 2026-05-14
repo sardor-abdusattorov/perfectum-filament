@@ -12,9 +12,9 @@ class PageSetting extends Model
 
     protected $table = 'page_settings';
 
-    protected $fillable = ['name', 'title', 'description', 'is_published'];
+    protected $fillable = ['name', 'title', 'description', 'meta_title', 'meta_description', 'is_published'];
 
-    public $translatable = ['title', 'description'];
+    public $translatable = ['title', 'description', 'meta_title', 'meta_description'];
 
     protected $casts = [
         'name' => PageSettingKey::class,

@@ -1,7 +1,7 @@
 @extends('layouts.primary')
 
-@section('title', $career?->title ?? $page?->title)
-@section('meta_description', $career?->description ?? $page?->description)
+@section('title', $career?->title ?? $page?->meta_title ?? $page?->title)
+@section('meta_description', $career?->description ?? $page?->meta_description ?? $page?->description)
 
 @section('content')
     <section class="section__secondary">

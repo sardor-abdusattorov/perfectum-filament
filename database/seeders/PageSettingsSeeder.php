@@ -13,6 +13,11 @@ class PageSettingsSeeder extends Seeder
         $rows = [
             PageSettingKey::Home->value => [
                 'title' => [
+                    'ru' => 'Perfectum',
+                    'uz' => 'Perfectum',
+                    'en' => 'Perfectum',
+                ],
+                'meta_title' => [
                     'ru' => 'Perfectum — оператор связи 5G Standalone',
                     'uz' => 'Perfectum — 5G Standalone aloqa operatori',
                     'en' => 'Perfectum — 5G Standalone telecom operator',
@@ -25,9 +30,9 @@ class PageSettingsSeeder extends Seeder
             ],
             PageSettingKey::Careers->value => [
                 'title' => [
-                    'ru' => 'Карьера | Perfectum',
-                    'uz' => 'Karyera | Perfectum',
-                    'en' => 'Career | Perfectum',
+                    'ru' => 'Карьера',
+                    'uz' => 'Karyera',
+                    'en' => 'Career',
                 ],
                 'description' => [
                     'ru' => 'Открытые вакансии и работа в команде',
@@ -37,9 +42,9 @@ class PageSettingsSeeder extends Seeder
             ],
             PageSettingKey::Contacts->value => [
                 'title' => [
-                    'ru' => 'Контакты | Perfectum',
-                    'uz' => 'Kontaktlar | Perfectum',
-                    'en' => 'Contacts | Perfectum',
+                    'ru' => 'Контакты',
+                    'uz' => 'Kontaktlar',
+                    'en' => 'Contacts',
                 ],
                 'description' => [
                     'ru' => 'Свяжитесь с нами удобным способом',
@@ -49,9 +54,9 @@ class PageSettingsSeeder extends Seeder
             ],
             PageSettingKey::About->value => [
                 'title' => [
-                    'ru' => 'О компании | Perfectum',
-                    'uz' => 'Kompaniya haqida | Perfectum',
-                    'en' => 'About | Perfectum',
+                    'ru' => 'О компании',
+                    'uz' => 'Kompaniya haqida',
+                    'en' => 'About',
                 ],
                 'description' => [
                     'ru' => 'История, миссия и команда Perfectum',
@@ -61,9 +66,9 @@ class PageSettingsSeeder extends Seeder
             ],
             PageSettingKey::Tenders->value => [
                 'title' => [
-                    'ru' => 'Тендеры | Perfectum',
-                    'uz' => 'Tenderlar | Perfectum',
-                    'en' => 'Tenders | Perfectum',
+                    'ru' => 'Тендеры',
+                    'uz' => 'Tenderlar',
+                    'en' => 'Tenders',
                 ],
                 'description' => [
                     'ru' => 'Актуальные тендеры и закупки компании',
@@ -73,9 +78,9 @@ class PageSettingsSeeder extends Seeder
             ],
             PageSettingKey::Tariffs->value => [
                 'title' => [
-                    'ru' => 'Тарифы | Perfectum',
-                    'uz' => 'Tariflar | Perfectum',
-                    'en' => 'Tariffs | Perfectum',
+                    'ru' => 'Тарифы',
+                    'uz' => 'Tariflar',
+                    'en' => 'Tariffs',
                 ],
                 'description' => [
                     'ru' => 'Выберите подходящий тарифный план',
@@ -85,9 +90,9 @@ class PageSettingsSeeder extends Seeder
             ],
             PageSettingKey::Services->value => [
                 'title' => [
-                    'ru' => 'Услуги | Perfectum',
-                    'uz' => 'Xizmatlar | Perfectum',
-                    'en' => 'Services | Perfectum',
+                    'ru' => 'Услуги',
+                    'uz' => 'Xizmatlar',
+                    'en' => 'Services',
                 ],
                 'description' => [
                     'ru' => 'Дополнительные услуги и опции',
@@ -97,9 +102,9 @@ class PageSettingsSeeder extends Seeder
             ],
             PageSettingKey::News->value => [
                 'title' => [
-                    'ru' => 'Новости | Perfectum',
-                    'uz' => 'Yangiliklar | Perfectum',
-                    'en' => 'News | Perfectum',
+                    'ru' => 'Новости',
+                    'uz' => 'Yangiliklar',
+                    'en' => 'News',
                 ],
                 'description' => [
                     'ru' => 'Последние новости и события компании',
@@ -109,9 +114,9 @@ class PageSettingsSeeder extends Seeder
             ],
             PageSettingKey::Coverage->value => [
                 'title' => [
-                    'ru' => 'Зона покрытия | Perfectum',
-                    'uz' => 'Qamrov hududi | Perfectum',
-                    'en' => 'Coverage area | Perfectum',
+                    'ru' => 'Зона покрытия',
+                    'uz' => 'Qamrov hududi',
+                    'en' => 'Coverage area',
                 ],
                 'description' => [
                     'ru' => 'Проверьте покрытие сети в вашем районе',
@@ -121,9 +126,9 @@ class PageSettingsSeeder extends Seeder
             ],
             PageSettingKey::FreeNumbers->value => [
                 'title' => [
-                    'ru' => 'Свободные номера | Perfectum',
-                    'uz' => 'Bo‘sh raqamlar | Perfectum',
-                    'en' => 'Free numbers | Perfectum',
+                    'ru' => 'Свободные номера',
+                    'uz' => 'Bo‘sh raqamlar',
+                    'en' => 'Free numbers',
                 ],
                 'description' => [
                     'ru' => 'Подберите красивый номер для себя',
@@ -134,11 +139,16 @@ class PageSettingsSeeder extends Seeder
         ];
 
         foreach ($rows as $name => $row) {
+            $metaTitle = $row['meta_title']
+                ?? array_map(fn (string $title): string => "{$title} | Perfectum", $row['title']);
+
             PageSetting::updateOrCreate(
                 ['name' => $name],
                 [
                     'title' => $row['title'],
                     'description' => $row['description'],
+                    'meta_title' => $metaTitle,
+                    'meta_description' => $row['description'],
                     'is_published' => true,
                 ],
             );

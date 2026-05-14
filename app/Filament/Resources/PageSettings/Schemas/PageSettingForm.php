@@ -36,6 +36,13 @@ class PageSettingForm
                                 Textarea::make('description')
                                     ->label(__('app.label.description'))
                                     ->rows(3),
+
+                                TextInput::make('meta_title')
+                                    ->label(__('app.label.meta_title')),
+
+                                Textarea::make('meta_description')
+                                    ->label(__('app.label.meta_description'))
+                                    ->rows(3),
                             ]),
 
                         Toggle::make('is_published')

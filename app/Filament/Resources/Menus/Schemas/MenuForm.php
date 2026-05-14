@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Menus\Schemas;
 
 use AbdulmajeedJamaan\FilamentTranslatableTabs\TranslatableTabs;
 use App\Enums\MenuPosition;
+use App\Filament\Support\ImageUpload;
 use App\Models\Menu;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -37,12 +38,12 @@ class MenuForm
                                     ->label(__('app.label.footer_column'))
                                     ->options([1 => '1', 2 => '2', 3 => '3', 4 => '4'])
                                     ->helperText(__('app.helper.footer_column'))
-                                    ->visible(fn (Get $get): bool => $get('position') === MenuPosition::Footer->value),
+                                    ->visible(fn (Get $get): bool => self::positionValue($get) === MenuPosition::Footer->value),
 
                                 Select::make('parent_id')
                                     ->label(__('app.label.parent_menu'))
                                     ->options(fn (Get $get, ?Menu $record): array => Menu::query()
-                                        ->where('position', $get('position'))
+                                        ->where('position', self::positionValue($get))
                                         ->whereNull('parent_id')
                                         ->when($record, fn ($query) => $query->whereKeyNot($record->getKey()))
                                         ->get()
@@ -69,10 +70,9 @@ class MenuForm
 
                         Tabs\Tab::make(__('app.label.tab_display'))
                             ->schema([
-                                TextInput::make('icon')
+                                ImageUpload::make('menus', field: 'icon')
                                     ->label(__('app.label.icon'))
-                                    ->helperText(__('app.helper.menu_icon'))
-                                    ->maxLength(255),
+                                    ->helperText(__('app.helper.menu_icon')),
 
                                 Select::make('target')
                                     ->label(__('app.label.target'))
@@ -96,5 +96,16 @@ class MenuForm
                             ]),
                     ]),
             ]);
+    }
+
+    private static function positionValue(Get $get): ?string
+    {
+        $position = $get('position');
+
+        if ($position instanceof MenuPosition) {
+            return $position->value;
+        }
+
+        return $position;
     }
 }

@@ -37,17 +37,16 @@ class PageForm
                                     ->live()
                                     ->afterStateUpdated(fn (Set $set) => $set('parent_id', null))
                                     ->helperText(fn (Get $get): string => __('app.helper.page_route')
-                                        . ': /' . ($get('section') ?: 'pages')
+                                        . ': /' . self::sectionValue($get)
                                         . '/' . ($get('slug') ?: 'slug')),
 
                                 TextInput::make('slug')
                                     ->label(__('app.label.slug'))
-                                    ->helperText(__('app.helper.page_slug'))
                                     ->maxLength(255)
                                     ->live(onBlur: true)
                                     ->unique(
                                         ignoreRecord: true,
-                                        modifyRuleUsing: fn (Unique $rule, Get $get) => $rule->where('section', $get('section')),
+                                        modifyRuleUsing: fn (Unique $rule, Get $get) => $rule->where('section', self::sectionValue($get)),
                                     ),
 
                                 Select::make('template')
@@ -60,7 +59,7 @@ class PageForm
                                 Select::make('parent_id')
                                     ->label(__('app.label.parent_page'))
                                     ->options(fn (Get $get, ?Page $record): array => Page::query()
-                                        ->where('section', $get('section'))
+                                        ->where('section', self::sectionValue($get))
                                         ->when($record, fn ($query) => $query->whereKeyNot($record->getKey()))
                                         ->pluck('slug', 'id')
                                         ->toArray())
@@ -109,5 +108,16 @@ class PageForm
                             ]),
                     ]),
             ]);
+    }
+
+    private static function sectionValue(Get $get): string
+    {
+        $section = $get('section');
+
+        if ($section instanceof PageSection) {
+            return $section->value;
+        }
+
+        return (string) ($section ?: PageSection::Pages->value);
     }
 }

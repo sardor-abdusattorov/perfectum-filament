@@ -14,30 +14,27 @@
                 <div class="col-12 new-header__col">
                     <div class="new-header__left">
                         <ul>
-                            <li class="">
-                                <a href="static-pages/karera.html">Karyera</a>
-                            </li>
-                            <li class="">
-                                <a href="static-pages/kontakty.html">Kontaktlar</a>
-                            </li>
-                            <li>
-                                <a href="#">Ko&#039;proq...</a>
-                                <ul>
-                                    <li class="">
-                                        <a href="about.html">Biz haqida</a>
-                                    </li>
-                                    <li class="">
-                                        <a href="static-pages/zakupki.html">Xaridlar</a>
-                                    </li>
-                                    <li class="">
-                                        <a href="additionals/faq.html">FAQ</a>
-                                    </li>
-                                    <li class="">
-                                        <a href="static-pages/yuridiceskie-dokumenty.html"> Yuridik
-                                            hujjatlar</a>
-                                    </li>
-                                </ul>
-                            </li>
+                            @foreach($topMenus as $menu)
+                                <li class="{{ $menu->children->isNotEmpty() ? 'has-children' : '' }}">
+                                    <a href="{{ $menu->url === '#' ? '#' : LaravelLocalization::getLocalizedURL(null, url($menu->url)) }}"
+                                       @if($menu->target) target="{{ $menu->target }}" @endif>
+                                        {{ $menu->name }}
+                                    </a>
+
+                                    @if($menu->children->isNotEmpty())
+                                        <ul>
+                                            @foreach($menu->children as $child)
+                                                <li class="">
+                                                    <a href="{{ $child->url === '#' ? '#' : LaravelLocalization::getLocalizedURL(null, url($child->url)) }}"
+                                                       @if($child->target) target="{{ $child->target }}" @endif>
+                                                        {{ $child->name }}
+                                                    </a>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    @endif
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                     <div class="new-header__right">

@@ -324,6 +324,9 @@ p {
 .new-header__top .new-header__phones ul li a svg {
   margin-right: 10px;
 }
+.new-header a:not([href]) {
+  cursor: pointer;
+}
 .new-header__top .new-header__language {
   margin-left: 60px;
 }
@@ -344,7 +347,7 @@ p {
 .new-header__top .new-header__language ul li a svg {
   margin-right: 10px;
 }
-.new-header__top .new-header__language ul li ol {
+.new-header__top .new-header__language ul li ul {
   padding: 23px 17.5px;
   border-radius: 16px;
   background-color: #fff;
@@ -362,7 +365,7 @@ p {
     0 642px 250px 0 rgba(35, 58, 105, 0.0117647059),
     0 1003px 250px 0 rgba(35, 58, 105, 0);
 }
-.new-header__top .new-header__language ul li ol:after {
+.new-header__top .new-header__language ul li ul:after {
   content: "";
   position: absolute;
   top: -30px;
@@ -370,7 +373,7 @@ p {
   width: 100%;
   height: 30px;
 }
-.new-header__top .new-header__language ul li ol::before {
+.new-header__top .new-header__language ul li ul::before {
   content: "";
   position: absolute;
   top: -10px;
@@ -387,10 +390,10 @@ p {
     0 642px 250px 0 rgba(35, 58, 105, 0.0117647059),
     0 1003px 250px 0 rgba(35, 58, 105, 0);
 }
-.new-header__top .new-header__language ul li ol li {
+.new-header__top .new-header__language ul li ul li {
   margin-bottom: 10px;
 }
-.new-header__top .new-header__language ul li ol li a {
+.new-header__top .new-header__language ul li ul li a {
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1.4444444444;
@@ -399,10 +402,10 @@ p {
   text-decoration: none;
   display: block;
 }
-.new-header__top .new-header__language ul li ol li:last-child {
+.new-header__top .new-header__language ul li ul li:last-child {
   margin-bottom: 0;
 }
-.new-header__top .new-header__language ul li.open ol {
+.new-header__top .new-header__language ul li.open ul {
   opacity: 1;
   visibility: visible;
 }

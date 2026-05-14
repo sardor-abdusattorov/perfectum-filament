@@ -89,9 +89,8 @@ return [
         'position' => 'Joylashuv',
         'footer_column' => 'Futer ustuni',
         'parent_menu' => 'Asosiy band',
-        'menu_link_kind' => 'Havola turi',
-        'menu_link_page' => 'Sayt sahifasi',
         'menu_link_url' => 'Havola',
+        'tab_display' => 'Ko‘rinishi',
         'target' => 'Havolani ochish',
     ],
     'helper' => [
@@ -116,8 +115,8 @@ return [
         'social_image' => 'SVG / PNG / WebP ikonka, 512 KB gacha',
         'page_slug' => 'Bo‘sh qoldirilsa — sarlavhadan avtomatik yaratiladi',
         'page_route' => 'Sahifa manzili',
-        'menu_name' => 'Sahifaga havola uchun bo‘sh qoldirilsa — sahifa nomi olinadi',
         'menu_icon' => 'Menyu bandi uchun ixtiyoriy ikonka',
+        'footer_column' => 'Futerdagi ustun raqami (1–4)',
     ],
     'status' => [
         'published' => 'Chop etilgan',
@@ -148,7 +147,8 @@ return [
         'contacts' => 'Kontaktlar',
     ],
     'menu_position' => [
-        'header' => 'Shapka',
+        'header_top' => 'Yuqori menyu',
+        'header_main' => 'Asosiy menyu',
         'footer' => 'Futer',
         'hamburger' => 'Mobil menyu',
     ],

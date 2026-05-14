@@ -13,9 +13,8 @@ return new class extends Migration
             $table->foreignId('parent_id')->nullable()->constrained('menus')->nullOnDelete();
             $table->string('position')->index();
             $table->unsignedTinyInteger('footer_column')->nullable();
-            $table->foreignId('page_id')->nullable()->constrained('pages')->nullOnDelete();
+            $table->json('name');
             $table->string('url')->nullable();
-            $table->json('name')->nullable();
             $table->string('icon')->nullable();
             $table->string('target')->default('_self');
             $table->unsignedInteger('sort')->default(0);

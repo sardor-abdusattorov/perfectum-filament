@@ -50,9 +50,4 @@ class Page extends Model
     {
         return $this->hasMany(self::class, 'parent_id')->orderBy('sort');
     }
-
-    public function menus(): HasMany
-    {
-        return $this->hasMany(Menu::class);
-    }
 }

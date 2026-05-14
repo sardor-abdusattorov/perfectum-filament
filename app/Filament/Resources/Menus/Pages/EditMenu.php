@@ -18,15 +18,4 @@ class EditMenu extends EditRecord
             DeleteAction::make(),
         ];
     }
-
-    protected function mutateFormDataBeforeSave(array $data): array
-    {
-        if (! empty($data['page_id'])) {
-            $data['url'] = null;
-        } else {
-            $data['page_id'] = null;
-        }
-
-        return $data;
-    }
 }

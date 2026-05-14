@@ -4,7 +4,6 @@ namespace App\Filament\Resources\Menus\Tables;
 
 use App\Enums\MenuPosition;
 use App\Enums\PublishedStatus;
-use App\Models\Menu;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
@@ -33,9 +32,8 @@ class MenusTable
                     ->searchable()
                     ->wrap(),
 
-                TextColumn::make('link')
+                TextColumn::make('url')
                     ->label(__('app.label.menu_link_url'))
-                    ->state(fn (Menu $record): string => $record->link)
                     ->default(__('app.label.empty'))
                     ->wrap(),
 

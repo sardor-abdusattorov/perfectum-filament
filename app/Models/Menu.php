@@ -18,9 +18,8 @@ class Menu extends Model
         'parent_id',
         'position',
         'footer_column',
-        'page_id',
-        'url',
         'name',
+        'url',
         'icon',
         'target',
         'sort',
@@ -44,30 +43,5 @@ class Menu extends Model
     public function children(): HasMany
     {
         return $this->hasMany(self::class, 'parent_id')->orderBy('sort');
-    }
-
-    public function page(): BelongsTo
-    {
-        return $this->belongsTo(Page::class);
-    }
-
-    public function getLinkAttribute(): string
-    {
-        if ($this->page_id && $this->page) {
-            return $this->page->url;
-        }
-
-        return (string) $this->url;
-    }
-
-    public function getTitleAttribute(): ?string
-    {
-        $name = $this->getTranslation('name', app()->getLocale(), false);
-
-        if ($name) {
-            return $name;
-        }
-
-        return $this->page?->getTranslation('title', app()->getLocale(), false);
     }
 }

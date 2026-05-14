@@ -6,7 +6,8 @@ use Filament\Support\Contracts\HasLabel;
 
 enum MenuPosition: string implements HasLabel
 {
-    case Header = 'header';
+    case HeaderTop = 'header_top';
+    case HeaderMain = 'header_main';
     case Footer = 'footer';
     case Hamburger = 'hamburger';
 

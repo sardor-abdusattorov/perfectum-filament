@@ -89,9 +89,8 @@ return [
         'position' => 'Position',
         'footer_column' => 'Footer column',
         'parent_menu' => 'Parent item',
-        'menu_link_kind' => 'Link type',
-        'menu_link_page' => 'Site page',
         'menu_link_url' => 'Link',
+        'tab_display' => 'Display',
         'target' => 'Link opening',
     ],
     'helper' => [
@@ -116,8 +115,8 @@ return [
         'social_image' => 'SVG / PNG / WebP icon, up to 512 KB',
         'page_slug' => 'Leave empty to generate automatically from the title',
         'page_route' => 'Page URL',
-        'menu_name' => 'Leave empty for a page link to reuse the page title',
         'menu_icon' => 'Optional menu item icon',
+        'footer_column' => 'Column number in the footer (1–4)',
     ],
     'status' => [
         'published' => 'Published',
@@ -148,7 +147,8 @@ return [
         'contacts' => 'Contacts',
     ],
     'menu_position' => [
-        'header' => 'Header',
+        'header_top' => 'Top menu',
+        'header_main' => 'Main menu',
         'footer' => 'Footer',
         'hamburger' => 'Mobile menu',
     ],

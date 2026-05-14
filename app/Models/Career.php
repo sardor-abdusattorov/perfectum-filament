@@ -36,6 +36,6 @@ class Career extends Model
 
     public function getUrlAttribute(): string
     {
-        return url("/career/{$this->slug}");
+        return url("/careers/{$this->slug}");
     }
 }

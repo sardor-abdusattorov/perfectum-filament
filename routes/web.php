@@ -15,8 +15,10 @@ Route::group(
     function () {
         Route::get('/', [HomeController::class, 'index'])->name('home');
 
-        Route::get('/career', [CareersController::class, 'index'])->name('careers.index');
-        Route::get('/career/{slug}', [CareersController::class, 'show'])->name('careers.show');
+        Route::prefix('careers')->name('careers.')->group(function () {
+            Route::get('/', [CareersController::class, 'index'])->name('index');
+            Route::get('/{slug}', [CareersController::class, 'show'])->name('show');
+        });
 
         Route::get('/{section}/{slug}', [PagesController::class, 'show'])
             ->whereIn('section', array_column(PageSection::cases(), 'value'))

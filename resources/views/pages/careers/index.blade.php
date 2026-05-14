@@ -1,7 +1,7 @@
 @extends('layouts.primary')
 
-@section('title', page_setting_title(\App\Enums\PageSettingKey::Career))
-@section('meta_description', page_setting_description(\App\Enums\PageSettingKey::Career))
+@section('title', $page?->title)
+@section('meta_description', $page?->description)
 
 @section('content')
 
@@ -9,7 +9,7 @@
         <div class="my-container">
             <div class="section__top-secondary section__top-flex">
                 <h2 class="block__title">
-                    {{ page_setting_title(\App\Enums\PageSettingKey::Career) ?? __('app.page_settings.career') }}
+                    {{ $page?->title }}
                 </h2>
             </div>
             <div class="section__grid">

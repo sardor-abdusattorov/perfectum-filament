@@ -11,7 +11,7 @@ class CareersController extends Controller
 {
     public function index(): View
     {
-        $page = PageSetting::get(PageSettingKey::Career);
+        $page = PageSetting::get(PageSettingKey::Careers);
 
         $careers = Career::query()
             ->where('is_published', true)
@@ -23,7 +23,7 @@ class CareersController extends Controller
 
     public function show(string $slug): View
     {
-        $page = PageSetting::get(PageSettingKey::Career);
+        $page = PageSetting::get(PageSettingKey::Careers);
 
         $career = Career::query()
             ->where('slug', $slug)

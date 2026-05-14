@@ -6,15 +6,17 @@ use Filament\Support\Contracts\HasLabel;
 
 enum PageSettingKey: string implements HasLabel
 {
-    case home = 'home';
+    case Home = 'home';
+    case Careers = 'careers';
+    case Contacts = 'contacts';
+    case About = 'about';
+    case Tenders = 'tenders';
     case Tariffs = 'tariffs';
     case Services = 'services';
     case News = 'news';
-    case Faq = 'faq';
+
     case Coverage = 'coverage';
     case FreeNumbers = 'free_numbers';
-    case Career = 'career';
-    case Contacts = 'contacts';
 
     public function getLabel(): string
     {

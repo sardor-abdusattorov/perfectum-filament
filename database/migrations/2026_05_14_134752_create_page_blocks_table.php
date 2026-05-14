@@ -6,20 +6,23 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('page_blocks', function (Blueprint $table) {
             $table->id();
+            $table->string('page')->index();
+            $table->json('title');
+            $table->json('description')->nullable();
+            $table->json('content')->nullable();
+            $table->string('image')->nullable();
+            $table->unsignedInteger('sort')->default(0);
+            $table->boolean('is_published')->default(true);
             $table->timestamps();
+
+            $table->index(['page', 'is_published', 'sort']);
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('page_blocks');

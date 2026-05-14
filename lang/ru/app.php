@@ -78,6 +78,8 @@ return [
         'pages_plural' => 'Страницы',
         'page_settings_single' => 'Настройка страницы',
         'page_settings_plural' => 'Настройки страниц',
+        'page_blocks_single' => 'Блок страницы',
+        'page_blocks_plural' => 'Блоки страниц',
         'menus_single' => 'Меню',
         'menus_plural' => 'Меню',
         'careers_single' => 'Вакансия',

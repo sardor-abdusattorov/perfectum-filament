@@ -78,6 +78,8 @@ return [
         'pages_plural' => 'Sahifalar',
         'page_settings_single' => 'Sahifa sozlamasi',
         'page_settings_plural' => 'Sahifa sozlamalari',
+        'page_blocks_single' => 'Sahifa bloki',
+        'page_blocks_plural' => 'Sahifa bloklari',
         'menus_single' => 'Menyu',
         'menus_plural' => 'Menyular',
         'careers_single' => 'Vakansiya',

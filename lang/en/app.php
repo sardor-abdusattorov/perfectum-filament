@@ -78,6 +78,8 @@ return [
         'pages_plural' => 'Pages',
         'page_settings_single' => 'Page setting',
         'page_settings_plural' => 'Page settings',
+        'page_blocks_single' => 'Page block',
+        'page_blocks_plural' => 'Page blocks',
         'menus_single' => 'Menu',
         'menus_plural' => 'Menus',
         'careers_single' => 'Vacancy',

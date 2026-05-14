@@ -42,7 +42,8 @@
             "app/Support/helpers/settings.php",
             "app/Support/helpers/site-settings.php",
             "app/Support/helpers/translator.php",
-            "app/Support/helpers/page-settings.php"
+            "app/Support/helpers/page-settings.php",
+            "app/Support/helpers/page-blocks.php"
         ]
     },
     "autoload-dev": {

@@ -3537,7 +3537,7 @@ p {
   right: 0;
   -webkit-filter: brightness(30%);
   filter: brightness(30%);
-  background-image: url('/images/icons/breadcrumbs-icon.svg');
+  background-image: url('../images/icons/breadcrumbs-icon.svg');
 }
 
 .flex-block {

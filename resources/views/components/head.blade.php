@@ -20,8 +20,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
     <link rel="manifest" href="/images/favicon/site.webmanifest">
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-
     <title>@yield('title', $seoTitle)</title>
     <meta property="og:title" content="@yield('title', $seoTitle)">
 
@@ -42,6 +40,8 @@
     <meta property="og:url" content="{{ url()->current() }}">
 
     <meta property="og:type" content="website">
+
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     {{-- Yandex Metrika --}}
     @if(settings('metrics.yandex'))

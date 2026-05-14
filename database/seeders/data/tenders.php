@@ -15,7 +15,7 @@ return [
             'en' => '<p><strong>Mandatory conditions for submitting a bid:</strong><br>The bid must be submitted electronically (in free form by e-mail, indicating a contact person), with a scanned copy of the signed non-disclosure agreement and the certificate of state registration attached.</p><p>The prices offered must remain valid until 31.12.2026.<br>Tender currency — UZS for local participants, USD for non-residents of Uzbekistan.</p><p><strong>Responsible manager:</strong><br>R. T. Khaertdinov<br>Procurement Manager of RWC LLC</p><p><strong>Contacts:</strong><br>Tel.: +998 98 3051350<br>E-mail: rafael.khaertdinov@perfectum.uz</p><p>Applications are accepted until 18:00 on 24.04.2026, Tashkent time (GMT+5).</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/UOPu94RajLDnLCqB8qKLNK1gtv64x1WMmA0VRjyQ.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/UOPu94RajLDnLCqB8qKLNK1gtv64x1WMmA0VRjyQ.docx'],
         ],
     ],
     [
@@ -32,7 +32,7 @@ return [
             'en' => '<p>To register a bid for this tender, send scanned copies of the following documents to anvar.ibragimov@perfectum.uz:<br>1. A free-form application letter by e-mail, indicating a contact person;<br>2. The certificate of state registration;<br>3. The NDA completed by the participant; the NDA template is available for download via the link below.</p><p>Applications are accepted until 18:00 on 13.04.2026, Tashkent time (GMT+5).<br>The technical specification and procurement scope are sent in the RFP file to all participants simultaneously after the application collection period ends.</p><p><strong>Mandatory conditions for concluding the contract:</strong><br>Payment terms for services: 100% post-payment within 15 calendar days after the parties sign the acceptance act.<br>The prices offered must remain valid until 01.06.2027.<br>Tender currency — UZS for local participants, USD for non-residents of Uzbekistan.</p><p><strong>Responsible manager:</strong><br>A. B. Ibragimov<br>Procurement Manager of RWC LLC</p><p><strong>Contacts:</strong><br>Tel.: +998 98 3051353<br>E-mail: anvar.ibragimov@perfectum.uz</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/GLWpfHIOxSy3sdqUyqyjrNvMA1sEfGb1UI517wpB.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/GLWpfHIOxSy3sdqUyqyjrNvMA1sEfGb1UI517wpB.docx'],
         ],
     ],
     [
@@ -49,7 +49,7 @@ return [
             'en' => '<p><strong>Mandatory conditions for submitting a bid.</strong> To register a bid for this tender, send the following to rafael.khaertdinov@perfectum.uz:<br>1. A free-form application letter by e-mail, indicating a contact person and their phone number;<br>2. A copy of the certificate of state registration;<br>3. The non-disclosure agreement (NDA) completed by the participant; the NDA template is available for download via the link below.</p><p>Applications are accepted until 18:00 on 25.03.2026, Tashkent time (GMT+5).<br>The technical specification and procurement scope are sent in the RFP file to all participants simultaneously after the application collection period ends.</p><p><strong>Mandatory conditions for concluding the contract:</strong><br>Payment terms for goods: 30% prepayment within 15 calendar days, 70% post-payment within 15 calendar days after the parties sign the acceptance act.<br>Payment terms for services: 100% post-payment within 15 calendar days after the parties sign the acceptance act.<br>The prices offered must remain valid until 31.12.2026.<br>Tender currency — UZS for local participants, USD for non-residents of Uzbekistan.</p><p><strong>Responsible manager:</strong><br>Rafael Khaertdinov<br>Procurement Manager of RWC LLC</p><p><strong>Contacts:</strong><br>Tel.: +998 98 3051350<br>E-mail: rafael.khaertdinov@perfectum.uz</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/uewZrT8uPma0dbRiP7zmuThHJjOmvmyflTPHVjwH.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/uewZrT8uPma0dbRiP7zmuThHJjOmvmyflTPHVjwH.docx'],
         ],
     ],
     [
@@ -66,7 +66,7 @@ return [
             'en' => '<p><strong>Mandatory conditions for submitting a bid.</strong> To register a bid for this tender, send the following to rafael.khaertdinov@perfectum.uz:<br>1. A free-form application letter by e-mail, indicating a contact person and their phone number;<br>2. A copy of the certificate of state registration;<br>3. The non-disclosure agreement (NDA) completed by the participant; the NDA template is available for download via the link below.</p><p>Applications are accepted until 18:00 on 25.03.2026, Tashkent time (GMT+5).<br>The technical specification and procurement scope are sent in the RFP file to all participants simultaneously after the application collection period ends.</p><p><strong>Mandatory conditions for concluding the contract:</strong><br>Payment terms for goods: 30% prepayment within 15 calendar days, 70% post-payment within 15 calendar days after the parties sign the acceptance act.<br>Payment terms for services: 100% post-payment within 15 calendar days after the parties sign the acceptance act.<br>The prices offered must remain valid until 31.12.2026.<br>Tender currency — UZS for local participants, USD for non-residents of Uzbekistan.</p><p><strong>Responsible manager:</strong><br>Rafael Khaertdinov<br>Procurement Manager of RWC LLC</p><p><strong>Contacts:</strong><br>Tel.: +998 98 3051350<br>E-mail: rafael.khaertdinov@perfectum.uz</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/1nwV6GV8Suk5HJdE7SzPm2YpCboiea7X8pCsZNXI.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/1nwV6GV8Suk5HJdE7SzPm2YpCboiea7X8pCsZNXI.docx'],
         ],
     ],
     [
@@ -83,7 +83,7 @@ return [
             'en' => '<p>To register a bid for this tender, send scanned copies of the following documents to anvar.ibragimov@perfectum.uz:<br>1. A free-form application letter by e-mail, indicating a contact person;<br>2. The certificate of state registration;<br>3. The NDA completed by the participant; the NDA template is available for download via the link below.</p><p>Applications are accepted until 18:00 on 18.03.2026, Tashkent time (GMT+5).<br>The technical specification and procurement scope are sent in the RFP file to all participants simultaneously after the application collection period ends.</p><p><strong>Mandatory conditions for concluding the contract:</strong><br>Payment terms for goods: 30% prepayment within 15 calendar days, 70% post-payment within 15 calendar days after the parties sign the acceptance act.<br>Payment terms for services: 100% post-payment within 15 calendar days after the parties sign the acceptance act.<br>The prices offered must remain valid until 18.03.2027.<br>Tender currency — UZS for local participants, USD for non-residents of Uzbekistan.</p><p><strong>Responsible manager:</strong><br>A. B. Ibragimov<br>Procurement Manager of RWC LLC</p><p><strong>Contacts:</strong><br>Tel.: +998 98 3051353<br>E-mail: anvar.ibragimov@perfectum.uz</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/PY7aKUqSy1ECdaJHzZXWRjzFmdllE31I6a9G2hL8.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/PY7aKUqSy1ECdaJHzZXWRjzFmdllE31I6a9G2hL8.docx'],
         ],
     ],
     [
@@ -100,7 +100,7 @@ return [
             'en' => '<p>Mandatory conditions when concluding a service contract:<br>The tender currency is US dollars. If a local company wins, its bid is converted into national currency at the Central Bank of Uzbekistan rate on the acceptance date and recorded in the contract.</p><p>To register a bid, the following must be sent to the e-mail below:<br>1. A scan of a free-form letter on the participating company letterhead, indicating a contact person;<br>2. A scan of the signed NDA (download link below);<br>3. A scan of the company certificate of state registration.</p><p>Responsible manager:<br>Shukhrat Rizakulov<br>Procurement Manager of RWC LLC</p><p>Contacts:<br>Tel.: +998 90 357-77-80 (WhatsApp, Telegram)<br>E-mail: shuxrat.rizakulov@perfectum.uz</p><p>Application deadline: applications are accepted until 12:00 on 11.03.2026, Tashkent time.</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/BYDPdHpdzOal7M6GneEabRH8GmbrPmxiI32iGBts.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/BYDPdHpdzOal7M6GneEabRH8GmbrPmxiI32iGBts.docx'],
         ],
     ],
     [
@@ -117,7 +117,7 @@ return [
             'en' => '<p>Mandatory conditions for concluding the contract:<br>Tender currency — UZS for local participants, USD for non-residents of Uzbekistan.</p><p>To register a bid, the following must be sent to the e-mail below:<br>1. A free-form e-mail letter from the participating company, indicating the full name and phone number of a contact person;<br>2. A scan of the signed non-disclosure agreement (download link below);<br>3. A scan of the certificate of state registration.</p><p>Responsible manager:<br>Shukhrat Rizakulov<br>Procurement Manager of RWC LLC</p><p>Contacts:<br>Tel.: +998 90 357-77-80<br>E-mail: shuxrat.rizakulov@perfectum.uz</p><p>Application registration deadline: applications are accepted until 12:00 on 11.03.2026.</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/1ccZCDl4pSxrOnLTqWOt0fG9bI6ak77jJDJo7Fq8.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/1ccZCDl4pSxrOnLTqWOt0fG9bI6ak77jJDJo7Fq8.docx'],
         ],
     ],
     [
@@ -134,7 +134,7 @@ return [
             'en' => '<p>Mandatory conditions when concluding a service contract:<br>The tender currency is US dollars. If a local company wins, its bid is converted into national currency at the Central Bank of Uzbekistan rate on the acceptance date and recorded in the contract.</p><p>To register a bid, the following must be sent to the e-mail below:<br>1. A scan of a free-form letter on the participating company letterhead, indicating a contact person;<br>2. A scan of the signed NDA (download link below);<br>3. A scan of the company certificate of state registration.</p><p>Responsible manager:<br>Shukhrat Rizakulov<br>Procurement Manager of RWC LLC</p><p>Contacts:<br>Tel.: +998 90 357-77-80 (WhatsApp, Telegram)<br>E-mail: shuxrat.rizakulov@perfectum.uz</p><p>Application deadline: applications are accepted until 18:00 on 19.02.2026, Tashkent time.</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/dzyfWKojfnPNrkFNdUCXLR9gpJszQhuqt5oLzLR3.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/dzyfWKojfnPNrkFNdUCXLR9gpJszQhuqt5oLzLR3.docx'],
         ],
     ],
     [
@@ -151,7 +151,7 @@ return [
             'en' => '<p>Mandatory conditions for concluding the contract:<br>Tender currency — UZS for local participants, USD for non-residents of Uzbekistan.</p><p>To register a bid, the following must be sent to the e-mail below:<br>1. A free-form e-mail letter from the participating company, indicating the full name and phone number of a contact person;<br>2. A scan of the signed non-disclosure agreement (download link below);<br>3. A scan of the certificate of state registration.</p><p>Responsible manager:<br>Shukhrat Rizakulov<br>Procurement Manager of RWC LLC</p><p>Contacts:<br>Tel.: +998 90 357-77-80<br>E-mail: shuxrat.rizakulov@perfectum.uz</p><p>Application registration deadline: applications are accepted until 18:00 on 19.02.2026.</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/si12TbuUezL7wgKnPBMKAqy7pxGSFKu9hSJ0Ua1H.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/si12TbuUezL7wgKnPBMKAqy7pxGSFKu9hSJ0Ua1H.docx'],
         ],
     ],
     [
@@ -168,7 +168,7 @@ return [
             'en' => '<p><strong>Mandatory conditions for submitting a bid:</strong><br>The bid must be submitted electronically (in free form by e-mail, indicating a contact person), with a scanned copy of the signed non-disclosure agreement and the certificate of state registration attached.</p><p><strong>Payment terms:</strong><br>1) Advance payment (30%) — within 10 banking days after the contract is signed and work begins.<br>2) Final payment (70%) — within 15 banking days from the date the parties sign the act of completed work.</p><p>The prices offered must remain valid until 31.08.2026.<br>Tender currency — UZS (Uzbek som).</p><p><strong>Responsible manager:</strong><br>R. T. Khaertdinov<br>Procurement Manager of RWC LLC</p><p><strong>Contacts:</strong><br>Tel.: +998 98 3051350<br>E-mail: rafael.khaertdinov@perfectum.uz</p><p>Applications are accepted until 18:00 on 11.02.2026, Tashkent time (GMT+5).</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/dnOoRWhqetXm4V4sOGzW83egWUs34NHHi0APWjHu.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/dnOoRWhqetXm4V4sOGzW83egWUs34NHHi0APWjHu.docx'],
         ],
     ],
     [
@@ -185,7 +185,7 @@ return [
             'en' => '<p>Mandatory conditions for concluding the contract:<br>- tender currency – UZS (Uzbek som)</p><p>To register a bid, the following must be sent to the e-mail below:</p><p>1. A free-form e-mail letter from the participating company, indicating the full name and phone number of a contact person;<br>2. A scan of the signed non-disclosure agreement (download link below);<br>3. A scan of the certificate of state registration.</p><p>Responsible manager:<br>Shukhrat Rizakulov<br>Procurement Manager of RWC LLC<br>Contacts:<br>Tel.: +998 90 357-77-80<br>E-mail: shuxrat.rizakulov@perfectum.uz<br>Application registration deadline:<br>Applications are accepted until 18:00 on 04 February 2026.</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/QEEUIgq4Zs3hneuxkBZ9bv3JSJxOmuHFPqnDeVi4.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/QEEUIgq4Zs3hneuxkBZ9bv3JSJxOmuHFPqnDeVi4.docx'],
         ],
     ],
     [
@@ -202,7 +202,7 @@ return [
             'en' => '<p><strong>Mandatory conditions for submitting a bid:</strong><br>- the bid must be submitted electronically (in free form by e-mail, indicating a contact person), with a scanned copy of the signed non-disclosure agreement and the certificate of state registration attached.</p><p><strong>Payment terms:</strong></p><p>Goods - 100% post-payment within 120 calendar days from the date the parties sign the acceptance and transfer act.<br>Services/works – 100% post-payment within 15 calendar days after the parties sign the act of services rendered/works performed.</p><p>- the prices offered must remain valid until 31.12.2026<br>- tender currency – UZS for local participants, USD for non-residents of Uzbekistan.</p><p><strong>Responsible manager:</strong><br>R. T. Khaertdinov<br>Procurement Manager of RWC LLC<br>Contacts:<br>Tel.: +998 98 3051350<br>E-mail: rafael.khaertdinov@perfectum.uz</p><p>Applications are accepted until 17:00 on 16.01.2026, Tashkent time (GMT+5).</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/5BXFH7zEYIhfaKJS2Oiiyf22D5D3hDxd4wvnvV1f.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/5BXFH7zEYIhfaKJS2Oiiyf22D5D3hDxd4wvnvV1f.docx'],
         ],
     ],
     [
@@ -219,7 +219,7 @@ return [
             'en' => '<p>Mandatory conditions for submitting a bid:<br>- the bid must be submitted electronically (in free form by e-mail, indicating a contact person), with a scanned copy of the signed non-disclosure agreement and the certificate of state registration attached.</p><p>Payment terms:</p><p>1) Advance payment (30%) — after the contract is signed and work begins.<br>2) Interim payment (20%) — after the audit of the NAS reporting and tax reporting is completed.<br>3) Final payment (50%) — within 14 calendar days from the date the full set of IFRS reporting and the final audit report are provided, subject to the absence of substantiated comments.</p><p>- the prices offered must remain valid until 31.03.2026<br>- tender currency – UZS for local participants, USD for non-residents of Uzbekistan.</p><p>Responsible manager:<br>R. T. Khaertdinov<br>Procurement Manager of RWC LLC<br>Contacts:<br>Tel.: +998 98 3051350<br>E-mail: rafael.khaertdinov@perfectum.uz</p><p>Applications are accepted until 18:00 on 19.12.2025, Tashkent time (GMT+5).</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/KhTVcDtRQXP9yPXBb1nKCWczZqNvkpSpbkkDsneI.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/KhTVcDtRQXP9yPXBb1nKCWczZqNvkpSpbkkDsneI.docx'],
         ],
     ],
     [
@@ -236,7 +236,7 @@ return [
             'en' => '<p>Mandatory conditions for submitting a bid:<br>- the bid must be submitted electronically (in free form by e-mail, indicating a contact person), with a scanned copy of the signed non-disclosure agreement and the certificate of state registration attached.</p><p>Payment terms:</p><p>Goods - 30% prepayment within 15 calendar days, 70% post-payment within 15 calendar days from the date the parties sign the acceptance and transfer act.<br>Services/works – 100% post-payment within 15 calendar days after the parties sign the act of services rendered/works performed.</p><p>- the prices offered must remain valid until 31.12.2027<br>- tender currency – UZS (Uzbek som).</p><p>Responsible manager:<br>R. T. Khaertdinov<br>Procurement Manager of RWC LLC<br>Contacts:<br>Tel.: +998 98 3051350<br>E-mail: rafael.khaertdinov@perfectum.uz</p><p>Applications are accepted until 18:00 on 14.11.2025, Tashkent time (GMT+5).</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/kW7UtlY3G3wDRHvD6KjI4kOuzXdXa7zW54El2YEo.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/kW7UtlY3G3wDRHvD6KjI4kOuzXdXa7zW54El2YEo.docx'],
         ],
     ],
     [
@@ -253,7 +253,7 @@ return [
             'en' => '<p>Mandatory conditions for concluding the contract:<br>- tender currency – UZS (Uzbek som)</p><p>To register a bid, the following must be sent to the e-mail below:</p><p>1. A free-form e-mail letter from the participating company, indicating the full name and phone number of a contact person;<br>2. A scan of the signed non-disclosure agreement (download link below);<br>3. A scan of the certificate of state registration.</p><p>Responsible manager:<br>Shukhrat Rizakulov<br>Procurement Manager of RWC LLC<br>Contacts:<br>Tel.: +998 90 357-77-80<br>E-mail: shuxrat.rizakulov@perfectum.uz<br><br>Application registration deadline:<br>Applications are accepted until 12:00 on 6 October 2025.</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/G2u29jIhdzqu0N9AKRISgloWn6C101lsuTv8QPzP.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/G2u29jIhdzqu0N9AKRISgloWn6C101lsuTv8QPzP.docx'],
         ],
     ],
     [
@@ -270,7 +270,7 @@ return [
             'en' => '<p>Mandatory conditions for submitting a bid:<br>- the bid must be submitted electronically (in free form by e-mail from the participant, indicating a contact person), with a scanned copy of the signed non-disclosure agreement and the certificate of state registration attached.</p><p>- payment terms:</p><p>Goods - 30% prepayment within 15 calendar days, 70% post-payment within 15 calendar days after the goods are delivered and the parties sign the acceptance and transfer act.<br>Services – 100% post-payment within 15 calendar days after the parties sign the act of services rendered.<br>- the prices offered must remain valid until 31.12.2025.<br>- tender currency – UZS for local participants, USD for non-residents of Uzbekistan.</p><p>Responsible manager:<br>R. T. Khaertdinov<br>Procurement Manager of RWC LLC<br>Contacts:<br>Tel.: +998 98 3051350<br>E-mail: rafael.khaertdinov@perfectum.uz</p><p>Applications are accepted until 18:00 on 12.08.2025, Tashkent time (GMT+5).</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/uOyTnpQms5WdV74tyntB6Gt95z1HGPJwIcYkqJka.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/uOyTnpQms5WdV74tyntB6Gt95z1HGPJwIcYkqJka.docx'],
         ],
     ],
     [
@@ -287,7 +287,7 @@ return [
             'en' => '<p>Mandatory conditions for submitting a bid:<br>- the bid must be submitted electronically (indicating a contact person), with a scanned copy of the signed non-disclosure agreement and the certificate of state registration of the participating company attached.</p><p>- payment terms:</p><p>Goods (software):<br>30% prepayment within 15 calendar days, 70% post-payment within 15 calendar days from the date the parties sign the goods acceptance and transfer act.</p><p>Services/works:<br>100% post-payment within 15 calendar days after the parties sign the act of services rendered/works performed.</p><p>- the prices offered must remain valid until 31.12.2025<br>- tender currency – UZS for local participants, USD for non-residents of Uzbekistan.</p><p>Responsible manager:<br>R. T. Khaertdinov<br>Procurement Manager of RWC LLC<br>Contacts:<br>Tel.: +998 98 3051350<br>E-mail: rafael.khaertdinov@perfectum.uz</p><p>Applications for participation in the tender are accepted until 18:00 on 09.07.2025, Tashkent time (GMT+5).</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/TMHY1teAbviVM1wjiljgAAScP6fxq5IQPQWXWMKx.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/TMHY1teAbviVM1wjiljgAAScP6fxq5IQPQWXWMKx.docx'],
         ],
     ],
     [
@@ -304,7 +304,7 @@ return [
             'en' => '<p>To register a bid for the tender, send scanned copies of the following documents to anvar.ibragimov@perfectum.uz:<br>1. A free-form application letter by e-mail, indicating a contact person;<br>2. The certificate of state registration;<br>3. The NDA completed by the participant; the NDA template is available for download via the link below.</p><p>This tender includes 3 lots:<br>Lot No. 1. Printed products<br>Lot No. 2. Outdoor advertising and stands<br>Lot No. 3. Corporate merch. Textiles</p><p>A tender participant has the right to submit a commercial offer for one lot, for any combination of lots, or for all lots without exception, depending on the specifics of its production and the services it provides</p><p>Applications are accepted until 18:00 on 01.07.2025, Tashkent time (GMT+5).<br>The technical specification and procurement scope are sent in the RFP file to all participants simultaneously after the application collection period ends.</p><p>Mandatory conditions for concluding the contract:<br>- payment terms for goods: 30% prepayment within 15 calendar days, 70% post-payment within 15 calendar days from the moment the parties sign the acceptance act.<br>- payment terms for services: 100% post-payment within 15 calendar days from the moment the parties sign the acceptance act.<br>- the prices offered in the commercial proposal must remain valid until 30.06.2026<br>- tender currency – UZS for local participants, USD for non-residents of Uzbekistan<br>Responsible manager:<br>A. B. Ibragimov<br>Procurement Manager of RWC LLC<br>Contacts:<br>Tel.: +998 98 3051353<br>E-mail: anvar.ibragimov@perfectum.uz</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/ChBktdds6wOQVWihiHn4231kz3dDCHAtEzuKeMjC.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/ChBktdds6wOQVWihiHn4231kz3dDCHAtEzuKeMjC.docx'],
         ],
     ],
     [
@@ -321,7 +321,7 @@ return [
             'en' => '<p>To register a bid for the tender, send scanned copies of the following documents to anvar.ibragimov@perfectum.uz:<br>1. A free-form application letter by e-mail, indicating a contact person;<br>2. The certificate of state registration;<br>3. The NDA completed by the participant; the NDA template is available for download via the link below.</p><p>Applications are accepted until 18:00 on 05.06.2025, Tashkent time (GMT+5).<br>The technical specification and procurement scope are sent in the RFP file to all participants simultaneously after the application collection period ends.</p><p>Mandatory conditions for concluding the contract:<br>- payment terms for goods: 30% prepayment within 15 calendar days, 70% post-payment within 15 calendar days from the moment the parties sign the acceptance act.<br>- payment terms for services: 100% post-payment within 15 calendar days from the moment the parties sign the acceptance act.<br>- the prices offered in the commercial proposal must remain valid until 30.05.2026<br>- tender currency – UZS for local participants, USD for non-residents of Uzbekistan<br><br>Responsible manager:<br>A. B. Ibragimov<br>Procurement Manager of RWC LLC<br>Contacts:<br>Tel.: +998 98 3051353<br>E-mail: anvar.ibragimov@perfectum.uz</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/0571BltzHAGD8aEfjadUj7mdAIBykYBQfndfBfYA.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/0571BltzHAGD8aEfjadUj7mdAIBykYBQfndfBfYA.docx'],
         ],
     ],
     [
@@ -338,7 +338,7 @@ return [
             'en' => '<p><strong>Mandatory conditions for concluding the contract:</strong><br>- tender currency – UZS (Uzbek som)<br><br><strong>To register a bid, the following must be sent to the e-mail below:</strong><br>1. A free-form e-mail letter from the participating company, indicating the full name and phone number of a contact person;<br>2. A scan of the signed non-disclosure agreement (download link below);<br>3. A scan of the certificate of state registration.</p><p><strong>Responsible manager:</strong><br>Shukhrat Rizakulov<br>Procurement Manager of RWC LLC<br>Contacts:<br>Tel.: +998 90 357-77-80<br>E-mail: shuxrat.rizakulov@perfectum.uz<br><br>Application registration deadline:<br>Applications are accepted until 12:00 on 19 May 2025.</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/sRETrgf6bwFgq1SwVvb524od9kVT3aVp8hn5nTZI.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/sRETrgf6bwFgq1SwVvb524od9kVT3aVp8hn5nTZI.docx'],
         ],
     ],
     [
@@ -355,7 +355,7 @@ return [
             'en' => '<p>Mandatory conditions for submitting a bid:<br>- the bid must be submitted electronically (in free form by e-mail, indicating a contact person and their contact details (phone number and e-mail)), with a scanned copy of the signed non-disclosure agreement and the certificate of state registration attached.</p><p>Payment terms:<br>Goods - 30% prepayment within 15 calendar days, 70% post-payment within 15 calendar days from the date the parties sign the acceptance and transfer act.<br>Services/Works – 100% post-payment within 15 calendar days after the parties sign the act of services rendered/works performed.</p><p>- the prices offered must remain valid until 31.08.2025<br>- tender currency – UZS for local participants, USD for non-residents of Uzbekistan.</p><p>Responsible manager:<br>R. T. Khaertdinov<br>Procurement Manager of RWC LLC<br>Contacts:<br>Tel.: +998 98 3051350<br>E-mail: rafael.khaertdinov@perfectum.uz</p><p>Applications are accepted until 18:00 on 05.05.2025, Tashkent time (GMT+5).</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/XbDowc3rIxgeXkjlVMFhHAnndf6llfnD8y3vZm2e.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/XbDowc3rIxgeXkjlVMFhHAnndf6llfnD8y3vZm2e.docx'],
         ],
     ],
     [
@@ -404,7 +404,7 @@ return [
             'en' => '<p><strong>Mandatory conditions for concluding the contract:</strong><br>- tender currency – UZS</p><p><strong>To register a bid, the following must be sent to the e-mail below:</strong><br>1. A free-form e-mail letter from the participating company, indicating the full name and phone number of a contact person;<br>2. A scan of the signed non-disclosure agreement (download link below);<br>3. A scan of the certificate of state registration.</p><p><strong>Responsible manager:</strong><br>Shukhrat Rizakulov<br>Procurement Manager of RWC LLC</p><p><strong>Contacts:</strong><br>Tel.: +998 90 357-77-80<br>E-mail: rshukhrat@perfectum.uz<br>Application registration deadline:<br>Applications are accepted until 18:00 on 24 April 2025.</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/pkRwnNdxTdL4Crc1W3RvVSZBo2a7QY2nALZ7NPMY.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/pkRwnNdxTdL4Crc1W3RvVSZBo2a7QY2nALZ7NPMY.docx'],
         ],
     ],
     [
@@ -421,7 +421,7 @@ return [
             'en' => '<p><strong>To register a bid for the tender, send scanned copies of the following documents to anvar.ibragimov@perfectum.uz:</strong><br>1. A free-form application letter by e-mail, indicating a contact person and phone number;<br>2. The certificate of state registration;<br>3. The NDA completed by the participant; the NDA template is available for download via the link below.</p><p>Applications are accepted until 18:00 on 24.04.2025, Tashkent time (GMT+5).<br>The technical specification and procurement scope are sent in the RFP file to all participants simultaneously after the application collection period ends, after 24.04.2025.</p><p><strong>Mandatory conditions for concluding the contract:</strong><br>- payment terms for goods: 30% prepayment within 15 calendar days, 70% post-payment within 15 calendar days from the moment the parties sign the acceptance act.<br>- payment terms for services: 100% post-payment within 15 calendar days from the moment the parties sign the acceptance act.<br>- the prices offered in the commercial proposal must remain valid until 31.12.2025<br>- tender currency – UZS for local participants, USD for non-residents of Uzbekistan</p><p><strong>Responsible manager:</strong><br>A. B. Ibragimov<br>Procurement Manager of RWC LLC<br>Contacts:<br>Tel.: +998 98 3051353<br>E-mail: anvar.ibragimov@perfectum.uz</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/VHvMAWqvH27lcTh88oEXSyyYQOwIRLBChqDA8Qpl.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/VHvMAWqvH27lcTh88oEXSyyYQOwIRLBChqDA8Qpl.docx'],
         ],
     ],
     [
@@ -438,7 +438,7 @@ return [
             'en' => '<p><strong>Mandatory conditions for submitting a bid:</strong><br>- the bid must be submitted electronically (in free form as an e-mail, indicating a contact person), with a scanned copy of the signed non-disclosure agreement and the certificate of state registration attached.</p><p><strong>Payment terms:</strong><br>Goods - 30% prepayment within 15 calendar days, 70% post-payment within 15 calendar days from the date the parties sign the acceptance and transfer act.<br>- delivery term – no more than 30 calendar days after the prepayment under the contract.<br>- warranty period - at least 36 months from the date the parties sign the acceptance and transfer act.<br>- the prices offered must remain valid until 31.08.2025<br>- tender currency – UZS for local participants, USD for non-residents of Uzbekistan.</p><p><strong>Responsible manager:</strong><br>R. T. Khaertdinov<br>Procurement Manager of RWC LLC<br>Contacts:<br>Tel.: +998 98 3051350<br>E-mail: rafael.khaertdinov@perfectum.uz</p><p>Applications are accepted until 18:00 on 24.04.2025, Tashkent time (GMT+5).</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/fjAsHnoax1tMVzipqmM2SIsGaOpHu8hyKGAxQPon.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/fjAsHnoax1tMVzipqmM2SIsGaOpHu8hyKGAxQPon.docx'],
         ],
     ],
     [
@@ -503,7 +503,7 @@ return [
             'en' => '<p><strong>Mandatory conditions for concluding the contract:</strong><br>- tender currency – UZS</p><p><strong>To register a bid, the following must be sent to the e-mail below:</strong><br>1. A free-form e-mail letter from the participating company, indicating the full name and phone number of a contact person;<br>2. A scan of the signed non-disclosure agreement (download link below);<br>3. A scan of the certificate of state registration.</p><p><strong>Responsible manager:</strong><br>Shukhrat Rizakulov<br>Procurement Manager of RWC LLC</p><p><strong>Contacts:</strong><br>Tel.: +998 90 357-77-80<br>E-mail: rshukhrat@perfectum.uz</p><p>Application registration deadline:<br>Applications are accepted until 12:00 on 15 April 2025.</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/MLpcCM9I479oy8eUxuySQZoQ7lvtXpMa4OSRyprd.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/MLpcCM9I479oy8eUxuySQZoQ7lvtXpMa4OSRyprd.docx'],
         ],
     ],
     [
@@ -712,7 +712,7 @@ return [
             'en' => '<p><strong>Mandatory conditions for concluding the contract:</strong><br>- tender currency – UZS</p><p><strong>To register a bid, the following must be sent to the e-mail below:</strong><br>1. A free-form e-mail letter from the participating company, indicating the full name and phone number of a contact person;<br>2. A scan of the signed non-disclosure agreement (download link below);<br>3. A scan of the certificate of state registration.<br><br><strong>Responsible manager:</strong><br>Shukhrat Rizakulov<br>Procurement Manager of RWC LLC</p><p><strong>Contacts:</strong><br>Tel.: +998 90 357-77-80<br>E-mail: rshukhrat@perfectum.uz</p><p><strong>Application registration deadline:</strong><br>Applications are accepted until 18:00 on 07 January 2025.</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/CLBjMMMHXmPsPMAoWc53kzfOpNkh5JMk7ZIKLTmp.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/CLBjMMMHXmPsPMAoWc53kzfOpNkh5JMk7ZIKLTmp.docx'],
         ],
     ],
     [
@@ -761,7 +761,7 @@ return [
             'en' => '<p><strong>To register a bid, the following must be sent to the e-mail below:</strong><br>1. A free-form e-mail letter from the participating company, indicating the full name and phone number of a contact person;<br>2. A scan of the signed non-disclosure agreement (download link below);<br>3. A scan of the certificate of state registration.</p><p><strong>Responsible manager:</strong><br>Shukhrat Rizakulov<br>Procurement Manager of RWC LLC</p><p><strong>Contacts:</strong><br>Tel.: +998 90 357-77-80<br>E-mail: rshukhrat@perfectum.uz</p><p><strong>Application registration deadline:</strong><br>Applications are accepted until 15:00 on 3 December 2024.</p>',
         ],
         'files' => [
-            ['name' => 'NDA.docx', 'file' => 'files/wWXKd9DMKvr1ySa9bxFsTtHeBNSs9H8B4P7c8Z7R.docx'],
+            ['name' => 'NDA.docx', 'file' => 'uploads/files/tenders/2026/05/wWXKd9DMKvr1ySa9bxFsTtHeBNSs9H8B4P7c8Z7R.docx'],
         ],
     ],
     [
@@ -1495,8 +1495,8 @@ return [
             'en' => '',
         ],
         'files' => [
-            ['name' => 'Orgtexnika.pdf', 'file' => 'files/nU1TMKSSwLJJ4SMP0e4P2R4D6EuVvoApm9PqlXcS.pdf'],
-            ['name' => '№6075, 6079.pdf', 'file' => 'files/jPXcm68UCRipBoVQ9h5okK3z8TZoGC9gIS5uxe6o.pdf'],
+            ['name' => 'Orgtexnika.pdf', 'file' => 'uploads/files/tenders/2026/05/nU1TMKSSwLJJ4SMP0e4P2R4D6EuVvoApm9PqlXcS.pdf'],
+            ['name' => '№6075, 6079.pdf', 'file' => 'uploads/files/tenders/2026/05/jPXcm68UCRipBoVQ9h5okK3z8TZoGC9gIS5uxe6o.pdf'],
         ],
     ],
 ];

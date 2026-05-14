@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Tender;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Storage;
 
 class TendersSeeder extends Seeder
 {
@@ -26,6 +27,8 @@ class TendersSeeder extends Seeder
             $tender->files()->delete();
 
             foreach ($row['files'] ?? [] as $fileSort => $file) {
+                $this->relocateLegacyFile($file['file']);
+
                 $tender->files()->create([
                     'name' => $file['name'],
                     'file' => $file['file'],
@@ -35,5 +38,25 @@ class TendersSeeder extends Seeder
         }
 
         $this->command?->info('Imported ' . count($tenders) . ' tenders.');
+    }
+
+    /**
+     * Move a file imported from the old site (flat `files/` folder) into the
+     * current upload structure. Idempotent: skips if already in place.
+     */
+    private function relocateLegacyFile(string $path): void
+    {
+        $disk = Storage::disk('public');
+
+        if ($disk->exists($path)) {
+            return;
+        }
+
+        $legacy = 'files/' . basename($path);
+
+        if ($disk->exists($legacy)) {
+            $disk->makeDirectory(dirname($path));
+            $disk->copy($legacy, $path);
+        }
     }
 }

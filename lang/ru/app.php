@@ -79,6 +79,8 @@ return [
         'page_settings_plural' => 'Настройки страниц',
         'menus_single' => 'Меню',
         'menus_plural' => 'Меню',
+        'careers_single' => 'Вакансия',
+        'careers_plural' => 'Вакансии',
         'slug' => 'Slug',
         'section' => 'Раздел',
         'template' => 'Шаблон',
@@ -91,6 +93,8 @@ return [
         'parent_menu' => 'Родительский пункт',
         'menu_link_url' => 'Ссылка',
         'tab_display' => 'Отображение',
+        'tab_files' => 'Файлы',
+        'add_file' => 'Добавить файл',
         'target' => 'Открытие ссылки',
     ],
     'helper' => [

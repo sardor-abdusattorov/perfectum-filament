@@ -79,6 +79,8 @@ return [
         'page_settings_plural' => 'Page settings',
         'menus_single' => 'Menu',
         'menus_plural' => 'Menus',
+        'careers_single' => 'Vacancy',
+        'careers_plural' => 'Vacancies',
         'slug' => 'Slug',
         'section' => 'Section',
         'template' => 'Template',
@@ -91,6 +93,8 @@ return [
         'parent_menu' => 'Parent item',
         'menu_link_url' => 'Link',
         'tab_display' => 'Display',
+        'tab_files' => 'Files',
+        'add_file' => 'Add file',
         'target' => 'Link opening',
     ],
     'helper' => [

@@ -6,6 +6,7 @@ use App\Enums\PageSection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Spatie\Translatable\HasTranslations;
 
 class Page extends Model
@@ -49,5 +50,10 @@ class Page extends Model
     public function children(): HasMany
     {
         return $this->hasMany(self::class, 'parent_id')->orderBy('sort');
+    }
+
+    public function files(): MorphMany
+    {
+        return $this->morphMany(File::class, 'fileable')->orderBy('sort');
     }
 }

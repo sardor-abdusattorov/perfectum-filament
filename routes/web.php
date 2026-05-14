@@ -1,6 +1,7 @@
 <?php
 
 use App\Enums\PageSection;
+use App\Http\Controllers\CareersController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
@@ -13,6 +14,9 @@ Route::group(
     ],
     function () {
         Route::get('/', [HomeController::class, 'index'])->name('home');
+
+        Route::get('/career', [CareersController::class, 'index'])->name('careers.index');
+        Route::get('/career/{slug}', [CareersController::class, 'show'])->name('careers.show');
 
         Route::get('/{section}/{slug}', [PagesController::class, 'show'])
             ->whereIn('section', array_column(PageSection::cases(), 'value'))

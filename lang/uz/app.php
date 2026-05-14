@@ -79,6 +79,8 @@ return [
         'page_settings_plural' => 'Sahifa sozlamalari',
         'menus_single' => 'Menyu',
         'menus_plural' => 'Menyular',
+        'careers_single' => 'Vakansiya',
+        'careers_plural' => 'Vakansiyalar',
         'slug' => 'Slug',
         'section' => 'Bo‘lim',
         'template' => 'Shablon',
@@ -91,6 +93,8 @@ return [
         'parent_menu' => 'Asosiy band',
         'menu_link_url' => 'Havola',
         'tab_display' => 'Ko‘rinishi',
+        'tab_files' => 'Fayllar',
+        'add_file' => 'Fayl qo‘shish',
         'target' => 'Havolani ochish',
     ],
     'helper' => [

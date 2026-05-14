@@ -95,6 +95,7 @@ return [
         'html_allowed' => 'Разрешена HTML-разметка',
         'social_name' => 'Необязательное название, например «Наш Telegram-канал»',
         'social_image' => 'Иконка SVG / PNG / WebP, до 512 КБ',
+        'faq_slug' => 'Уникальный идентификатор для URL (латиницей, например how-to-connect-5g)',
     ],
     'status' => [
         'published' => 'Опубликовано',

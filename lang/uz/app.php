@@ -95,6 +95,7 @@ return [
         'html_allowed' => 'HTML belgilashga ruxsat berilgan',
         'social_name' => 'Ixtiyoriy nom, masalan «Bizning Telegram kanali»',
         'social_image' => 'SVG / PNG / WebP ikonka, 512 KB gacha',
+        'faq_slug' => 'URL uchun noyob identifikator (lotin harflarida, masalan how-to-connect-5g)',
     ],
     'status' => [
         'published' => 'Chop etilgan',

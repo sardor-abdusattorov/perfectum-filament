@@ -13,7 +13,7 @@ class Faq extends Model
 
     protected $fillable = ['question', 'answer', 'slug', 'image', 'sort', 'is_published'];
 
-    public $translatable = ['question', 'answer', 'slug'];
+    public $translatable = ['question', 'answer'];
 
     protected $casts = [
         'is_published' => 'boolean',

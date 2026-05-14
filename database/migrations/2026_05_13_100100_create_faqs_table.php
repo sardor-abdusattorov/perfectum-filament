@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->json('question');
             $table->json('answer')->nullable();
-            $table->json('slug')->nullable();
+            $table->string('slug')->nullable()->unique();
             $table->string('image')->nullable();
             $table->unsignedInteger('sort')->default(0)->index();
             $table->boolean('is_published')->default(true);

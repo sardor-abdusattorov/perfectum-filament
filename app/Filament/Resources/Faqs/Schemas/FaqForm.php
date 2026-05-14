@@ -31,11 +31,13 @@ class FaqForm
                                     ->extraInputAttributes([
                                         'style' => 'min-height: 10rem; max-height: 30vh; overflow-y: auto;',
                                     ]),
-
-                                TextInput::make('slug')
-                                    ->label(__('app.label.slug'))
-                                    ->helperText(__('app.helper.unique_translation_identifier')),
                             ]),
+
+                        TextInput::make('slug')
+                            ->label(__('app.label.slug'))
+                            ->helperText(__('app.helper.faq_slug'))
+                            ->unique(ignoreRecord: true)
+                            ->maxLength(255),
 
                         ImageUpload::make('news', field: 'image')
                             ->label(__('app.label.image')),

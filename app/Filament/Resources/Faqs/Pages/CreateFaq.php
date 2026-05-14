@@ -13,9 +13,15 @@ class CreateFaq extends CreateRecord
 
     protected function mutateFormDataBeforeCreate(array $data): array
     {
-        if (empty($data['slug']) && ! empty($data['question']['ru'])) {
-            $slug = Str::slug($data['question']['ru']);
-            $data['slug'] = mb_substr($slug, 0, 64);
+        if (empty($data['slug'])) {
+            $source = $data['question']['en']
+                ?? $data['question']['ru']
+                ?? $data['question']['uz']
+                ?? '';
+
+            if ($source !== '') {
+                $data['slug'] = mb_substr(Str::slug($source), 0, 64);
+            }
         }
 
         return $data;

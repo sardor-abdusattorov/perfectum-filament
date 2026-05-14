@@ -11,7 +11,7 @@ class CareersSeeder extends Seeder
     {
         $careers = [
             [
-                'slug' => 'operator-call-centra',
+                'slug' => 'call-center-operator',
                 'sort' => 1,
                 'title' => [
                     'ru' => 'Оператор Call-центра',
@@ -30,7 +30,7 @@ class CareersSeeder extends Seeder
                 ],
             ],
             [
-                'slug' => 'inzhener-operator-otdel-ekspluatacii-kommutatorov',
+                'slug' => 'operator-engineer-switch-operations-department',
                 'sort' => 2,
                 'title' => [
                     'ru' => 'Инженер-оператор в Отдел эксплуатации коммутаторов',

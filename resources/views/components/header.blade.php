@@ -16,7 +16,7 @@
                         <ul>
                             @foreach($topMenus as $menu)
                                 <li class="{{ $menu->children->isNotEmpty() ? 'has-children' : '' }}">
-                                    <a href="{{ $menu->url === '#' ? '#' : LaravelLocalization::getLocalizedURL(null, url($menu->url)) }}"
+                                    <a @if($menu->url !== '#') href="{{ LaravelLocalization::getLocalizedURL(null, url($menu->url)) }}" @endif
                                        @if($menu->target) target="{{ $menu->target }}" @endif>
                                         {{ $menu->name }}
                                     </a>
@@ -25,7 +25,7 @@
                                         <ul>
                                             @foreach($menu->children as $child)
                                                 <li class="">
-                                                    <a href="{{ $child->url === '#' ? '#' : LaravelLocalization::getLocalizedURL(null, url($child->url)) }}"
+                                                    <a @if($child->url !== '#') href="{{ LaravelLocalization::getLocalizedURL(null, url($child->url)) }}" @endif
                                                        @if($child->target) target="{{ $child->target }}" @endif>
                                                         {{ $child->name }}
                                                     </a>
@@ -67,7 +67,7 @@
                         <div class="new-header__language">
                             <ul>
                                 <li>
-                                    <a href="#" class="new-header__language-toggle">
+                                    <a class="new-header__language-toggle">
                                         <svg width="16" height="16" viewbox="0 0 16 16" fill="none"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_4008_1099)">
@@ -98,7 +98,7 @@
                                         </svg>
                                         {{ $supportedLocales[$currentLocale]['short'] ?? strtoupper($currentLocale) }}
                                     </a>
-                                    <ol>
+                                    <ul>
                                         @foreach ($supportedLocales as $code => $properties)
                                             @if ($code !== $currentLocale)
                                                 <li>
@@ -109,7 +109,7 @@
                                                 </li>
                                             @endif
                                         @endforeach
-                                    </ol>
+                                    </ul>
                                 </li>
                             </ul>
                         </div>

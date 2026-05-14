@@ -120,7 +120,7 @@
                             <ul>
                                 <li>
                                     <a href="#" class="new-header__language-toggle">
-                                        <i class="fa-light fa-globe" aria-hidden="true"></i>
+                                        <i class="fa-solid fa-globe" aria-hidden="true"></i>
                                         {{ $supportedLocales[$currentLocale]['short'] ?? strtoupper($currentLocale) }}
                                     </a>
                                     <ol>

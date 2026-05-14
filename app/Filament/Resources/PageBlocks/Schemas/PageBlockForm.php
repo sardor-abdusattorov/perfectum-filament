@@ -73,13 +73,9 @@ class PageBlockForm
                                         DocumentUpload::make('page-blocks')
                                             ->storeFileNamesIn('name')
                                             ->required(),
-
-                                        TextInput::make('name')
-                                            ->label(__('app.label.name')),
                                     ])
                                     ->orderColumn('sort')
                                     ->reorderable()
-                                    ->columns(2)
                                     ->defaultItems(0)
                                     ->addActionLabel(__('app.label.add_file')),
                             ]),

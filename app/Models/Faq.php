@@ -11,7 +11,7 @@ class Faq extends Model
 
     protected $table = 'faqs';
 
-    protected $fillable = ['question', 'answer', 'slug', 'image', 'sort', 'is_published'];
+    protected $fillable = ['question', 'answer', 'image', 'sort', 'is_published'];
 
     public $translatable = ['question', 'answer'];
 

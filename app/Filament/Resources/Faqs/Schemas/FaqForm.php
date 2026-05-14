@@ -33,12 +33,6 @@ class FaqForm
                                     ]),
                             ]),
 
-                        TextInput::make('slug')
-                            ->label(__('app.label.slug'))
-                            ->helperText(__('app.helper.faq_slug'))
-                            ->unique(ignoreRecord: true)
-                            ->maxLength(255),
-
                         ImageUpload::make('news', field: 'image')
                             ->label(__('app.label.image')),
 

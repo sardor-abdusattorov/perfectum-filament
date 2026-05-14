@@ -1,3 +1,11 @@
+@php
+    use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+
+
+    $currentLocale = LaravelLocalization::getCurrentLocale();
+    $supportedLocales = LaravelLocalization::getSupportedLocales();
+@endphp
+
 <!-- HEADER -->
 <header class="new-header">
     <div class="new-header__top">
@@ -60,10 +68,6 @@
                             </ul>
                         </div>
                         <div class="new-header__language">
-                            @php
-                                $currentLocale = LaravelLocalization::getCurrentLocale();
-                                $supportedLocales = LaravelLocalization::getSupportedLocales();
-                            @endphp
                             <ul>
                                 <li>
                                     <a href="#" class="new-header__language-toggle">
@@ -95,32 +99,6 @@
                                                 </clippath>
                                             </defs>
                                         </svg>
-                                        {{ $supportedLocales[$currentLocale]['short'] ?? strtoupper($currentLocale) }}
-                                    </a>
-                                    <ol>
-                                        @foreach ($supportedLocales as $code => $properties)
-                                            @if ($code !== $currentLocale)
-                                                <li>
-                                                    <a rel="alternate" hreflang="{{ $code }}"
-                                                       href="{{ LaravelLocalization::getLocalizedURL($code) }}">
-                                                        {{ $properties['short'] ?? strtoupper($code) }}
-                                                    </a>
-                                                </li>
-                                            @endif
-                                        @endforeach
-                                    </ol>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="new-header__language">
-                            @php
-                                $currentLocale = LaravelLocalization::getCurrentLocale();
-                                $supportedLocales = LaravelLocalization::getSupportedLocales();
-                            @endphp
-                            <ul>
-                                <li>
-                                    <a href="#" class="new-header__language-toggle">
-                                        <i class="fa-solid fa-globe" aria-hidden="true"></i>
                                         {{ $supportedLocales[$currentLocale]['short'] ?? strtoupper($currentLocale) }}
                                     </a>
                                     <ol>

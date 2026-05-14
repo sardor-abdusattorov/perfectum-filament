@@ -7,9 +7,12 @@
 
     <div class="section__secondary section-bg">
         <div class="my-container">
+
+            <nav class="breadcrumbs"><ul class="breadcrumbs__ul"><li class="breadcrumbs__item"><a href="#!" class="breadcrumbs__link">Главная</a></li> <li class="breadcrumbs__item"><a href="#!" class="breadcrumbs__link">Часто задаваемые вопросы</a></li></ul></nav>
+
             <div class="section__top-secondary section__top-flex">
                 <h2 class="block__title">
-                    {{ $page?->title }}
+                    {{ translator('app', 'careers_title') }}
                 </h2>
             </div>
             <div class="section__grid">

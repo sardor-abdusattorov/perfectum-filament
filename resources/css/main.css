@@ -3513,7 +3513,7 @@ p {
   width: 16px;
   height: 9px;
   flex-shrink: 0;
-  background-size: contain;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-image: url('../images/icons/breadcrumbs-icon.svg');
   filter: brightness(30%);

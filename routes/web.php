@@ -3,6 +3,7 @@
 use App\Enums\PageSection;
 use App\Http\Controllers\CareersController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\TendersController;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +25,11 @@ Route::group(
         Route::prefix('tenders')->name('tenders.')->group(function () {
             Route::get('/', [TendersController::class, 'index'])->name('index');
             Route::get('/{slug}', [TendersController::class, 'show'])->name('show');
+        });
+
+        Route::prefix('news')->name('news.')->group(function () {
+            Route::get('/', [NewsController::class, 'index'])->name('index');
+            Route::get('/{slug}', [NewsController::class, 'show'])->name('show');
         });
 
         Route::get('/{section}/{slug}', [PagesController::class, 'show'])

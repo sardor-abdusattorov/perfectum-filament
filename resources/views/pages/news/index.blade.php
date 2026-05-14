@@ -12,129 +12,98 @@
 
             <div class="section__top-secondary section__top-flex">
                 <h2 class="block__title">
-                    Новости
+                    {{ $page?->title }}
                 </h2>
                 <div class="section__top-secondary--details">
-                    <div class="dropdown custom__dropdown"><button type="button" id="dropdownMenuButton"
-                                                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                                                   class="btn dropdown-toggle">
-                            2026
+                    <div class="dropdown custom__dropdown">
+                        <button type="button" id="newsYearDropdown" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" class="btn dropdown-toggle">
+                            {{ $year ?: __('app.label.all') }}
                         </button>
-                        <div aria-labelledby="dropdownMenuButton" class="dropdown-menu"><a href="#"
-                                                                                           class="dropdown-item">2020</a> <a href="#" class="dropdown-item">2021</a> <a
-                                href="#" class="dropdown-item">2022</a> <a href="#"
-                                                                           class="dropdown-item">2023</a> <a href="#" class="dropdown-item">2024</a></div>
-                    </div>
-                    <div class="dropdown custom__dropdown"><button type="button" id="dropdownMenuButton2"
-                                                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                                                   class="btn dropdown-toggle">
-                            Апрель
-                        </button>
-                        <div aria-labelledby="dropdownMenuButton2" class="dropdown-menu"><a href="#"
-                                                                                            class="dropdown-item">Январь</a> <a href="#" class="dropdown-item">Февраль</a>
-                            <a href="#" class="dropdown-item">Март</a> <a href="#"
-                                                                          class="dropdown-item">Апрель</a> <a href="#" class="dropdown-item">Май</a> <a
-                                href="#" class="dropdown-item">Июнь</a> <a href="#"
-                                                                           class="dropdown-item">Июль</a> <a href="#" class="dropdown-item">Август</a> <a
-                                href="#" class="dropdown-item">Сентябрь</a> <a href="#"
-                                                                               class="dropdown-item">Октябрь</a> <a href="#" class="dropdown-item">Ноябрь</a>
-                            <a href="#" class="dropdown-item">Декабрь</a>
+                        <div aria-labelledby="newsYearDropdown" class="dropdown-menu">
+                            <a href="{{ route('news.index') }}"
+                               class="dropdown-item {{ $year ? '' : 'active' }}">{{ __('app.label.all') }}</a>
+                            @foreach ($years as $availableYear)
+                                <a href="{{ route('news.index', ['year' => $availableYear]) }}"
+                                   class="dropdown-item {{ (int) $year === $availableYear ? 'active' : '' }}">
+                                    {{ $availableYear }}
+                                </a>
+                            @endforeach
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="section__grid">
-                <a href="#" class="card pa-0">
-                    <div class="card__content pa-20"><span class="card__date">2 апреля 2026 г.</span>
-                        <h3 class="card__title mb-10" style="font-weight: 600;">
-                            Новая IVR-услуга (№0 800 120 3333‚ СП ООО «IST TELEKOM»)
-                        </h3>
-                        <h4 class="card__subtitle">
-                            IVR-услуга
-                        </h4>
-                    </div>
-                </a>
-                <a href="#" class="card pa-0">
-                    <div class="card__content pa-20"><span class="card__date">1 апреля 2026 г.</span>
-                        <h3 class="card__title mb-10" style="font-weight: 600;">
-                            SMS-информирование (№102, ГУ ЦРС «Безопасный город» МВД РУз)
-                        </h3>
-                        <h4 class="card__subtitle">
-                            SMS-информирование
-                        </h4>
-                    </div>
-                </a>
-                <a href="#" class="card pa-0">
-                    <div class="card__content pa-20"><span class="card__date">31 марта 2026 г.</span>
-                        <h3 class="card__title mb-10" style="font-weight: 600;">
-                            SMS-информирование (№6079, ГУ «Центр управления проектами цифрового правительства»)
-                        </h3>
-                        <h4 class="card__subtitle">
-                            SMS-информирование
-                        </h4>
-                    </div>
-                </a>
-                <a href="#" class="card pa-0">
-                    <div class="card__content pa-20"><span class="card__date">30 марта 2026 г.</span>
-                        <h3 class="card__title mb-10" style="font-weight: 600;">
-                            Расширено покрытие настоящего 5G Standalone
-                        </h3>
-                        <h4 class="card__subtitle">
-                            5G Standalone
-                        </h4>
-                    </div>
-                </a>
-                <a href="#" class="card pa-0">
-                    <div class="card__content pa-20"><span class="card__date">30 марта 2026 г.</span>
-                        <h3 class="card__title mb-10" style="font-weight: 600;">
-                            SMS-информирование (№22700‚ OOO «AURUM STELLA 05»)
-                        </h3>
-                        <h4 class="card__subtitle">
-                            SMS-информирование
-                        </h4>
-                    </div>
-                </a>
-                <a href="#" class="card pa-0">
-                    <div class="card__content pa-20"><span class="card__date">19 марта 2026 г.</span>
-                        <h3 class="card__title mb-10" style="font-weight: 600;">
-                            Вывод и приостановление сервисных номеров (№№5900, 8887, 9500, ООО «Play mobile»)
-                        </h3>
-                        <h4 class="card__subtitle">
-                            Прекращение предоставления услуг SMS-информирования
-                        </h4>
-                    </div>
-                </a>
-                <a href="#" class="card pa-0">
-                    <div class="card__content pa-20"><span class="card__date">18 марта 2026 г.</span>
-                        <h3 class="card__title mb-10" style="font-weight: 600;">
-                            Режим работы
-                        </h3>
-                        <h4 class="card__subtitle">
-                            Режим работы
-                        </h4>
-                    </div>
-                </a>
-                <a href="#" class="card pa-0">
-                    <div class="card__content pa-20"><span class="card__date">17 марта 2026 г.</span>
-                        <h3 class="card__title mb-10" style="font-weight: 600;">
-                            Временное приостановление оказания услуг (№2702, ООО «QQM IT SOLUTIONS»)
-                        </h3>
-                        <h4 class="card__subtitle">
-                            Временное приостановление оказания услуг
-                        </h4>
-                    </div>
-                </a>
 
-            </div>
-            <div class="section__bottom">
-                <div class="pagination">
-                    <ul data-v-82963a40="" class="pagination__wrap">
-                        <li class="pagination__item active">
-                            <a d class="pagination__link">1</a>
-                        </li>
-                    </ul>
+                    @if ($year)
+                        <div class="dropdown custom__dropdown">
+                            <button type="button" id="newsMonthDropdown" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false" class="btn dropdown-toggle">
+                                {{ $month ? __('app.months.' . $month) : __('app.label.all') }}
+                            </button>
+                            <div aria-labelledby="newsMonthDropdown" class="dropdown-menu">
+                                <a href="{{ route('news.index', ['year' => $year]) }}"
+                                   class="dropdown-item {{ $month ? '' : 'active' }}">{{ __('app.label.all') }}</a>
+                                @for ($m = 1; $m <= 12; $m++)
+                                    <a href="{{ route('news.index', ['year' => $year, 'month' => $m]) }}"
+                                       class="dropdown-item {{ (int) $month === $m ? 'active' : '' }}">
+                                        {{ __('app.months.' . $m) }}
+                                    </a>
+                                @endfor
+                            </div>
+                        </div>
+                    @endif
                 </div>
             </div>
+
+            <div class="section__grid">
+                @forelse ($news as $item)
+                    <a href="{{ route('news.show', $item->slug) }}" class="card pa-0">
+                        <div class="card__content pa-20">
+                            @if ($item->published_at)
+                                <span class="card__date">
+                                    {{ $item->published_at->day }}
+                                    {{ __('app.months.' . $item->published_at->month) }}
+                                    {{ $item->published_at->year }}
+                                </span>
+                            @endif
+                            <h3 class="card__title mb-10" style="font-weight: 600;">
+                                {{ $item->title }}
+                            </h3>
+                            @if ($item->description)
+                                <h4 class="card__subtitle">
+                                    {{ $item->description }}
+                                </h4>
+                            @endif
+                        </div>
+                    </a>
+                @empty
+                    <p>{{ __('app.label.empty') }}</p>
+                @endforelse
+            </div>
+
+            @if ($news->hasPages())
+                <div class="section__bottom">
+                    <div class="pagination">
+                        <ul class="pagination__wrap">
+                            @if (! $news->onFirstPage())
+                                <li class="pagination__item">
+                                    <a href="{{ $news->previousPageUrl() }}" class="pagination__link" rel="prev">&laquo;</a>
+                                </li>
+                            @endif
+
+                            @foreach ($news->getUrlRange(max(1, $news->currentPage() - 2), min($news->lastPage(), $news->currentPage() + 2)) as $page => $url)
+                                <li class="pagination__item {{ $page === $news->currentPage() ? 'active' : '' }}">
+                                    <a href="{{ $url }}" class="pagination__link">{{ $page }}</a>
+                                </li>
+                            @endforeach
+
+                            @if ($news->hasMorePages())
+                                <li class="pagination__item">
+                                    <a href="{{ $news->nextPageUrl() }}" class="pagination__link" rel="next">&raquo;</a>
+                                </li>
+                            @endif
+                        </ul>
+                    </div>
+                </div>
+            @endif
         </div>
     </div>
 

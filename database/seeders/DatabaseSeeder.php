@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             PageSettingsSeeder::class,
             CareersSeeder::class,
             TendersSeeder::class,
+            NewsSeeder::class,
             MenusSeeder::class,
         ]);
     }

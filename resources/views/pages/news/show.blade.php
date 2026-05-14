@@ -1,43 +1,39 @@
 @extends('layouts.primary')
 
-@section('title', $tender?->title ?? $page?->meta_title ?? $page?->title)
-@section('meta_description', $tender?->description ?? $page?->meta_description ?? $page?->description)
+@section('title', $news?->title ?? $page?->meta_title ?? $page?->title)
+@section('meta_description', $news?->description ?? $page?->meta_description ?? $page?->description)
 
 @section('content')
     <section class="section__secondary">
         <div class="my-container">
 
             <x-breadcrumbs :items="[
-                ['label' => $page?->title, 'url' => route('tenders.index')],
-                ['label' => $tender?->title],
+                ['label' => $page?->title, 'url' => route('news.index')],
+                ['label' => $news?->title],
             ]" />
 
-            @if ($tender)
+            @if ($news)
                 <div class="block__wrap">
-                    @if ($tender->image)
+                    @if ($news->image)
                         <div class="main__photo mb-20">
-                            <img src="{{ \Illuminate\Support\Facades\Storage::disk('public')->url($tender->image) }}"
-                                 alt="{{ $tender->title }}">
+                            <img src="{{ \Illuminate\Support\Facades\Storage::disk('public')->url($news->image) }}"
+                                 alt="{{ $news->title }}">
                         </div>
                     @endif
 
-                    <h2 class="block__title mb-20">{{ $tender->title }}</h2>
+                    <h2 class="block__title mb-20">{{ $news->title }}</h2>
 
-                    @if ($tender->content)
+                    @if ($news->published_at)
+                        <span class="card__date">
+                            {{ $news->published_at->day }}
+                            {{ __('app.months.' . $news->published_at->month) }}
+                            {{ $news->published_at->year }}
+                        </span>
+                    @endif
+
+                    @if ($news->content)
                         <div class="content__text">
-                            {!! $tender->content !!}
-                        </div>
-                    @endif
-
-                    @if ($tender->files->isNotEmpty())
-                        <div class="block__files mt-20">
-                            @foreach ($tender->files as $file)
-                                <a class="block__file"
-                                   href="{{ \Illuminate\Support\Facades\Storage::disk('public')->url($file->file) }}"
-                                   download>
-                                    {{ $file->name }}
-                                </a>
-                            @endforeach
+                            {!! $news->content !!}
                         </div>
                     @endif
                 </div>

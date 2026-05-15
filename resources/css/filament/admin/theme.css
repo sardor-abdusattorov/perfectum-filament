@@ -102,3 +102,9 @@
 .dark .fi-fo-rich-editor.fullscreen .fi-fo-rich-editor-toolbar {
     border-bottom-color: rgb(63, 63, 70);
 }
+.fi-fo-rich-editor.fullscreen .fi-fo-rich-editor-main{
+    max-width: 100%;
+}
+.fi-fo-rich-editor.fullscreen .fi-fo-rich-editor-content {
+    max-width: 100%;
+}

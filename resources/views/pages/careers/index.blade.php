@@ -26,7 +26,7 @@
                         </div>
                     </a>
                 @empty
-                    <p>{{ __('app.label.empty') }}</p>
+                    <h2 class="block__title">{{ translator('app', 'empty') }}</h2>
                 @endforelse
             </div>
         </div>

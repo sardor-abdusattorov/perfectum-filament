@@ -29,7 +29,7 @@ class FaqForm
                                     ->label(__('app.label.answer'))
                                     ->helperText(__('app.helper.text_displayed_on_site'))
                                     ->extraInputAttributes([
-                                        'style' => 'min-height: 10rem; max-height: 30vh; overflow-y: auto;',
+
                                     ]),
                             ]),
 

@@ -25,7 +25,7 @@ class CareersController extends Controller
 
     public function show(string $slug): View
     {
-        $page = PageSetting::get(PageSettingKey::Careers);
+        $page = PageSetting::where('name', PageSettingKey::Careers)->first();
 
         $career = Career::query()
             ->where('slug', $slug)
@@ -33,6 +33,6 @@ class CareersController extends Controller
             ->with('files')
             ->first();
 
-        return view('pages.careers.show', compact('page', 'career'));
+        return view('pages.careers.show', compact( 'career', 'page'));
     }
 }

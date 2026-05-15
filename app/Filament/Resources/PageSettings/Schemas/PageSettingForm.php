@@ -38,10 +38,12 @@ class PageSettingForm
                                     ->rows(3),
 
                                 TextInput::make('meta_title')
-                                    ->label(__('app.label.meta_title')),
+                                    ->label(__('app.label.meta_title'))
+                                    ->required(),
 
                                 Textarea::make('meta_description')
                                     ->label(__('app.label.meta_description'))
+                                    ->required()
                                     ->rows(3),
                             ]),
 

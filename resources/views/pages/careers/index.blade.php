@@ -1,7 +1,7 @@
 @extends('layouts.primary')
 
-@section('title', $page?->meta_title ?: $page?->title)
-@section('meta_description', $page?->meta_description ?: $page?->description)
+@section('title', $page?->meta_title)
+@section('meta_description', $page?->meta_description)
 
 @section('content')
 
@@ -12,7 +12,7 @@
 
             <div class="section__top-secondary section__top-flex">
                 <h2 class="block__title">
-                    {{ translator('app', 'careers_title') }}
+                    {{ $page?->title }}
                 </h2>
             </div>
             <div class="section__grid">

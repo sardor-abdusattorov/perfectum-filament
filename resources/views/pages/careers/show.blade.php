@@ -1,22 +1,27 @@
+@php
+    use Illuminate\Support\Facades\Storage;
+@endphp
+
 @extends('layouts.primary')
 
-@section('title', $career?->title ?? $page?->meta_title ?? $page?->title)
-@section('meta_description', $career?->description ?? $page?->meta_description ?? $page?->description)
+@section('title', $career?->title)
+@section('meta_description', $career?->description)
 
 @section('content')
     <section class="section__secondary">
         <div class="my-container">
 
-            <x-breadcrumbs :items="[
-                ['label' => $page?->title, 'url' => route('careers.index')],
-                ['label' => $career?->title],
-            ]" />
-
             @if ($career)
                 <div class="block__wrap">
+
+                    <x-breadcrumbs :items="[
+                        ['label' => $page?->title, 'url' => route('careers.index')],
+                        ['label' => $career?->title],
+                    ]"/>
+
                     @if ($career->image)
                         <div class="main__photo mb-20">
-                            <img src="{{ \Illuminate\Support\Facades\Storage::disk('public')->url($career->image) }}"
+                            <img src="{{ Storage::disk('public')->url($career->image) }}"
                                  alt="{{ $career->title }}">
                         </div>
                     @endif
@@ -33,7 +38,7 @@
                         <div class="block__files mt-20">
                             @foreach ($career->files as $file)
                                 <a class="block__file"
-                                   href="{{ \Illuminate\Support\Facades\Storage::disk('public')->url($file->file) }}"
+                                   href="{{ Storage::disk('public')->url($file->file) }}"
                                    download>
                                     {{ $file->name }}
                                 </a>

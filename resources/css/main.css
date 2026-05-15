@@ -414,6 +414,10 @@ p {
   color: #3e3e3e;
   text-decoration: none;
   display: block;
+  transition: color 250ms;
+}
+.new-header__top .new-header__language ul li ul li a:hover {
+  color: #e60000;
 }
 .new-header__top .new-header__language ul li ul li:last-child {
   margin-bottom: 0;

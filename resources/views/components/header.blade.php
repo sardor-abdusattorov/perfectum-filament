@@ -86,7 +86,7 @@
                                 <li>
                                     <a class="new-header__language-toggle">
                                         <x-icon.globe/>
-                                        {{ $supportedLocales[$currentLocale]['short'] ?? strtoupper($currentLocale) }}
+                                        {{ \Illuminate\Support\Str::ucfirst($supportedLocales[$currentLocale]['native'] ?? $currentLocale) }}
                                     </a>
                                     <ul>
                                         @foreach ($supportedLocales as $code => $properties)
@@ -94,7 +94,7 @@
                                                 <li>
                                                     <a rel="alternate" hreflang="{{ $code }}"
                                                        href="{{ LaravelLocalization::getLocalizedURL($code) }}">
-                                                        {{ $properties['short'] ?? strtoupper($code) }}
+                                                        {{ \Illuminate\Support\Str::ucfirst($properties['native'] ?? $code) }}
                                                     </a>
                                                 </li>
                                             @endif

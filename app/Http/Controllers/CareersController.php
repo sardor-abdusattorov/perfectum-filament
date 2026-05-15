@@ -15,8 +15,10 @@ class CareersController extends Controller
 
         $careers = Career::query()
             ->where('is_published', true)
+            ->select(['id', 'slug', 'title', 'description', 'image', 'is_published', 'sort'])
             ->orderBy('sort')
-            ->get();
+            ->paginate(12)
+            ->withQueryString();
 
         return view('pages.careers.index', compact('page', 'careers'));
     }

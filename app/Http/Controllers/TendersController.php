@@ -15,8 +15,10 @@ class TendersController extends Controller
 
         $tenders = Tender::query()
             ->where('is_published', true)
+            ->select(['id', 'slug', 'title', 'description', 'image', 'is_published', 'sort'])
             ->orderBy('sort')
-            ->get();
+            ->paginate(12)
+            ->withQueryString();
 
         return view('pages.tenders.index', compact('page', 'tenders'));
     }

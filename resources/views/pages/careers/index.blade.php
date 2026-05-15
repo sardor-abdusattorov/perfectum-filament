@@ -29,6 +29,32 @@
                     <h2 class="block__title">{{ translator('app', 'empty') }}</h2>
                 @endforelse
             </div>
+
+            @if ($careers->hasPages())
+                <div class="section__bottom">
+                    <div class="pagination">
+                        <ul class="pagination__wrap">
+                            @if (! $careers->onFirstPage())
+                                <li class="pagination__item">
+                                    <a href="{{ $careers->previousPageUrl() }}" class="pagination__link" rel="prev">&laquo;</a>
+                                </li>
+                            @endif
+
+                            @foreach ($careers->getUrlRange(max(1, $careers->currentPage() - 2), min($careers->lastPage(), $careers->currentPage() + 2)) as $page => $url)
+                                <li class="pagination__item {{ $page === $careers->currentPage() ? 'active' : '' }}">
+                                    <a href="{{ $url }}" class="pagination__link">{{ $page }}</a>
+                                </li>
+                            @endforeach
+
+                            @if ($careers->hasMorePages())
+                                <li class="pagination__item">
+                                    <a href="{{ $careers->nextPageUrl() }}" class="pagination__link" rel="next">&raquo;</a>
+                                </li>
+                            @endif
+                        </ul>
+                    </div>
+                </div>
+            @endif
         </div>
     </div>
 

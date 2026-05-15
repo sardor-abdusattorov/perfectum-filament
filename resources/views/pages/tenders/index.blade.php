@@ -29,6 +29,32 @@
                     <p>{{ __('app.label.empty') }}</p>
                 @endforelse
             </div>
+
+            @if ($tenders->hasPages())
+                <div class="section__bottom">
+                    <div class="pagination">
+                        <ul class="pagination__wrap">
+                            @if (! $tenders->onFirstPage())
+                                <li class="pagination__item">
+                                    <a href="{{ $tenders->previousPageUrl() }}" class="pagination__link" rel="prev">&laquo;</a>
+                                </li>
+                            @endif
+
+                            @foreach ($tenders->getUrlRange(max(1, $tenders->currentPage() - 2), min($tenders->lastPage(), $tenders->currentPage() + 2)) as $page => $url)
+                                <li class="pagination__item {{ $page === $tenders->currentPage() ? 'active' : '' }}">
+                                    <a href="{{ $url }}" class="pagination__link">{{ $page }}</a>
+                                </li>
+                            @endforeach
+
+                            @if ($tenders->hasMorePages())
+                                <li class="pagination__item">
+                                    <a href="{{ $tenders->nextPageUrl() }}" class="pagination__link" rel="next">&raquo;</a>
+                                </li>
+                            @endif
+                        </ul>
+                    </div>
+                </div>
+            @endif
         </div>
     </div>
 

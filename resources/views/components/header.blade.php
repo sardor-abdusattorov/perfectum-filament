@@ -82,26 +82,26 @@
                             </ul>
                         </div>
                         <div class="new-header__language">
-                            <ul>
-                                <li>
-                                    <a class="new-header__language-toggle">
-                                        <x-icon.globe/>
+                            <div class="new-header__language-dropdown">
+                                <a class="new-header__language-toggle">
+                                    <x-icon.globe class="new-header__language-icon"/>
+                                    <span class="new-header__language-current">
                                         {{ \Illuminate\Support\Str::ucfirst($supportedLocales[$currentLocale]['native'] ?? $currentLocale) }}
-                                    </a>
-                                    <ul>
-                                        @foreach ($supportedLocales as $code => $properties)
-                                            @if ($code !== $currentLocale)
-                                                <li>
-                                                    <a rel="alternate" hreflang="{{ $code }}"
-                                                       href="{{ LaravelLocalization::getLocalizedURL($code) }}">
-                                                        {{ \Illuminate\Support\Str::ucfirst($properties['native'] ?? $code) }}
-                                                    </a>
-                                                </li>
-                                            @endif
-                                        @endforeach
-                                    </ul>
-                                </li>
-                            </ul>
+                                    </span>
+                                </a>
+                                <ul class="new-header__language-list">
+                                    @foreach ($supportedLocales as $code => $properties)
+                                        @if ($code !== $currentLocale)
+                                            <li class="new-header__language-item">
+                                                <a class="new-header__language-link" rel="alternate" hreflang="{{ $code }}"
+                                                   href="{{ LaravelLocalization::getLocalizedURL($code) }}">
+                                                    {{ \Illuminate\Support\Str::ucfirst($properties['native'] ?? $code) }}
+                                                </a>
+                                            </li>
+                                        @endif
+                                    @endforeach
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -13,6 +13,7 @@ class CareersSeeder extends Seeder
             [
                 'slug' => 'call-center-operator',
                 'sort' => 1,
+                'published_at' => '2025-12-09 19:00:00',
                 'title' => [
                     'ru' => 'Оператор Call-центра',
                     'uz' => 'Call-markaz operatori',
@@ -27,6 +28,7 @@ class CareersSeeder extends Seeder
             [
                 'slug' => 'operator-engineer-switch-operations-department',
                 'sort' => 2,
+                'published_at' => '2024-11-24 19:00:00',
                 'title' => [
                     'ru' => 'Инженер-оператор в Отдел эксплуатации коммутаторов',
                     'uz' => 'Kommutatorlarni ekspluatatsiya qilish bo‘limi muhandis-operatori',
@@ -50,7 +52,7 @@ class CareersSeeder extends Seeder
                     'image' => null,
                     'sort' => $row['sort'],
                     'is_published' => true,
-                    'published_at' => now(),
+                    'published_at' => $row['published_at'],
                 ],
             );
         }

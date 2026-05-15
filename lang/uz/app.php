@@ -89,7 +89,6 @@ return [
         'news_single' => 'Yangilik',
         'news_plural' => 'Yangiliklar',
         'published_at' => 'Chop etilgan sana',
-        'show_all_time' => 'Doimo ko‘rsatish',
         'all' => 'Barchasi',
         'slug' => 'Slug',
         'section' => 'Bo‘lim',
@@ -131,7 +130,6 @@ return [
         'page_route' => 'Sahifa manzili',
         'menu_icon' => 'Menyu bandi uchun ixtiyoriy ikonka',
         'footer_column' => 'Futerdagi ustun raqami (1–4)',
-        'show_all_time' => 'Yangilik tanlangan sana filtridan qat’i nazar ko‘rsatiladi',
     ],
     'status' => [
         'published' => 'Chop etilgan',

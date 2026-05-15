@@ -52,16 +52,6 @@ class NewsForm
                     ->seconds(false)
                     ->default(now()),
 
-                TextInput::make('sort')
-                    ->label(__('app.label.sort'))
-                    ->numeric()
-                    ->default(0),
-
-                Toggle::make('show_all_time')
-                    ->label(__('app.label.show_all_time'))
-                    ->helperText(__('app.helper.show_all_time'))
-                    ->default(false),
-
                 Toggle::make('is_published')
                     ->label(__('app.label.show_on_site'))
                     ->helperText(__('app.helper.if_disabled_hidden'))

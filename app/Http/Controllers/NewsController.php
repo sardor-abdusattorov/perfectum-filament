@@ -33,7 +33,6 @@ class NewsController extends Controller
 
         $news = $query
             ->orderByDesc('published_at')
-            ->orderBy('sort')
             ->paginate(12)
             ->withQueryString();
 

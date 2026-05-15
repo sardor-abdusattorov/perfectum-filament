@@ -89,7 +89,6 @@ return [
         'news_single' => 'News item',
         'news_plural' => 'News',
         'published_at' => 'Published at',
-        'show_all_time' => 'Always show',
         'all' => 'All',
         'slug' => 'Slug',
         'section' => 'Section',
@@ -131,7 +130,6 @@ return [
         'page_route' => 'Page URL',
         'menu_icon' => 'Optional menu item icon',
         'footer_column' => 'Column number in the footer (1–4)',
-        'show_all_time' => 'The news item is shown regardless of the selected date filter',
     ],
     'status' => [
         'published' => 'Published',

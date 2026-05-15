@@ -24,9 +24,7 @@ class NewsSeeder extends Seeder
                     'description' => $row['description'],
                     'content' => $row['content'],
                     'image' => $row['image'] ?? null,
-                    'sort' => $row['sort'] ?? 0,
                     'is_published' => $row['is_published'] ?? true,
-                    'show_all_time' => $row['show_all_time'] ?? false,
                     'published_at' => $row['published_at'] ?? null,
                 ],
             );

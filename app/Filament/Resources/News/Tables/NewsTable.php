@@ -12,7 +12,6 @@ use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Filters\SelectFilter;
-use Filament\Tables\Filters\TernaryFilter;
 use Filament\Tables\Table;
 
 class NewsTable
@@ -46,17 +45,6 @@ class NewsTable
                     ->dateTime('d.m.Y')
                     ->sortable(),
 
-                TextColumn::make('sort')
-                    ->label(__('app.label.sort'))
-                    ->sortable(),
-
-                ToggleColumn::make('show_all_time')
-                    ->label(__('app.label.show_all_time'))
-                    ->onIcon('heroicon-m-check-circle')
-                    ->offIcon('heroicon-m-x-circle')
-                    ->onColor('success')
-                    ->offColor('gray'),
-
                 ToggleColumn::make('is_published')
                     ->label(__('app.label.show_on_site'))
                     ->sortable()
@@ -71,9 +59,6 @@ class NewsTable
                     ->options(PublishedStatus::getStatusOptions())
                     ->searchable()
                     ->preload(),
-
-                TernaryFilter::make('show_all_time')
-                    ->label(__('app.label.show_all_time')),
             ])
             ->recordActions([
                 ViewAction::make(),

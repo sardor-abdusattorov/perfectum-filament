@@ -17,9 +17,7 @@ class News extends Model
         'description',
         'content',
         'image',
-        'sort',
         'is_published',
-        'show_all_time',
         'published_at',
     ];
 
@@ -27,8 +25,6 @@ class News extends Model
 
     protected $casts = [
         'is_published' => 'boolean',
-        'show_all_time' => 'boolean',
-        'sort' => 'integer',
         'published_at' => 'datetime',
     ];
 

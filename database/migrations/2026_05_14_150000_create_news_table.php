@@ -15,11 +15,11 @@ return new class extends Migration
             $table->json('description')->nullable();
             $table->json('content')->nullable();
             $table->string('image')->nullable();
-            $table->unsignedInteger('sort')->default(0)->index();
-            $table->boolean('is_published')->default(true)->index();
-            $table->boolean('show_all_time')->default(false);
-            $table->timestamp('published_at')->nullable()->index();
+            $table->boolean('is_published')->default(true);
+            $table->timestamp('published_at')->nullable();
             $table->timestamps();
+
+            $table->index(['is_published', 'published_at']);
         });
     }
 

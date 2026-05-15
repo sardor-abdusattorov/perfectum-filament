@@ -1,7 +1,6 @@
 @php
     use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
-
     $currentLocale = LaravelLocalization::getCurrentLocale();
     $supportedLocales = LaravelLocalization::getSupportedLocales();
 
@@ -29,6 +28,12 @@
         }
         return false;
     };
+
+    $localizedUrl = function ($url) {
+        return $url && $url !== '#'
+            ? LaravelLocalization::getLocalizedURL(null, url($url))
+            : '#';
+    };
 @endphp
 
 <!-- HEADER -->
@@ -47,10 +52,8 @@
                                     ]);
                                 @endphp
                                 <li @class($classes)>
-                                    <a @attributes([
-                                        'href' => $menu->url !== '#' ? LaravelLocalization::getLocalizedURL(null, url($menu->url)) : null,
-                                        'target' => $menu->target ?: null,
-                                    ])>
+                                    <a href="{{ $localizedUrl($menu->url) }}"
+                                       @if($menu->target) target="{{ $menu->target }}" @endif>
                                         {{ $menu->name }}
                                     </a>
 
@@ -58,10 +61,8 @@
                                         <ul>
                                             @foreach($menu->children as $child)
                                                 <li @class(['active' => $menuIsActive($child)])>
-                                                    <a @attributes([
-                                                        'href' => $child->url !== '#' ? LaravelLocalization::getLocalizedURL(null, url($child->url)) : null,
-                                                        'target' => $child->target ?: null,
-                                                    ])>
+                                                    <a href="{{ $localizedUrl($child->url) }}"
+                                                       @if($child->target) target="{{ $child->target }}" @endif>
                                                         {{ $child->name }}
                                                     </a>
                                                 </li>

@@ -2,6 +2,7 @@
 
 @section('title', $news?->title ?? $page?->meta_title ?? $page?->title)
 @section('meta_description', $news?->description ?? $page?->meta_description ?? $page?->description)
+@section('og_image', $news?->og_image)
 
 @section('content')
     <section class="section__secondary">

@@ -2,6 +2,7 @@
 
 @section('title', $tender?->title ?? $page?->meta_title ?? $page?->title)
 @section('meta_description', $tender?->description ?? $page?->meta_description ?? $page?->description)
+@section('og_image', $tender?->og_image)
 
 @section('content')
     <section class="section__secondary">

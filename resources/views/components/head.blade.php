@@ -38,8 +38,9 @@
     @endif
 
     <meta property="og:url" content="{{ url()->current() }}">
-
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ config('app.name') }}">
+    <meta property="og:locale" content="{{ str_replace('-', '_', $locale) }}">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 

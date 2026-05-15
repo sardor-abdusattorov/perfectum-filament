@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Support\Facades\Storage;
 use Spatie\Translatable\HasTranslations;
 
 class Career extends Model
@@ -34,4 +35,8 @@ class Career extends Model
         return $this->morphMany(File::class, 'fileable')->orderBy('sort');
     }
 
+    public function getOgImageAttribute(): ?string
+    {
+        return $this->image ? asset(Storage::disk('public')->url($this->image)) : null;
+    }
 }

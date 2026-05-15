@@ -6,6 +6,7 @@
 
 @section('title', $career?->title)
 @section('meta_description', $career?->description)
+@section('og_image', $career?->og_image)
 
 @section('content')
     <section class="section__secondary">

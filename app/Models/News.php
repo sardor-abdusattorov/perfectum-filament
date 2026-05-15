@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 use Spatie\Translatable\HasTranslations;
 
 class News extends Model
@@ -31,5 +32,10 @@ class News extends Model
     public function getUrlAttribute(): string
     {
         return url("/news/{$this->slug}");
+    }
+
+    public function getOgImageAttribute(): ?string
+    {
+        return $this->image ? asset(Storage::disk('public')->url($this->image)) : null;
     }
 }

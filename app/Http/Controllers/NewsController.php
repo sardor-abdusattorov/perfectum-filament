@@ -32,6 +32,7 @@ class NewsController extends Controller
         }
 
         $news = $query
+            ->select(['id', 'slug', 'title', 'description', 'image', 'is_published', 'published_at'])
             ->orderByDesc('published_at')
             ->paginate(12)
             ->withQueryString();

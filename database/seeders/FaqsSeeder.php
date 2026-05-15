@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\Faq;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class FaqsSeeder extends Seeder
 {
@@ -12,7 +11,6 @@ class FaqsSeeder extends Seeder
     {
         $faqs = [
             [
-                'id' => 1760,
                 'question' => [
                     'ru' => 'Что такое 5G Standalone?',
                     'uz' => '5G Standalone nima?',
@@ -25,7 +23,6 @@ class FaqsSeeder extends Seeder
                 ],
             ],
             [
-                'id' => 1761,
                 'question' => [
                     'ru' => 'Когда 5G Standalone появится в моем районе?',
                     'uz' => 'Mening tumanimda 5G Standalone qachon paydo bo‘ladi?',
@@ -38,7 +35,6 @@ class FaqsSeeder extends Seeder
                 ],
             ],
             [
-                'id' => 1762,
                 'question' => [
                     'ru' => 'Как найти свой район на карте покрытия?',
                     'uz' => "O'z hududingizni qamrov xaritasida qanday topish mumkin?",
@@ -51,7 +47,6 @@ class FaqsSeeder extends Seeder
                 ],
             ],
             [
-                'id' => 1763,
                 'question' => [
                     'ru' => 'Как подключить 5G Standalone?',
                     'uz' => '5G Standalone xizmatini qanday ulash mumkin?',
@@ -60,26 +55,22 @@ class FaqsSeeder extends Seeder
                 'answer' => [
                     'ru' => '<p><strong>Вариант 1: Онлайн-заявка</strong></p><p><span style="color: rgb(65, 65, 65);">•&nbsp;</span>Оставьте заявку на сайте.</p><p><span style="color: rgb(65, 65, 65);">•&nbsp;</span>Мы свяжемся с вами, проверим техническую возможность подключения и договоримся о времени установки.</p><p><span style="color: rgb(65, 65, 65);">•&nbsp;</span>В указанное время наш специалист приедет, привезёт оборудование (роутер и SIM-карту Perfectum), подключит и настроит домашний интернет.</p><p><br></p><p><strong>Вариант 2: Посетите офисы Perfectum</strong></p><p><span style="color: rgb(65, 65, 65);">•&nbsp;</span>Центральный офис: ул. Шевченко, 21</p><p><span style="color: rgb(65, 65, 65);">•&nbsp;</span>Филиал в&nbsp;Чиланзарском районе: ул. Гагарина, дом 40</p>',
                     'uz' => '<p>1-variant: Onlayn ariza topshirish</p><p><span style="color: rgb(65, 65, 65);">•&nbsp;</span>Saytimiz orqali ariza yuboring.</p><p><span style="color: rgb(65, 65, 65);">•&nbsp;</span>Biz siz bilan bogʻlanamiz, texnik imkoniyatni tekshiramiz va o‘rnatish vaqtini kelishib olamiz.</p><p><span style="color: rgb(65, 65, 65);">•&nbsp;</span>Belgilangan vaqtda mutaxassisimiz keladi, uskunani (router va Perfectum SIM-kartasi) olib keladi, internetni ulaydi va sozlaydi.</p><p><br></p><p>2-variant: Perfectum ofislariga tashrif buyuring</p><p>• Markaziy ofis: Shevchenko ko‘chasi, 21-uy</p><p>• Chilonzor tumanidagi filial: Gagarin ko‘chasi, 40-uy</p>',
-                    'en' => '<p><strong>Option 1: Online request</strong></p><p><span style="color: rgb(65, 65, 65);">•&nbsp;</span>Leave a request on the website.</p><p><span style="color: rgb(65, 65, 65);">•&nbsp;</span>We will contact you, verify technical feasibility and agree on an installation time.</p><p><span style="color: rgb(65, 65, 65);">•&nbsp;</span>Our specialist will arrive at the scheduled time, bring the equipment (router and a Perfectum SIM card), connect and configure your home internet.</p><p><br></p><p><strong>Option 2: Visit a Perfectum office</strong></p><p><span style="color: rgb(65, 65, 65);">•&nbsp;</span>Head office: Shevchenko street, 21</p><p><span style="color: rgb(65, 65, 65);">•&nbsp;</span>Chilanzar branch: Gagarin street, 40</p>',
+                    'en' => '<p><strong>Option 1: Online request</strong></p><p><span style="color: rgb(65, 65, 65);">•&nbsp;</span>Leave a request on the website.</p><p><span style="color: rgb(65, 65, 65);">•&nbsp;</span>Our specialist will arrive at the scheduled time, bring the equipment (router and a Perfectum SIM card), connect and configure your home internet.</p><p><br></p><p><strong>Option 2: Visit a Perfectum office</strong></p><p><span style="color: rgb(65, 65, 65);">•&nbsp;</span>Head office: Shevchenko street, 21</p><p><span style="color: rgb(65, 65, 65);">•&nbsp;</span>Chilanzar branch: Gagarin street, 40</p>',
                 ],
             ],
         ];
 
-        foreach ($faqs as $row) {
+        foreach ($faqs as $index => $row) {
             Faq::updateOrCreate(
-                ['id' => $row['id']],
+                ['question->en' => $row['question']['en']],
                 [
                     'question' => $row['question'],
                     'answer' => $row['answer'],
-                    'sort' => 1,
+                    'sort' => $index + 1,
                     'image' => null,
                     'is_published' => true,
                 ],
             );
-        }
-
-        if (DB::getDriverName() === 'pgsql') {
-            DB::statement("SELECT setval('faqs_id_seq', (SELECT COALESCE(MAX(id), 1) FROM faqs))");
         }
 
         $this->command?->info('Imported ' . count($faqs) . ' FAQs.');

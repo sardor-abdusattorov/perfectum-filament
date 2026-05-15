@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             TendersSeeder::class,
             NewsSeeder::class,
             MenusSeeder::class,
+            SiteTranslationsSeeder::class,
         ]);
     }
 }

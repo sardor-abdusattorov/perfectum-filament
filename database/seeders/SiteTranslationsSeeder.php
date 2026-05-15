@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\SiteTranslation;
 use Illuminate\Database\Seeder;
 
 class SiteTranslationsSeeder extends Seeder
@@ -10,29 +11,26 @@ class SiteTranslationsSeeder extends Seeder
     {
         $translations = [
             [
-                'question' => [
-                    'ru' => 'empthy',
-
+                'category' => 'common',
+                'key' => 'empty',
+                'value' => [
+                    'ru' => 'Ничего не найдено',
+                    'uz' => 'Hech narsa topilmadi',
+                    'en' => 'Nothing found',
+                ],
             ],
         ];
 
-        foreach ($faqs as $row) {
-            Faq::updateOrCreate(
-                ['id' => $row['id']],
+        foreach ($translations as $row) {
+            SiteTranslation::updateOrCreate(
+                ['category' => $row['category'], 'key' => $row['key']],
                 [
-                    'question' => $row['question'],
-                    'answer' => $row['answer'],
-                    'sort' => 1,
-                    'image' => null,
+                    'value' => $row['value'],
                     'is_published' => true,
                 ],
             );
         }
 
-        if (DB::getDriverName() === 'pgsql') {
-            DB::statement("SELECT setval('faqs_id_seq', (SELECT COALESCE(MAX(id), 1) FROM faqs))");
-        }
-
-        $this->command?->info('Imported ' . count($faqs) . ' FAQs.');
+        $this->command?->info('Imported ' . count($translations) . ' site translations.');
     }
 }

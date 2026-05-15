@@ -33,9 +33,4 @@ class News extends Model
     {
         return url("/news/{$this->slug}");
     }
-
-    public function getOgImageAttribute(): ?string
-    {
-        return $this->image ? asset(Storage::disk('public')->url($this->image)) : null;
-    }
 }

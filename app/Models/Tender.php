@@ -39,9 +39,4 @@ class Tender extends Model
     {
         return url("/tenders/{$this->slug}");
     }
-
-    public function getOgImageAttribute(): ?string
-    {
-        return $this->image ? asset(Storage::disk('public')->url($this->image)) : null;
-    }
 }

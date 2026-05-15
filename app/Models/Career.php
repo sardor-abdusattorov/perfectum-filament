@@ -34,9 +34,4 @@ class Career extends Model
     {
         return $this->morphMany(File::class, 'fileable')->orderBy('sort');
     }
-
-    public function getOgImageAttribute(): ?string
-    {
-        return $this->image ? asset(Storage::disk('public')->url($this->image)) : null;
-    }
 }

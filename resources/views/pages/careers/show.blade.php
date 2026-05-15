@@ -6,7 +6,6 @@
 
 @section('title', $career?->title)
 @section('meta_description', $career?->description)
-@section('og_image', $career?->og_image)
 
 @section('content')
     <section class="section__secondary">
@@ -26,6 +25,10 @@
                                  alt="{{ $career->title }}">
                         </div>
                     @endif
+
+                    <h5 class="card__date">
+                        12 May, 2022
+                    </h5>
 
                     <h2 class="block__title mb-20">{{ $career->title }}</h2>
 

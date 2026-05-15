@@ -39,15 +39,19 @@
                     @endif
 
                     @if ($career->files->isNotEmpty())
-                        <div class="block__files mt-20">
+
+                        <ul class="list-group">
+
                             @foreach ($career->files as $file)
-                                <a class="block__file"
+                                <a class="mt-3 header__menu-link files_download"
                                    href="{{ Storage::disk('public')->url($file->file) }}"
                                    download>
                                     {{ $file->name }}
                                 </a>
                             @endforeach
-                        </div>
+
+                        </ul>
+
                     @endif
                 </div>
             @else

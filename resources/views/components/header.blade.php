@@ -4,6 +4,31 @@
 
     $currentLocale = LaravelLocalization::getCurrentLocale();
     $supportedLocales = LaravelLocalization::getSupportedLocales();
+
+    $pathSegments = explode('/', trim(request()->path(), '/'));
+    if (! empty($pathSegments) && array_key_exists($pathSegments[0], $supportedLocales)) {
+        array_shift($pathSegments);
+    }
+    $currentPath = implode('/', $pathSegments);
+
+    $menuIsActive = function ($menu) use ($currentPath) {
+        $candidates = [$menu->url];
+        if ($menu->children->isNotEmpty()) {
+            foreach ($menu->children as $child) {
+                $candidates[] = $child->url;
+            }
+        }
+        foreach ($candidates as $url) {
+            $target = trim((string) $url, '/');
+            if ($target === '' || $target === '#') {
+                continue;
+            }
+            if ($currentPath === $target || str_starts_with($currentPath, $target . '/')) {
+                return true;
+            }
+        }
+        return false;
+    };
 @endphp
 
 <!-- HEADER -->
@@ -15,7 +40,13 @@
                     <div class="new-header__left">
                         <ul>
                             @foreach($topMenus as $menu)
-                                <li class="{{ $menu->children->isNotEmpty() ? 'has-children' : '' }}">
+                                @php
+                                    $classes = array_filter([
+                                        $menu->children->isNotEmpty() ? 'has-children' : null,
+                                        $menuIsActive($menu) ? 'active' : null,
+                                    ]);
+                                @endphp
+                                <li @class($classes)>
                                     <a @if($menu->url !== '#') href="{{ LaravelLocalization::getLocalizedURL(null, url($menu->url)) }}" @endif
                                        @if($menu->target) target="{{ $menu->target }}" @endif>
                                         {{ $menu->name }}

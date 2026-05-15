@@ -232,7 +232,8 @@ p {
   text-decoration: none;
   transition: color 250ms;
 }
-.new-header__top .new-header__left ul li a:hover {
+.new-header__top .new-header__left ul li a:hover,
+.new-header__top .new-header__left ul li.active > a {
   color: #e60000;
 }
 .new-header__top .new-header__left ul li ul {
@@ -320,6 +321,10 @@ p {
   font-family: "Nunito Sans", sans-serif;
   color: #9ba1b9;
   text-decoration: none;
+  transition: color 250ms;
+}
+.new-header__top .new-header__phones ul li a:hover {
+  color: #e60000;
 }
 .new-header__top .new-header__phones ul li a svg {
   margin-right: 10px;
@@ -343,6 +348,10 @@ p {
   font-family: "Nunito Sans", sans-serif;
   color: #9ba1b9;
   text-decoration: none;
+  transition: color 250ms;
+}
+.new-header__top .new-header__language ul li a:hover {
+  color: #e60000;
 }
 .new-header__top .new-header__language ul li a svg {
   margin-right: 10px;

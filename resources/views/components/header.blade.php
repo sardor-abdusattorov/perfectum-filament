@@ -52,10 +52,8 @@
                                     ]);
                                 @endphp
                                 <li @class($classes)>
-                                    <a @attributes([
-                                        'href' => $localizedUrl($menu->url),
-                                        'target' => $menu->target ?: null,
-                                    ])>
+                                    @php($menuUrl = $localizedUrl($menu->url))
+                                    <a @if($menuUrl) href="{{ $menuUrl }}" @endif @if($menu->target) target="{{ $menu->target }}" @endif>
                                         {{ $menu->name }}
                                     </a>
 
@@ -63,10 +61,8 @@
                                         <ul>
                                             @foreach($menu->children as $child)
                                                 <li @class(['active' => $menuIsActive($child)])>
-                                                    <a @attributes([
-                                                        'href' => $localizedUrl($child->url),
-                                                        'target' => $child->target ?: null,
-                                                    ])>
+                                                    @php($childUrl = $localizedUrl($child->url))
+                                                    <a @if($childUrl) href="{{ $childUrl }}" @endif @if($child->target) target="{{ $child->target }}" @endif>
                                                         {{ $child->name }}
                                                     </a>
                                                 </li>

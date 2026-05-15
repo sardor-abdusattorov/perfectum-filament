@@ -47,8 +47,10 @@
                                     ]);
                                 @endphp
                                 <li @class($classes)>
-                                    <a @if($menu->url !== '#') href="{{ LaravelLocalization::getLocalizedURL(null, url($menu->url)) }}" @endif
-                                       @if($menu->target) target="{{ $menu->target }}" @endif>
+                                    <a @attributes([
+                                        'href' => $menu->url !== '#' ? LaravelLocalization::getLocalizedURL(null, url($menu->url)) : null,
+                                        'target' => $menu->target ?: null,
+                                    ])>
                                         {{ $menu->name }}
                                     </a>
 
@@ -56,8 +58,10 @@
                                         <ul>
                                             @foreach($menu->children as $child)
                                                 <li @class(['active' => $menuIsActive($child)])>
-                                                    <a @if($child->url !== '#') href="{{ LaravelLocalization::getLocalizedURL(null, url($child->url)) }}" @endif
-                                                       @if($child->target) target="{{ $child->target }}" @endif>
+                                                    <a @attributes([
+                                                        'href' => $child->url !== '#' ? LaravelLocalization::getLocalizedURL(null, url($child->url)) : null,
+                                                        'target' => $child->target ?: null,
+                                                    ])>
                                                         {{ $child->name }}
                                                     </a>
                                                 </li>

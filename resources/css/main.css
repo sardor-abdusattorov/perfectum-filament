@@ -293,6 +293,10 @@ p {
   text-decoration: none;
   display: block;
 }
+.new-header__top .new-header__left ul li ul li a:hover,
+.new-header__top .new-header__left ul li ul li.active > a {
+  color: #e60000;
+}
 .new-header__top .new-header__left ul li ul li:last-child {
   margin-bottom: 0;
 }

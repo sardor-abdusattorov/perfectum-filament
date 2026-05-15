@@ -1,5 +1,5 @@
 <!-- FOOTER -->
-<footer class="new-footer new-footer--home">
+<footer @class(['new-footer', 'new-footer--home' => request()->routeIs('home')])>
     <div class="container footer__container">
         <div class="new-footer__top">
             <div class="row footer__row">

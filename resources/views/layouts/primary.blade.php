@@ -16,7 +16,6 @@
 
 </div>
 
-    <x-mobile-menu/>
 </body>
 
 </html>

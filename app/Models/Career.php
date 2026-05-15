@@ -21,6 +21,7 @@ class Career extends Model
         'image',
         'sort',
         'is_published',
+        'published_at',
     ];
 
     public $translatable = ['title', 'description', 'content'];
@@ -28,6 +29,7 @@ class Career extends Model
     protected $casts = [
         'is_published' => 'boolean',
         'sort' => 'integer',
+        'published_at' => 'datetime',
     ];
 
     public function files(): MorphMany

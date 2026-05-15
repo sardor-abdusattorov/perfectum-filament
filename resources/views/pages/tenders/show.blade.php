@@ -1,8 +1,12 @@
+@php
+    use Illuminate\Support\Facades\Storage;
+@endphp
+
 @extends('layouts.primary')
 
 @section('title', $tender?->title ?? $page?->meta_title ?? $page?->title)
 @section('meta_description', $tender?->description ?? $page?->meta_description ?? $page?->description)
-@section('og_image', $tender?->og_image)
+@section('og_image', $tender?->image ? asset(Storage::url($tender->image)) : '')
 
 @section('content')
     <section class="section__secondary">
@@ -15,14 +19,14 @@
 
             @if ($tender)
                 <div class="block__wrap">
+                    <h2 class="block__title mb-20">{{ $tender->title }}</h2>
+
                     @if ($tender->image)
                         <div class="main__photo mb-20">
-                            <img src="{{ \Illuminate\Support\Facades\Storage::disk('public')->url($tender->image) }}"
+                            <img src="{{ Storage::disk('public')->url($tender->image) }}"
                                  alt="{{ $tender->title }}">
                         </div>
                     @endif
-
-                    <h2 class="block__title mb-20">{{ $tender->title }}</h2>
 
                     @if ($tender->content)
                         <div class="content__text">
@@ -34,7 +38,7 @@
                         <div class="block__files mt-20">
                             @foreach ($tender->files as $file)
                                 <a class="block__file"
-                                   href="{{ \Illuminate\Support\Facades\Storage::disk('public')->url($file->file) }}"
+                                   href="{{ Storage::disk('public')->url($file->file) }}"
                                    download>
                                     {{ $file->name }}
                                 </a>

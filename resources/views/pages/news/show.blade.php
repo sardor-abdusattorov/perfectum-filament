@@ -1,8 +1,12 @@
+@php
+    use Illuminate\Support\Facades\Storage;
+@endphp
+
 @extends('layouts.primary')
 
 @section('title', $news?->title ?? $page?->meta_title ?? $page?->title)
 @section('meta_description', $news?->description ?? $page?->meta_description ?? $page?->description)
-@section('og_image', $career->image ? url(Storage::url($career->image)) : '')
+@section('og_image', $news?->image ? asset(Storage::url($news->image)) : '')
 
 @section('content')
     <section class="section__secondary">
@@ -15,21 +19,21 @@
 
             @if ($news)
                 <div class="block__wrap">
-                    @if ($news->image)
-                        <div class="main__photo mb-20">
-                            <img src="{{ \Illuminate\Support\Facades\Storage::disk('public')->url($news->image) }}"
-                                 alt="{{ $news->title }}">
-                        </div>
-                    @endif
-
                     <h2 class="block__title mb-20">{{ $news->title }}</h2>
 
                     @if ($news->published_at)
-                        <span class="card__date">
+                        <h5 class="card__date mb-20">
                             {{ $news->published_at->day }}
-                            {{ __('app.months.' . $news->published_at->month) }}
+                            {{ __('app.months.' . $news->published_at->month) }},
                             {{ $news->published_at->year }}
-                        </span>
+                        </h5>
+                    @endif
+
+                    @if ($news->image)
+                        <div class="main__photo mb-20">
+                            <img src="{{ Storage::disk('public')->url($news->image) }}"
+                                 alt="{{ $news->title }}">
+                        </div>
                     @endif
 
                     @if ($news->content)

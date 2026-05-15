@@ -50,6 +50,7 @@ class CareersSeeder extends Seeder
                     'image' => null,
                     'sort' => $row['sort'],
                     'is_published' => true,
+                    'published_at' => now(),
                 ],
             );
         }

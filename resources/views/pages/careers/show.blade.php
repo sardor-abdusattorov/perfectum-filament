@@ -6,6 +6,7 @@
 
 @section('title', $career?->title)
 @section('meta_description', $career?->description)
+@section('og_image', $career?->image ? asset(Storage::url($career->image)) : '')
 
 @section('content')
     <section class="section__secondary">
@@ -19,18 +20,22 @@
                         ['label' => $career?->title],
                     ]"/>
 
+                    <h2 class="block__title mb-20">{{ $career->title }}</h2>
+
+                    @if ($career->published_at)
+                        <h5 class="card__date mb-20">
+                            {{ $career->published_at->day }}
+                            {{ __('app.months.' . $career->published_at->month) }},
+                            {{ $career->published_at->year }}
+                        </h5>
+                    @endif
+
                     @if ($career->image)
                         <div class="main__photo mb-20">
                             <img src="{{ Storage::disk('public')->url($career->image) }}"
                                  alt="{{ $career->title }}">
                         </div>
                     @endif
-
-                    <h5 class="card__date">
-                        12 May, 2022
-                    </h5>
-
-                    <h2 class="block__title mb-20">{{ $career->title }}</h2>
 
                     @if ($career->content)
                         <div class="content__text">
@@ -39,9 +44,7 @@
                     @endif
 
                     @if ($career->files->isNotEmpty())
-
                         <ul class="list-group">
-
                             @foreach ($career->files as $file)
                                 <a class="mt-3 header__menu-link files_download"
                                    href="{{ Storage::disk('public')->url($file->file) }}"
@@ -49,9 +52,7 @@
                                     {{ $file->name }}
                                 </a>
                             @endforeach
-
                         </ul>
-
                     @endif
                 </div>
             @else

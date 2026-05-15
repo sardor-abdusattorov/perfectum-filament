@@ -6,6 +6,7 @@ use AbdulmajeedJamaan\FilamentTranslatableTabs\TranslatableTabs;
 use App\Filament\Support\DocumentUpload;
 use App\Filament\Support\ImageUpload;
 use App\Filament\Support\TextEditor;
+use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
@@ -55,6 +56,11 @@ class CareerForm
                                     ->label(__('app.label.sort'))
                                     ->numeric()
                                     ->default(0),
+
+                                DateTimePicker::make('published_at')
+                                    ->label(__('app.label.published_at'))
+                                    ->seconds(false)
+                                    ->default(now()),
 
                                 Toggle::make('is_published')
                                     ->label(__('app.label.show_on_site'))

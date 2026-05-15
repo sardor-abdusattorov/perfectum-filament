@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->unsignedInteger('sort')->default(0);
             $table->boolean('is_published')->default(true);
+            $table->timestamp('published_at')->nullable();
             $table->timestamps();
 
             $table->index(['is_published', 'sort']);

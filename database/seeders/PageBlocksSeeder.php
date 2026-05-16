@@ -22,7 +22,7 @@ class PageBlocksSeeder extends Seeder
                 'content' => [
                     'ru' => $this->contactsRu(),
                     'uz' => $this->contactsUz(),
-                    'en' => $this->contactsUz(),
+                    'en' => $this->contactsEn(),
                 ],
             ],
             [
@@ -83,6 +83,17 @@ HTML;
 <table><tbody><tr><td colspan="3"><p>VILOYATDAGI OFISLAR</p></td></tr><tr><td><p>ANDIJON</p></td><td><p>Boburshox prospekti, 22.</p></td><td rowspan="13"><p>+998983051111</p></td></tr><tr><td><p>BUXORO</p></td><td><p>Mustaqillik koʻchasi, 28-uy, 2-blok, 4. Moʻljal: k/t «Buxoro»</p></td></tr><tr><td><p>GULISTON</p></td><td><p>Sayxun koʻchasi, 17-uy</p></td></tr><tr><td><p>JIZZAX</p></td><td><p>Sharof Rashidov, 300</p></td></tr><tr><td><p>QARSHI</p></td><td><p>Shodlik MFY, Nasaf koʻchasi</p></td></tr><tr><td><p>QOʻQON</p></td><td><p>Qoʻqon sh., Turkiston koʻchasi, 136E uy. Moʻljal: Gʻisht koʻprik, yongʻin xizmati yonida</p></td></tr><tr><td><p>NAVOIY</p></td><td><p>Islom Karimov koʻchasi, 103</p></td></tr><tr><td><p>NAMANGAN</p></td><td><p>3-ch tor koʻchasi, 1</p></td></tr><tr><td><p>NUKUS</p></td><td><p>Qoraqalpogʻiston koʻchasi, 20-uy</p></td></tr><tr><td><p>SAMARQAND</p></td><td><p>Shoxrux Mirzo koʻchasi, 62</p></td></tr><tr><td><p>TERMEZ</p></td><td><p>Ibn Sino koʻchasi, 29-uy. Moʻljal: temir yoʻl vokzali, shahar voenkomati roʻparasida</p></td></tr><tr><td><p>URGANCH</p></td><td><p>Paxlavon Maxmud, 17</p></td></tr><tr><td><p>FARGʻONA</p></td><td><p>B. Margʻiloniy Mashʼal koʻchasi, 29 MFY</p></td></tr></tbody></table>
 <table><tbody><tr><td colspan="2"><p>MAʼLUMOTLAR XIZMATI (CALL-MARKAZ) NING ISH VAQTLARI:</p></td></tr><tr><td><p>07:00 dan 23:00 gacha</p></td><td><p>+998983051111, +998981270077, 077 (Perfectum abonentlari uchun bepul),<br>099 (84,20 soʻm/daq.)</p></td></tr></tbody></table>
 <table><tbody><tr><td colspan="2"><p>Fuqarolarning murojaatlarini qabul qilish jadvali</p></td></tr><tr><td><p style="text-align: center;"><strong>SESHANBA, JUMA</strong></p></td><td><p><strong>10:00</strong>—<strong>12:00</strong></p></td></tr></tbody></table>
+HTML;
+    }
+
+    private function contactsEn(): string
+    {
+        return <<<'HTML'
+<table><tbody><tr><td colspan="2"><p>OFFICE HOURS</p></td></tr><tr><td rowspan="2"><p>weekdays</p></td><td><p>Head office (Tashkent) — <strong>08:00</strong>—<strong>19:00</strong></p></td></tr><tr><td><p>Other offices — <strong>09:00</strong>—<strong>18:00</strong></p></td></tr><tr><td><p>Saturday</p></td><td><p><strong>10:00</strong>—<strong>17:00</strong></p></td></tr></tbody></table>
+<table><tbody><tr><td></td><td><p>ADDRESS</p></td><td><p>PHONE</p></td></tr><tr><td><p>HEAD OFFICE</p></td><td><p>100060, Uzbekistan,<br>Tashkent, 21 Taras Shevchenko street</p></td><td><p>+998983051111,<br>+998981270077,<br>for Perfectum subscribers: 077 (free) and 099 — 84.20 UZS/min.</p></td></tr><tr><td><p>CHILANZAR OFFICE</p></td><td><p>40 Gagarin street</p></td><td><p>+998981270022</p></td></tr></tbody></table>
+<table><tbody><tr><td colspan="3"><p>REGIONAL OFFICES</p></td></tr><tr><td><p>ANDIJAN</p></td><td><p>22 Boburshokh avenue</p></td><td rowspan="13"><p>+998983051111</p></td></tr><tr><td><p>BUKHARA</p></td><td><p>28/2 Mustaqillik street, block 4 (landmark: «Bukhoro» cinema)</p></td></tr><tr><td><p>GULISTAN</p></td><td><p>17 Sayhun street</p></td></tr><tr><td><p>JIZZAKH</p></td><td><p>300 Sharof Rashidov street</p></td></tr><tr><td><p>KARSHI</p></td><td><p>Shodlik MFY, Nasaf street</p></td></tr><tr><td><p>KOKAND</p></td><td><p>136E Turkiston street. Landmark: Gisht Kuprik, next to the fire service</p></td></tr><tr><td><p>NAVOI</p></td><td><p>103 Islam Karimov street</p></td></tr><tr><td><p>NAMANGAN</p></td><td><p>1a, 3rd lane, I. Karimov avenue</p></td></tr><tr><td><p>NUKUS</p></td><td><p>20 Karakalpakstan street</p></td></tr><tr><td><p>SAMARKAND</p></td><td><p>62a Shokhrukh Mirzo street</p></td></tr><tr><td><p>TERMEZ</p></td><td><p>29 Ibn Sino street. Landmark: railway station, opposite the city military registration office</p></td></tr><tr><td><p>URGENCH</p></td><td><p>17 Pakhlavon Makhmud street</p></td></tr><tr><td><p>FERGANA</p></td><td><p>29 B. Margiloniy Mashal street, MFY</p></td></tr></tbody></table>
+<table><tbody><tr><td colspan="2"><p>CALL CENTER WORKING HOURS</p></td></tr><tr><td><p>from 07:00 to 23:00</p></td><td><p>+998983051111, +998981270077,<br>077 (free for Perfectum subscribers), 099 (84.20 UZS/min.)</p></td></tr></tbody></table>
+<table><tbody><tr><td colspan="2"><p>CITIZEN APPOINTMENT SCHEDULE</p></td></tr><tr><td><p style="text-align: center;"><strong>TUESDAY, FRIDAY</strong></p></td><td><p><strong>10:00</strong>—<strong>12:00</strong></p></td></tr></tbody></table>
 HTML;
     }
 

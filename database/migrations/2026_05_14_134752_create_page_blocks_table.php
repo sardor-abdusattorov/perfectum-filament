@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->string('page')->index();
             $table->string('name')->nullable();
-            $table->json('title');
+            $table->json('title')->nullable();
             $table->json('description')->nullable();
             $table->json('content')->nullable();
             $table->string('image')->nullable();

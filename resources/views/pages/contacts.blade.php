@@ -10,15 +10,14 @@
 @section('content')
     <section class="section__secondary">
         <div class="my-container">
+            <div class="block__wrap">
+                <x-breadcrumbs :items="[['label' => $page?->title]]" />
 
-            <x-breadcrumbs :items="[['label' => $page?->title]]" />
+                <h2 class="block__title mb-20">{{ $page?->title }}</h2>
 
-            <h2 class="block__title mb-20">{{ $page?->title }}</h2>
-
-            @forelse ($texts as $text)
-                <div class="block__wrap mb-20">
+                @forelse ($texts as $text)
                     @if ($text->title)
-                        <h3 class="block__subtitle mb-20">{{ $text->title }}</h3>
+                        <h3 class="card__title mb-20">{{ $text->title }}</h3>
                     @endif
 
                     @if ($text->description)
@@ -33,14 +32,14 @@
                     @endif
 
                     @if ($text->content)
-                        <div class="content__text">
+                        <div class="content__text mb-20">
                             {!! $text->content !!}
                         </div>
                     @endif
-                </div>
-            @empty
-                <p>{{ __('app.label.empty') }}</p>
-            @endforelse
+                @empty
+                    <p>{{ __('app.label.empty') }}</p>
+                @endforelse
+            </div>
         </div>
     </section>
 @endsection

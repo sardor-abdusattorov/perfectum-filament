@@ -40,8 +40,7 @@ class PageBlockForm
                                 TranslatableTabs::make('translations')
                                     ->schema([
                                         TextInput::make('title')
-                                            ->label(__('app.label.title'))
-                                            ->required(),
+                                            ->label(__('app.label.title')),
 
                                         Textarea::make('description')
                                             ->label(__('app.label.description'))

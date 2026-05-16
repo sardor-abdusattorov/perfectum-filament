@@ -14,11 +14,7 @@ class PageBlocksSeeder extends Seeder
             [
                 'page' => PageSettingKey::Contacts->value,
                 'name' => 'main',
-                'title' => [
-                    'ru' => 'Контакты',
-                    'uz' => 'Kontaktlar',
-                    'en' => 'Contacts',
-                ],
+                'title' => null,
                 'description' => null,
                 'content' => [
                     'ru' => $this->contactsRu(),
@@ -29,11 +25,7 @@ class PageBlocksSeeder extends Seeder
             [
                 'page' => PageSettingKey::About->value,
                 'name' => 'main',
-                'title' => [
-                    'ru' => 'О компании',
-                    'uz' => 'Kompaniya haqida',
-                    'en' => 'About the company',
-                ],
+                'title' => null,
                 'description' => [
                     'ru' => 'История ООО «Rubicon Wireless Communication» (торговая марка Perfectum):',
                     'uz' => '«Rubicon Wireless Communication» MCHJ tarixi (Perfectum savdo belgisi):',

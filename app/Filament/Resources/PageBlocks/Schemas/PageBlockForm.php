@@ -53,11 +53,6 @@ class PageBlockForm
                                 ImageUpload::make('page-blocks', field: 'image')
                                     ->label(__('app.label.image')),
 
-                                TextInput::make('sort')
-                                    ->label(__('app.label.sort'))
-                                    ->numeric()
-                                    ->default(0),
-
                                 Toggle::make('is_published')
                                     ->label(__('app.label.show_on_site'))
                                     ->helperText(__('app.helper.if_disabled_hidden'))

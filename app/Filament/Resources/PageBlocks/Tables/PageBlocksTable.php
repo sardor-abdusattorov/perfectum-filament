@@ -20,7 +20,7 @@ class PageBlocksTable
     public static function configure(Table $table): Table
     {
         return $table
-            ->defaultSort('sort')
+            ->defaultSort('id', 'desc')
             ->columns([
                 ImageColumn::make('image')
                     ->label(__('app.label.image'))
@@ -43,10 +43,6 @@ class PageBlocksTable
                 TextColumn::make('files_count')
                     ->label(__('app.label.tab_files'))
                     ->counts('files'),
-
-                TextColumn::make('sort')
-                    ->label(__('app.label.sort'))
-                    ->sortable(),
 
                 ToggleColumn::make('is_published')
                     ->label(__('app.label.show_on_site'))

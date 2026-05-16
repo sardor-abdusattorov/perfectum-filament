@@ -19,7 +19,6 @@ class PageBlock extends Model
         'description',
         'content',
         'image',
-        'sort',
         'is_published',
     ];
 
@@ -28,7 +27,6 @@ class PageBlock extends Model
     protected $casts = [
         'page' => PageSettingKey::class,
         'is_published' => 'boolean',
-        'sort' => 'integer',
     ];
 
     public function files(): MorphMany

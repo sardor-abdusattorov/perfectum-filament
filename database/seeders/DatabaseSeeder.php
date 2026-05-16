@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
             SettingsSeeder::class,
             SocialsSeeder::class,
             PageSettingsSeeder::class,
+            PageBlocksSeeder::class,
             CareersSeeder::class,
             TendersSeeder::class,
             NewsSeeder::class,

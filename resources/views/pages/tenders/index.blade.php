@@ -14,6 +14,10 @@
                 <h2 class="block__title">
                     {{ $page?->title }}
                 </h2>
+
+                @if ($page?->description)
+                    {!! $page->description !!}
+                @endif
             </div>
             <div class="section__grid">
                 @forelse ($tenders as $tender)

@@ -19,7 +19,7 @@ class TendersTable
     public static function configure(Table $table): Table
     {
         return $table
-            ->defaultSort('sort')
+            ->defaultSort('published_at', 'desc')
             ->columns([
                 ImageColumn::make('image')
                     ->label(__('app.label.image'))
@@ -43,6 +43,11 @@ class TendersTable
                 TextColumn::make('files_count')
                     ->label(__('app.label.tab_files'))
                     ->counts('files'),
+
+                TextColumn::make('published_at')
+                    ->label(__('app.label.published_at'))
+                    ->dateTime('d.m.Y')
+                    ->sortable(),
 
                 TextColumn::make('sort')
                     ->label(__('app.label.sort'))

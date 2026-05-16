@@ -6,6 +6,7 @@ use AbdulmajeedJamaan\FilamentTranslatableTabs\TranslatableTabs;
 use App\Filament\Support\DocumentUpload;
 use App\Filament\Support\ImageUpload;
 use App\Filament\Support\TextEditor;
+use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
@@ -50,6 +51,11 @@ class TenderForm
 
                                 ImageUpload::make('tenders', field: 'image')
                                     ->label(__('app.label.image')),
+
+                                DateTimePicker::make('published_at')
+                                    ->label(__('app.label.published_at'))
+                                    ->seconds(false)
+                                    ->default(now()),
 
                                 TextInput::make('sort')
                                     ->label(__('app.label.sort'))

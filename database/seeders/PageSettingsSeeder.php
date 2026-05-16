@@ -71,6 +71,11 @@ class PageSettingsSeeder extends Seeder
                     'en' => 'Tenders',
                 ],
                 'description' => [
+                    'ru' => '<p>Чтобы получать последние новости о закупках компании, подпишитесь на <a href="https://t.me/Perfectum_Zakupki"><b>наш Telegram-канал</b></a> и <a href="https://www.facebook.com/groups/1103621480683219"><b>страницу Facebook</b></a>.</p>',
+                    'uz' => '<p>Kompaniyaning xaridlari haqida soʻnggi maʼlumotlarni olish uchun <a href="https://t.me/Perfectum_Zakupki"><b>Telegram kanalimizga</b></a> va <a href="https://www.facebook.com/groups/1103621480683219"><b>Facebook saxifamizga</b></a> obuna boʻling.</p>',
+                    'en' => '<p>To stay up to date with the company\'s procurements, subscribe to our <a href="https://t.me/Perfectum_Zakupki"><b>Telegram channel</b></a> and <a href="https://www.facebook.com/groups/1103621480683219"><b>Facebook page</b></a>.</p>',
+                ],
+                'meta_description' => [
                     'ru' => 'Актуальные тендеры и закупки компании',
                     'uz' => 'Kompaniyaning dolzarb tenderlari va xaridlari',
                     'en' => 'Current company tenders and procurement',
@@ -148,7 +153,7 @@ class PageSettingsSeeder extends Seeder
                     'title' => $row['title'],
                     'description' => $row['description'],
                     'meta_title' => $metaTitle,
-                    'meta_description' => $row['description'],
+                    'meta_description' => $row['meta_description'] ?? $row['description'],
                     'is_published' => true,
                 ],
             );

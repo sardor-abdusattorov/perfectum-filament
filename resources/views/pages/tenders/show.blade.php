@@ -21,6 +21,14 @@
                 <div class="block__wrap">
                     <h2 class="block__title mb-20">{{ $tender->title }}</h2>
 
+                    @if ($tender->published_at)
+                        <h5 class="card__date mb-20">
+                            {{ $tender->published_at->day }}
+                            {{ __('app.months.' . $tender->published_at->month) }},
+                            {{ $tender->published_at->year }}
+                        </h5>
+                    @endif
+
                     @if ($tender->image)
                         <div class="main__photo mb-20">
                             <img src="{{ Storage::disk('public')->url($tender->image) }}"

@@ -19,6 +19,7 @@ class Tender extends Model
         'description',
         'content',
         'image',
+        'published_at',
         'sort',
         'is_published',
     ];
@@ -28,6 +29,7 @@ class Tender extends Model
     protected $casts = [
         'is_published' => 'boolean',
         'sort' => 'integer',
+        'published_at' => 'datetime',
     ];
 
     public function files(): MorphMany

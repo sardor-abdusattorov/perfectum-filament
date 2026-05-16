@@ -19,6 +19,7 @@ class TendersSeeder extends Seeder
                     'title' => $row['title'],
                     'content' => $row['content'],
                     'image' => null,
+                    'published_at' => $row['published_at'] ?? now()->subDays($sort),
                     'sort' => $sort + 1,
                     'is_published' => $row['is_published'] ?? true,
                 ],

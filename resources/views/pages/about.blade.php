@@ -17,7 +17,7 @@
 
                 @forelse ($texts as $text)
                     @if ($text->title)
-                        <h3 class="card__title mb-20">{{ $text->title }}</h3>
+                        <h3 class="block__subtitle mb-20">{{ $text->title }}</h3>
                     @endif
 
                     @if ($text->description)

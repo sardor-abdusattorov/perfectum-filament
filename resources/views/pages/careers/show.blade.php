@@ -12,13 +12,14 @@
     <section class="section__secondary">
         <div class="my-container">
 
-            <x-breadcrumbs :items="[
-                ['label' => $page?->title, 'url' => route('careers.index')],
-                ['label' => $career?->title],
-            ]" />
-
             @if ($career)
                 <div class="block__wrap">
+
+                    <x-breadcrumbs :items="[
+                        ['label' => $page?->title, 'url' => route('careers.index')],
+                        ['label' => $career?->title],
+                    ]"/>
+
                     <h2 class="block__title mb-20">{{ $career->title }}</h2>
 
                     @if ($career->published_at)

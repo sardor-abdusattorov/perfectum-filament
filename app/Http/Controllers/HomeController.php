@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Enums\PageSettingKey;
+use App\Models\PageBlock;
 use App\Models\PageSetting;
 use Illuminate\Http\Request;
 
@@ -17,6 +18,8 @@ class HomeController extends Controller
     {
         $page = PageSetting::where('name', PageSettingKey::Contacts)->first();
 
-        return view('pages.contacts', compact('page'));
+        $texts = PageBlock::where('page', PageSettingKey::Contacts)->orderBy('sort')->get();
+
+        return view('pages.contacts', compact('page', 'texts'));
     }
 }

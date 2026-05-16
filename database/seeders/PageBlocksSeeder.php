@@ -13,6 +13,7 @@ class PageBlocksSeeder extends Seeder
         $blocks = [
             [
                 'page' => PageSettingKey::Contacts->value,
+                'name' => 'main',
                 'title' => [
                     'ru' => 'Контакты',
                     'uz' => 'Kontaktlar',
@@ -27,6 +28,7 @@ class PageBlocksSeeder extends Seeder
             ],
             [
                 'page' => PageSettingKey::About->value,
+                'name' => 'main',
                 'title' => [
                     'ru' => 'О компании',
                     'uz' => 'Kompaniya haqida',
@@ -49,7 +51,7 @@ class PageBlocksSeeder extends Seeder
             PageBlock::updateOrCreate(
                 [
                     'page' => $block['page'],
-                    'title->en' => $block['title']['en'],
+                    'name' => $block['name'],
                 ],
                 [
                     'title' => $block['title'],

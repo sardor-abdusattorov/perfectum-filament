@@ -2680,18 +2680,13 @@ p {
 }
 
 .card__description {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: var(--color-text-light);
+  font-weight: 500;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .card__info {

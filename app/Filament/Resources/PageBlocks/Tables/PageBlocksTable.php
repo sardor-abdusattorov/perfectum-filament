@@ -34,6 +34,12 @@ class PageBlocksTable
                     ->badge()
                     ->sortable(),
 
+                TextColumn::make('name')
+                    ->label(__('app.label.key'))
+                    ->searchable()
+                    ->default(__('app.label.empty'))
+                    ->toggleable(),
+
                 TextColumn::make('title')
                     ->label(__('app.label.title'))
                     ->searchable()

@@ -15,6 +15,7 @@ class PageBlock extends Model
 
     protected $fillable = [
         'page',
+        'name',
         'title',
         'description',
         'content',

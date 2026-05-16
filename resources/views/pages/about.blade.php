@@ -5,46 +5,42 @@
 @extends('layouts.primary')
 
 @section('title', $page?->title)
-@section('meta_description', $page?->description)
+@section('meta_description', $page?->meta_description)
 
 @section('content')
     <section class="section__secondary">
         <div class="my-container">
 
-            @if ($career)
-                <div class="block__wrap">
+            <x-breadcrumbs :items="[['label' => $page?->title]]" />
 
-                    <x-breadcrumbs :items="[
-                        ['label' => $page?->title, 'url' => route('careers.index')],
-                        ['label' => $career?->title],
-                    ]"/>
+            <h2 class="block__title mb-20">{{ $page?->title }}</h2>
 
-                    <h2 class="block__title mb-20">{{ $career->title }}</h2>
-
-                    @if ($career->published_at)
-                        <h5 class="card__description mb-20">
-                            {{ $career->published_at->day }}
-                            {{ __('app.months.' . $career->published_at->month) }},
-                            {{ $career->published_at->year }}
-                        </h5>
+            @forelse ($texts as $text)
+                <div class="block__wrap mb-20">
+                    @if ($text->title)
+                        <h3 class="block__subtitle mb-20">{{ $text->title }}</h3>
                     @endif
 
-                    @if ($career->image)
+                    @if ($text->description)
+                        <h5 class="card__description mb-20">{{ $text->description }}</h5>
+                    @endif
+
+                    @if ($text->image)
                         <div class="main__photo mb-20">
-                            <img src="{{ Storage::disk('public')->url($career->image) }}"
-                                 alt="{{ $career->title }}">
+                            <img src="{{ Storage::disk('public')->url($text->image) }}"
+                                 alt="{{ $text->title }}">
                         </div>
                     @endif
 
-                    @if ($career->content)
+                    @if ($text->content)
                         <div class="content__text">
-                            {!! $career->content !!}
+                            {!! $text->content !!}
                         </div>
                     @endif
-
                 </div>
-
-            @endif
+            @empty
+                <p>{{ __('app.label.empty') }}</p>
+            @endforelse
         </div>
     </section>
 @endsection

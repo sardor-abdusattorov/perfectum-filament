@@ -19,6 +19,8 @@ Route::group(
 
         Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts');
 
+        Route::get('/about', [HomeController::class, 'about'])->name('about');
+
         Route::prefix('careers')->name('careers.')->group(function () {
             Route::get('/', [CareersController::class, 'index'])->name('index');
             Route::get('/{slug}', [CareersController::class, 'show'])->name('show');

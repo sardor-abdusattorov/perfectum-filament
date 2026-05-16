@@ -11,6 +11,7 @@ return new class extends Migration
         Schema::create('page_blocks', function (Blueprint $table) {
             $table->id();
             $table->string('page')->index();
+            $table->string('name')->nullable();
             $table->json('title');
             $table->json('description')->nullable();
             $table->json('content')->nullable();
@@ -18,6 +19,7 @@ return new class extends Migration
             $table->boolean('is_published')->default(true);
             $table->timestamps();
 
+            $table->unique(['page', 'name']);
             $table->index(['page', 'is_published']);
         });
     }

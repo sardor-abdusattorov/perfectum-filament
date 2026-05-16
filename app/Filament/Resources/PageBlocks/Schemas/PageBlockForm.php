@@ -32,6 +32,11 @@ class PageBlockForm
                                     ->required()
                                     ->selectablePlaceholder(false),
 
+                                TextInput::make('name')
+                                    ->label(__('app.label.key'))
+                                    ->helperText(__('app.helper.block_key'))
+                                    ->maxLength(255),
+
                                 TranslatableTabs::make('translations')
                                     ->schema([
                                         TextInput::make('title')

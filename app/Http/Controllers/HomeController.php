@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Enums\PageSettingKey;
 use App\Models\PageBlock;
 use App\Models\PageSetting;
-use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -16,10 +15,22 @@ class HomeController extends Controller
 
     public function contacts()
     {
-        $page = PageSetting::where('name', PageSettingKey::Contacts)->first();
+        return $this->renderStatic(PageSettingKey::Contacts, 'pages.contacts');
+    }
 
-        $texts = PageBlock::where('page', PageSettingKey::Contacts)->get();
+    public function about()
+    {
+        return $this->renderStatic(PageSettingKey::About, 'pages.about');
+    }
 
-        return view('pages.contacts', compact('page', 'texts'));
+    protected function renderStatic(PageSettingKey $key, string $view)
+    {
+        return view($view, [
+            'page' => PageSetting::where('name', $key)->first(),
+            'texts' => PageBlock::where('page', $key)
+                ->where('is_published', true)
+                ->get()
+                ->keyBy('name'),
+        ]);
     }
 }

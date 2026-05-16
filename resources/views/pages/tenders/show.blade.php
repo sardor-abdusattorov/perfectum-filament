@@ -12,13 +12,14 @@
     <section class="section__secondary">
         <div class="my-container">
 
-            <x-breadcrumbs :items="[
-                ['label' => $page?->title, 'url' => route('tenders.index')],
-                ['label' => $tender?->title],
-            ]" />
-
             @if ($tender)
                 <div class="block__wrap">
+
+                    <x-breadcrumbs :items="[
+                        ['label' => $page?->title, 'url' => route('tenders.index')],
+                        ['label' => $tender?->title],
+                    ]"/>
+
                     <h2 class="block__title mb-20">{{ $tender->title }}</h2>
 
                     @if ($tender->published_at)
@@ -43,15 +44,15 @@
                     @endif
 
                     @if ($tender->files->isNotEmpty())
-                        <div class="block__files mt-20">
+                        <ul class="list-group">
                             @foreach ($tender->files as $file)
-                                <a class="block__file"
+                                <a class="mt-3 header__menu-link files_download"
                                    href="{{ Storage::disk('public')->url($file->file) }}"
                                    download>
                                     {{ $file->name }}
                                 </a>
                             @endforeach
-                        </div>
+                        </ul>
                     @endif
                 </div>
             @else

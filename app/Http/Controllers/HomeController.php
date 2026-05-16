@@ -18,7 +18,7 @@ class HomeController extends Controller
     {
         $page = PageSetting::where('name', PageSettingKey::Contacts)->first();
 
-        $texts = PageBlock::where('page', PageSettingKey::Contacts)->orderBy('sort')->get();
+        $texts = PageBlock::where('page', PageSettingKey::Contacts)->get();
 
         return view('pages.contacts', compact('page', 'texts'));
     }

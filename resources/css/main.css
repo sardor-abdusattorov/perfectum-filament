@@ -1756,9 +1756,8 @@ p {
   flex: 0 0 auto;
   width: 50%;
 }
-
 .new-footer__menu-title {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 .new-footer__menu-title h3 {
   font-weight: 700;

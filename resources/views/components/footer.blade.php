@@ -51,7 +51,7 @@
                     <div class="new-footer__menu-wrap">
                         <div class="new-footer__menu-column">
                             <div class="new-footer__menu-title">
-                                <h3>Uy interneti</h3>
+                                <h3>{{translator('app', 'home_internet')}}</h3>
                             </div>
                             <div class="new-footer__menu-list">
                                 <ul>
@@ -69,7 +69,7 @@
                         </div>
                         <div class="new-footer__menu-column">
                             <div class="new-footer__menu-title">
-                                <h3>Abonentlarga</h3>
+                                <h3>{{translator('app', 'for_abonents')}}</h3>
                             </div>
                             <div class="new-footer__menu-list">
                                 <ul>
@@ -103,7 +103,7 @@
                         </div>
                         <div class="new-footer__menu-column">
                             <div class="new-footer__menu-title">
-                                <h3>Foydali</h3>
+                                <h3>{{translator('app', 'useful')}}</h3>
                             </div>
                             <div class="new-footer__menu-list">
                                 <ul>
@@ -137,7 +137,7 @@
                         </div>
                         <div class="new-footer__menu-column">
                             <div class="new-footer__menu-title">
-                                <h3>Ma`lumot</h3>
+                                <h3>{{translator('app', 'information')}}</h3>
                             </div>
                             <div class="new-footer__menu-list">
                                 <ul>
@@ -162,33 +162,30 @@
                         </div>
                         <div class="new-footer__menu-column">
                             <div class="new-footer__menu-title">
-                                <h3>Mobil ilovalar</h3>
+                                <h3>{{translator('app', 'mobile_apps')}}</h3>
                                 <ul>
                                     <li>
-                                        <a href="#">
-                                            <img src="assets/images/GooglePlay.svg" alt="">
+                                        <a href="{{site_setting('app_google_play')}}" target="_blank">
+                                            <img src="/images/GooglePlay.svg" alt="google play">
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
-                                            <img src="assets/images/AppStorev1.svg" alt="">
+                                        <a href="{{site_setting('app_app_store')}}" target="_blank">
+                                            <img src="/images/AppStore.svg" alt="app store">
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="new-footer__menu-title footer__menu-title--social">
-                                <h3>Ijtimoiy tarmoqlar</h3>
+                                <h3>{{translator('app', 'social_links')}}</h3>
                                 <ul>
-
                                     @foreach($social_links as $social)
-                                        @if($social->image)
-                                            <li>
-                                                <a href="{{ $social->url }}" target="_blank" rel="noopener">
-                                                    <img src="{{ Storage::url($social->image) }}"
-                                                         alt="{{ $social->name }}">
-                                                </a>
-                                            </li>
-                                        @endif
+                                        <li>
+                                            <a href="{{ $social->url }}" target="_blank" rel="noopener">
+                                                <img src="{{ Storage::url($social->image) }}"
+                                                     alt="{{ $social->name }}">
+                                            </a>
+                                        </li>
                                     @endforeach
 
                                 </ul>

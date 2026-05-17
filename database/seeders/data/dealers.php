@@ -2,8 +2,10 @@
 
 // Source: legacy `menu_pages` table (menu_id = 11, dealers per region).
 // Single-locale slug taken from the legacy `slug.uz` value to match the
-// current public site language. `image` is intentionally null because the
-// legacy svg paths do not exist in the new project yet.
+// current public site language. `image` target follows the new
+// uploads/images/dealers/Y/m/<basename> layout produced by
+// App\Filament\Support\ImageUpload. The seeder copies the legacy
+// storage/app/public/images/<basename>.svg into that target path.
 
 return [
     [
@@ -21,7 +23,7 @@ HTML,
 HTML,
         ],
         'sort' => 14,
-        'image' => 'images/LMGAB4WRQS4p7hdFF3XPMpU3n9uSEixXi4ggyIyB.svg',
+        'image' => 'uploads/images/dealers/2022/04/LMGAB4WRQS4p7hdFF3XPMpU3n9uSEixXi4ggyIyB.svg',
         'created_date' => '2022-04-17 19:00:00',
     ],
     [
@@ -39,7 +41,7 @@ HTML,
 HTML,
         ],
         'sort' => 13,
-        'image' => 'images/inKLJ9gZpX1QPYgMRxadGNUpMzI9W4I7ObOmbGzF.svg',
+        'image' => 'uploads/images/dealers/2022/04/inKLJ9gZpX1QPYgMRxadGNUpMzI9W4I7ObOmbGzF.svg',
         'created_date' => '2022-04-17 19:00:00',
     ],
     [
@@ -57,7 +59,7 @@ HTML,
 HTML,
         ],
         'sort' => 12,
-        'image' => 'images/dzH1yFRQKGZA8dlBgva3T1xQnnTvOzipHw4Ag5W8.svg',
+        'image' => 'uploads/images/dealers/2022/04/dzH1yFRQKGZA8dlBgva3T1xQnnTvOzipHw4Ag5W8.svg',
         'created_date' => '2022-04-17 19:00:00',
     ],
     [
@@ -75,7 +77,7 @@ HTML,
 HTML,
         ],
         'sort' => 11,
-        'image' => 'images/qL6YI5WdCTJwZTcrXLp3DcmkPfMBcQ1zLmDXK3u0.svg',
+        'image' => 'uploads/images/dealers/2022/04/qL6YI5WdCTJwZTcrXLp3DcmkPfMBcQ1zLmDXK3u0.svg',
         'created_date' => '2022-04-17 19:00:00',
     ],
     [
@@ -93,7 +95,7 @@ HTML,
 HTML,
         ],
         'sort' => 10,
-        'image' => 'images/pRzgfc6ze4MIynkdYRhjpKVm1HCKPrqMuJbCIpVU.svg',
+        'image' => 'uploads/images/dealers/2022/04/pRzgfc6ze4MIynkdYRhjpKVm1HCKPrqMuJbCIpVU.svg',
         'created_date' => '2022-04-17 19:00:00',
     ],
     [
@@ -111,7 +113,7 @@ HTML,
 HTML,
         ],
         'sort' => 9,
-        'image' => 'images/bHM9elVxgcmQY28UiPoiHmqsvU6kPoj7kVsb41br.svg',
+        'image' => 'uploads/images/dealers/2022/04/bHM9elVxgcmQY28UiPoiHmqsvU6kPoj7kVsb41br.svg',
         'created_date' => '2022-04-17 19:00:00',
     ],
     [
@@ -129,7 +131,7 @@ HTML,
 HTML,
         ],
         'sort' => 8,
-        'image' => 'images/2LguHv4fxV1mUNbSjRY9g2r1YluUmZL5tXS5vWWO.svg',
+        'image' => 'uploads/images/dealers/2022/04/2LguHv4fxV1mUNbSjRY9g2r1YluUmZL5tXS5vWWO.svg',
         'created_date' => '2022-04-17 19:00:00',
     ],
     [
@@ -147,7 +149,7 @@ HTML,
 HTML,
         ],
         'sort' => 7,
-        'image' => 'images/uqfpiIBYun3hgkbjelEk2xAVvf0lBxBrECfypFOV.svg',
+        'image' => 'uploads/images/dealers/2022/04/uqfpiIBYun3hgkbjelEk2xAVvf0lBxBrECfypFOV.svg',
         'created_date' => '2022-04-17 19:00:00',
     ],
     [
@@ -165,7 +167,7 @@ HTML,
 HTML,
         ],
         'sort' => 6,
-        'image' => 'images/x5R2JO1RNkksjJgVGEP5Glc2S4CqPNTRgZtmQfAC.svg',
+        'image' => 'uploads/images/dealers/2022/04/x5R2JO1RNkksjJgVGEP5Glc2S4CqPNTRgZtmQfAC.svg',
         'created_date' => '2022-04-17 19:00:00',
     ],
     [
@@ -183,7 +185,7 @@ HTML,
 HTML,
         ],
         'sort' => 5,
-        'image' => 'images/fdI3W1IjqFCLQC4cDgZ5PEEtQi8HTQXTHjnA2O4g.svg',
+        'image' => 'uploads/images/dealers/2022/04/fdI3W1IjqFCLQC4cDgZ5PEEtQi8HTQXTHjnA2O4g.svg',
         'created_date' => '2022-04-17 19:00:00',
     ],
     [
@@ -201,7 +203,7 @@ HTML,
 HTML,
         ],
         'sort' => 4,
-        'image' => 'images/0nmhxOMZtTcru8KHNRWgOWn4HlytYEKcUzg0fL0n.svg',
+        'image' => 'uploads/images/dealers/2022/04/0nmhxOMZtTcru8KHNRWgOWn4HlytYEKcUzg0fL0n.svg',
         'created_date' => '2022-04-17 19:00:00',
     ],
     [
@@ -219,7 +221,7 @@ HTML,
 HTML,
         ],
         'sort' => 3,
-        'image' => 'images/ODK8yJz1d9xwyoLGKrb1LbfxFkpSK8nEYKEH2A70.svg',
+        'image' => 'uploads/images/dealers/2022/04/ODK8yJz1d9xwyoLGKrb1LbfxFkpSK8nEYKEH2A70.svg',
         'created_date' => '2022-04-17 19:00:00',
     ],
     [
@@ -237,7 +239,7 @@ HTML,
 HTML,
         ],
         'sort' => 2,
-        'image' => 'images/xitbVj5OmkWjh7bc6V97M6EHLtzRK6eXSoAGwg8e.svg',
+        'image' => 'uploads/images/dealers/2022/04/xitbVj5OmkWjh7bc6V97M6EHLtzRK6eXSoAGwg8e.svg',
         'created_date' => '2022-04-17 19:00:00',
     ],
     [
@@ -255,7 +257,7 @@ HTML,
 HTML,
         ],
         'sort' => 1,
-        'image' => 'images/WOCFZTrW4qaifDlUGRZRxUjTVmoCdvvchJ2vW5Lr.svg',
+        'image' => 'uploads/images/dealers/2022/03/WOCFZTrW4qaifDlUGRZRxUjTVmoCdvvchJ2vW5Lr.svg',
         'created_date' => '2022-03-31 19:00:00',
     ],
 ];

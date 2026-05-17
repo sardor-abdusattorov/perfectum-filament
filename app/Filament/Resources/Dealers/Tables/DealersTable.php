@@ -40,6 +40,10 @@ class DealersTable
                     ->badge()
                     ->color('gray'),
 
+                TextColumn::make('files_count')
+                    ->label(__('app.label.tab_files'))
+                    ->counts('files'),
+
                 TextColumn::make('sort')
                     ->label(__('app.label.sort'))
                     ->sortable(),

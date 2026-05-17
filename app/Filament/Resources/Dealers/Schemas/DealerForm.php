@@ -3,11 +3,14 @@
 namespace App\Filament\Resources\Dealers\Schemas;
 
 use AbdulmajeedJamaan\FilamentTranslatableTabs\TranslatableTabs;
+use App\Filament\Support\DocumentUpload;
 use App\Filament\Support\ImageUpload;
 use App\Filament\Support\TextEditor;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
+use Filament\Schemas\Components\Tabs;
 use Filament\Schemas\Schema;
 
 class DealerForm
@@ -16,45 +19,65 @@ class DealerForm
     {
         return $schema
             ->components([
-                TextInput::make('slug')
-                    ->label(__('app.label.slug'))
-                    ->helperText(__('app.helper.page_slug'))
-                    ->maxLength(255)
-                    ->unique(ignoreRecord: true)
-                    ->columnSpanFull(),
-
-                TranslatableTabs::make('translations')
+                Tabs::make('dealer')
                     ->columnSpanFull()
                     ->schema([
-                        TextInput::make('title')
-                            ->label(__('app.label.title'))
-                            ->required(),
+                        Tabs\Tab::make(__('app.label.basic_information'))
+                            ->schema([
+                                TextInput::make('slug')
+                                    ->label(__('app.label.slug'))
+                                    ->helperText(__('app.helper.page_slug'))
+                                    ->maxLength(255)
+                                    ->unique(ignoreRecord: true),
 
-                        Textarea::make('description')
-                            ->label(__('app.label.description'))
-                            ->rows(3),
+                                TranslatableTabs::make('translations')
+                                    ->schema([
+                                        TextInput::make('title')
+                                            ->label(__('app.label.title'))
+                                            ->required(),
 
-                        TextEditor::make('dealers', 'content')
-                            ->label(__('app.label.content'))
-                            ->helperText(__('app.helper.text_displayed_on_site'))
-                            ->extraInputAttributes([
-                                'style' => 'min-height: 16rem; max-height: 60vh; overflow-y: auto;',
+                                        Textarea::make('description')
+                                            ->label(__('app.label.description'))
+                                            ->rows(3),
+
+                                        TextEditor::make('dealers', 'content')
+                                            ->label(__('app.label.content'))
+                                            ->helperText(__('app.helper.text_displayed_on_site'))
+                                            ->extraInputAttributes([
+                                                'style' => 'min-height: 16rem; max-height: 60vh; overflow-y: auto;',
+                                            ]),
+                                    ]),
+
+                                ImageUpload::make('dealers', field: 'image')
+                                    ->label(__('app.label.image')),
+
+                                TextInput::make('sort')
+                                    ->label(__('app.label.sort'))
+                                    ->numeric()
+                                    ->default(0),
+
+                                Toggle::make('is_published')
+                                    ->label(__('app.label.show_on_site'))
+                                    ->helperText(__('app.helper.if_disabled_hidden'))
+                                    ->default(true),
+                            ]),
+
+                        Tabs\Tab::make(__('app.label.tab_files'))
+                            ->schema([
+                                Repeater::make('files')
+                                    ->relationship()
+                                    ->label(__('app.label.tab_files'))
+                                    ->schema([
+                                        DocumentUpload::make('dealers')
+                                            ->storeFileNamesIn('name')
+                                            ->required(),
+                                    ])
+                                    ->orderColumn('sort')
+                                    ->reorderable()
+                                    ->defaultItems(0)
+                                    ->addActionLabel(__('app.label.add_file')),
                             ]),
                     ]),
-
-                ImageUpload::make('dealers', field: 'image')
-                    ->label(__('app.label.image'))
-                    ->columnSpanFull(),
-
-                TextInput::make('sort')
-                    ->label(__('app.label.sort'))
-                    ->numeric()
-                    ->default(0),
-
-                Toggle::make('is_published')
-                    ->label(__('app.label.show_on_site'))
-                    ->helperText(__('app.helper.if_disabled_hidden'))
-                    ->default(true),
             ]);
     }
 }

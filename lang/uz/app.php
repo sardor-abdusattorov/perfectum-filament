@@ -161,6 +161,7 @@ return [
         'tariffs' => 'Tariflar',
         'services' => 'Xizmatlar',
         'news' => 'Yangiliklar',
+        'dealers' => 'Dilerlar',
         'coverage' => 'Qamrov hududi',
         'free_numbers' => 'Bo‘sh raqamlar',
     ],

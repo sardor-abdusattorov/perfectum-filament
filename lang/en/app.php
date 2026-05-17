@@ -161,6 +161,7 @@ return [
         'tariffs' => 'Tariffs',
         'services' => 'Services',
         'news' => 'News',
+        'dealers' => 'Dealers',
         'coverage' => 'Coverage area',
         'free_numbers' => 'Free numbers',
     ],

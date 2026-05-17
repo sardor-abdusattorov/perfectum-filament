@@ -161,6 +161,7 @@ return [
         'tariffs' => 'Тарифы',
         'services' => 'Услуги',
         'news' => 'Новости',
+        'dealers' => 'Дилеры',
         'coverage' => 'Зона покрытия',
         'free_numbers' => 'Свободные номера',
     ],

@@ -69,7 +69,6 @@ return [
         'site_name' => 'Site name',
         'contacts_address' => 'Address',
         'contacts_working_plan' => 'Working hours',
-        'footer_text' => 'Footer text',
         'footer_free_numbers_text' => 'Free numbers promo text',
         'map_coordinates' => 'Coordinates on the map',
         'logo_header' => 'Header logo',

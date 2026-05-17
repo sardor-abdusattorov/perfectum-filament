@@ -149,10 +149,6 @@ class Settings extends Page implements HasForms
                             ->label(__('app.label.contacts_working_plan'))
                             ->rows(2),
 
-                        Textarea::make('footer.text')
-                            ->label(__('app.label.footer_text'))
-                            ->rows(3),
-
                         TextEditor::make('settings', 'footer.free_numbers_text')
                             ->label(__('app.label.footer_free_numbers_text'))
                             ->helperText(__('app.helper.html_allowed'))

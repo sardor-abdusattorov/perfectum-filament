@@ -69,7 +69,6 @@ return [
         'site_name' => 'Название сайта',
         'contacts_address' => 'Адрес',
         'contacts_working_plan' => 'График работы',
-        'footer_text' => 'Текст футера',
         'footer_free_numbers_text' => 'Промо-текст «Свободные номера»',
         'map_coordinates' => 'Координаты на карте',
         'logo_header' => 'Логотип в шапке',

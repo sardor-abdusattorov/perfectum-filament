@@ -69,7 +69,6 @@ return [
         'site_name' => 'Sayt nomi',
         'contacts_address' => 'Manzil',
         'contacts_working_plan' => 'Ish vaqti',
-        'footer_text' => 'Pastki qism matni',
         'footer_free_numbers_text' => '«Bo‘sh raqamlar» promo matni',
         'map_coordinates' => 'Xaritadagi koordinatalar',
         'logo_header' => 'Yuqori logotip',

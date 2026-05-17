@@ -88,6 +88,8 @@ return [
         'tenders_plural' => 'Tenders',
         'news_single' => 'News item',
         'news_plural' => 'News',
+        'dealers_single' => 'Dealer',
+        'dealers_plural' => 'Dealers',
         'published_at' => 'Published at',
         'all' => 'All',
         'slug' => 'Slug',

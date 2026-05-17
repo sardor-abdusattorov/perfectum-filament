@@ -88,6 +88,8 @@ return [
         'tenders_plural' => 'Тендеры',
         'news_single' => 'Новость',
         'news_plural' => 'Новости',
+        'dealers_single' => 'Дилер',
+        'dealers_plural' => 'Дилеры',
         'published_at' => 'Дата публикации',
         'all' => 'Все',
         'slug' => 'Slug',

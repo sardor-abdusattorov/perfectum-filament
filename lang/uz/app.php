@@ -88,6 +88,8 @@ return [
         'tenders_plural' => 'Tenderlar',
         'news_single' => 'Yangilik',
         'news_plural' => 'Yangiliklar',
+        'dealers_single' => 'Diler',
+        'dealers_plural' => 'Dilerlar',
         'published_at' => 'Chop etilgan sana',
         'all' => 'Barchasi',
         'slug' => 'Slug',

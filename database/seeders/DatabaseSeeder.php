@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             CareersSeeder::class,
             TendersSeeder::class,
             NewsSeeder::class,
+            DealersSeeder::class,
             MenusSeeder::class,
             SiteTranslationsSeeder::class,
         ]);

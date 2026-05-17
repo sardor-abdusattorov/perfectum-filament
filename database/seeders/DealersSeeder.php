@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Dealer;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Storage;
 
 class DealersSeeder extends Seeder
 {
@@ -12,12 +13,16 @@ class DealersSeeder extends Seeder
         $dealers = require database_path('seeders/data/dealers.php');
 
         foreach ($dealers as $row) {
+            if (! empty($row['image'])) {
+                $this->relocateLegacyImage($row['image']);
+            }
+
             Dealer::updateOrCreate(
                 ['slug' => $row['slug']],
                 [
                     'title' => $row['title'],
                     'content' => $row['content'],
-                    'image' => null,
+                    'image' => $row['image'] ?? null,
                     'sort' => $row['sort'],
                     'is_published' => true,
                     'created_at' => $row['created_date'] ?? now(),
@@ -27,5 +32,25 @@ class DealersSeeder extends Seeder
         }
 
         $this->command?->info('Imported '.count($dealers).' dealer regions.');
+    }
+
+    /**
+     * Move an image imported from the old site (flat `images/` folder) into
+     * the current upload structure. Idempotent: skips if already in place.
+     */
+    private function relocateLegacyImage(string $path): void
+    {
+        $disk = Storage::disk('public');
+
+        if ($disk->exists($path)) {
+            return;
+        }
+
+        $legacy = 'images/'.basename($path);
+
+        if ($disk->exists($legacy)) {
+            $disk->makeDirectory(dirname($path));
+            $disk->copy($legacy, $path);
+        }
     }
 }

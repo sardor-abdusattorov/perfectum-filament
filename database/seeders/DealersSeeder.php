@@ -12,9 +12,17 @@ class DealersSeeder extends Seeder
     {
         $dealers = require database_path('seeders/data/dealers.php');
 
+        $disk = Storage::disk('public');
+
         foreach ($dealers as $row) {
+            $image = null;
+
             if (! empty($row['image'])) {
                 $this->relocateLegacyImage($row['image']);
+
+                if ($disk->exists($row['image'])) {
+                    $image = $row['image'];
+                }
             }
 
             Dealer::updateOrCreate(
@@ -22,7 +30,7 @@ class DealersSeeder extends Seeder
                 [
                     'title' => $row['title'],
                     'content' => $row['content'],
-                    'image' => $row['image'] ?? null,
+                    'image' => $image,
                     'sort' => $row['sort'],
                     'is_published' => true,
                     'created_at' => $row['created_date'] ?? now(),

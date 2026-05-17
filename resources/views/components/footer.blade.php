@@ -141,22 +141,14 @@
                             </div>
                             <div class="new-footer__menu-list">
                                 <ul>
-                                    <li>
-                                        <a href="#" class="footer_menu_class">
-                                            Xaridlar
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="footer_menu_class">
-                                            Karyera
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="footer_menu_class"> Kontaktlar </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="footer_menu_class"> Yuridik xujjatlar </a>
-                                    </li>
+                                    @foreach($footer_menus as $menu)
+                                        <li>
+                                            <a href="#" class="footer_menu_class">
+                                                Xaridlar
+                                            </a>
+                                        </li>
+                                    @endforeach
+
                                 </ul>
                             </div>
                         </div>

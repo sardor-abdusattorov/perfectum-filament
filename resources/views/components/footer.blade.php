@@ -9,6 +9,19 @@
                         <img src="/images/footer-logo.png" alt="logo">
                     </div>
                     <div class="new-footer__text">
+                        <p>
+                            Perfectum™ — tez rivojlanayotgan, boy tarixga ega va jasorat bilan kelajakka
+                            qarayotgan kompaniya. 1995-yilda asos solingan biz bugun mobil va fiks aloqa
+                            sohasidagi ilg‘or texnologiyalarni joriy etib, O‘zbekiston telekommunikatsiya
+                            bozorining yangi bosqichini shakllantirmoqdamiz. 2023-yilda Perfectum™ mamlakat
+                            miqyosidagi 5G Standalone tarmog‘ini noldan yaratish bo‘yicha yirik loyihani
+                            ishga tushirdi. Ushbu loyiha eng so'nggi avlod aloqa xizmatlarini taqdim etish
+                            imkonini beradi. Bizning missiyamiz — O‘zbekiston aholisi va biznesini eng yangi
+                            5G Standalone texnologiyalariga asoslangan yuqori tezlikdagi, ishonchli va
+                            xavfsiz internet bilan ta’minlashdir. Biz mijozlar va hamkorlar uchun o‘sish,
+                            innovatsiya va muvaffaqiyat sari yangi imkoniyatlar eshigini ochgan holda,
+                            mintaqadagi yetakchi telekom-provayderga aylanishga intilamiz.
+                        </p>
                         <a class="gazButton gazButton--strong-gray" href="{{route('about')}}">
                             {{translator('app', 'about_us')}}
                         </a>

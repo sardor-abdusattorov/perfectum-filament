@@ -9,9 +9,6 @@
                         <img src="/images/footer-logo.png" alt="logo">
                     </div>
                     <div class="new-footer__text">
-                        <p>
-                            {{translator('app', 'footer_text')}}
-                        </p>
                         <a class="gazButton gazButton--strong-gray" href="{{route('about')}}">
                             {{translator('app', 'about_us')}}
                         </a>

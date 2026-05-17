@@ -3517,6 +3517,8 @@ p {
   display: flex;
   align-items: center;
   gap: 15px;
+  min-width: 0;
+  flex-wrap: wrap;
 }
 
 .breadcrumbs__item:last-child {
@@ -3544,6 +3546,8 @@ p {
     font-size: 14px;
     line-height: 28px;
     font-weight: 600;
+    overflow-wrap: anywhere;
+    word-break: normal;
 }
 
 .breadcrumbs__link:hover {

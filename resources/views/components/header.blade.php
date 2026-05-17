@@ -1,5 +1,5 @@
 @php
-    use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+    use Illuminate\Support\Str;use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
     $currentLocale = LaravelLocalization::getCurrentLocale();
     $supportedLocales = LaravelLocalization::getSupportedLocales();
@@ -36,7 +36,7 @@
     };
 @endphp
 
-<!-- HEADER -->
+    <!-- HEADER -->
 <header class="new-header">
     <div class="new-header__top">
         <div class="container new-header__container">
@@ -53,7 +53,8 @@
                                 @endphp
                                 <li @class($classes)>
                                     @php($menuUrl = $localizedUrl($menu->url))
-                                    <a @if($menuUrl) href="{{ $menuUrl }}" @endif @if($menu->target) target="{{ $menu->target }}" @endif>
+                                    <a @if($menuUrl) href="{{ $menuUrl }}"
+                                       @endif @if($menu->target) target="{{ $menu->target }}" @endif>
                                         {{ $menu->name }}
                                     </a>
 
@@ -62,7 +63,8 @@
                                             @foreach($menu->children as $child)
                                                 <li @class(['active' => $menuIsActive($child)])>
                                                     @php($childUrl = $localizedUrl($child->url))
-                                                    <a @if($childUrl) href="{{ $childUrl }}" @endif @if($child->target) target="{{ $child->target }}" @endif>
+                                                    <a @if($childUrl) href="{{ $childUrl }}"
+                                                       @endif @if($child->target) target="{{ $child->target }}" @endif>
                                                         {{ $child->name }}
                                                     </a>
                                                 </li>
@@ -78,7 +80,8 @@
                             <ul>
                                 <li>
                                     <a href="tel:+998 98 127 0077">
-                                        <x-icon.phone/> +998 98 127 0077
+                                        <x-icon.phone/>
+                                        +998 98 127 0077
                                     </a>
                                 </li>
                                 <li>
@@ -91,16 +94,17 @@
                                 <a class="new-header__language-toggle">
                                     <x-icon.globe class="new-header__language-icon"/>
                                     <span class="new-header__language-current">
-                                        {{ \Illuminate\Support\Str::ucfirst($supportedLocales[$currentLocale]['native'] ?? $currentLocale) }}
+                                        {{ Str::ucfirst($supportedLocales[$currentLocale]['native'] ?? $currentLocale) }}
                                     </span>
                                 </a>
                                 <ul class="new-header__language-list">
                                     @foreach ($supportedLocales as $code => $properties)
                                         @if ($code !== $currentLocale)
                                             <li class="new-header__language-item">
-                                                <a class="new-header__language-link" rel="alternate" hreflang="{{ $code }}"
+                                                <a class="new-header__language-link" rel="alternate"
+                                                   hreflang="{{ $code }}"
                                                    href="{{ LaravelLocalization::getLocalizedURL($code) }}">
-                                                    {{ \Illuminate\Support\Str::ucfirst($properties['native'] ?? $code) }}
+                                                    {{ Str::ucfirst($properties['native'] ?? $code) }}
                                                 </a>
                                             </li>
                                         @endif
@@ -119,8 +123,8 @@
                 <div class="col-12 new-header__col">
                     <div class="new-header__left">
                         <div class="new-header__logo">
-                            <a href="index.htm">
-                                <img src="assets/images/SZkoPAX1pWvIHdI16puBp7HFiUHxnEtwyy9JhiMV.png" alt="">
+                            <a href="{{route('home')}}">
+                                <img src="/images/header-logo.png" alt="logo">
                             </a>
                         </div>
                         <div class="new-header__menu">
@@ -277,7 +281,8 @@
                                 <li>
                                     <a class="gazButton " href="https://lk.perfectum.uz/ru/login"
                                        target="_blank">
-                                        <x-icon.user/> Shaxsiy kabinet
+                                        <x-icon.user/>
+                                        Shaxsiy kabinet
                                     </a>
                                 </li>
                                 <li>

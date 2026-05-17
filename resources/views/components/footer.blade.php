@@ -1,34 +1,19 @@
-<!-- FOOTER -->
+@php use Illuminate\Support\Facades\Storage; @endphp
+    <!-- FOOTER -->
 <footer @class(['new-footer', 'new-footer--home' => request()->routeIs('home')])>
     <div class="container footer__container">
         <div class="new-footer__top">
             <div class="row footer__row">
                 <div class="col-12 col-md-12 col-lg-5 footer__col">
                     <div class="new-footer__logo">
-                        <img src="assets/images/689hyZxKfM1yobwJz9Qott5ZQ00qXNP50OwyHAyf.png" alt="">
+                        <img src="/images/footer-logo.png" alt="logo">
                     </div>
                     <div class="new-footer__text">
                         <p>
-                            Perfectum™ — tez rivojlanayotgan, boy tarixga ega va jasorat bilan kelajakka
-                            qarayotgan
-                            kompaniya. 1995-yilda asos solingan biz bugun mobil va fiks aloqa sohasidagi ilg‘or
-                            texnologiyalarni joriy etib, O‘zbekiston telekommunikatsiya bozorining yangi
-                            bosqichini
-                            shakllantirmoqdamiz. 2023-yilda Perfectum™ mamlakat miqyosidagi 5G Standalone
-                            tarmog‘ini
-                            noldan yaratish bo‘yicha yirik loyihani ishga tushirdi. Ushbu loyiha eng
-                            so'nggi avlod aloqa xizmatlarini taqdim etish imkonini beradi. Bizning
-                            missiyamiz —
-                            O‘zbekiston aholisi va biznesini eng yangi 5G Standalone texnologiyalariga
-                            asoslangan
-                            yuqori tezlikdagi, ishonchli va xavfsiz internet bilan ta’minlashdir. Biz mijozlar
-                            va
-                            hamkorlar uchun o‘sish, innovatsiya va muvaffaqiyat sari yangi imkoniyatlar
-                            eshigini ochgan holda, mintaqadagi yetakchi telekom-provayderga aylanishga
-                            intilamiz.
+                            {{translator('app', 'footer_text')}}
                         </p>
-                        <a class="gazButton gazButton--strong-gray" href="#">
-                            Biz haqimizda
+                        <a class="gazButton gazButton--strong-gray" href="{{route('about')}}">
+                            {{translator('app', 'about_us')}}
                         </a>
                     </div>
                     <div class="new-footer__extra-info">
@@ -194,30 +179,16 @@
                             <div class="new-footer__menu-title footer__menu-title--social">
                                 <h3>Ijtimoiy tarmoqlar</h3>
                                 <ul>
-                                    <li>
-                                        <a href="#">
-                                            <img src="assets/images/TLgWHFG8Hi2Yfxv0AmzHmFxuc1jqQcW0OlWfq9Os.svg"
-                                                 alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="assets/images/wqoc5CnTmHfg9ccBT1Npld5DvS9UfhWJAoIhfMf1.svg"
-                                                 alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="assets/images/UNddpTFFwXOXRBK2eqxfUYwp8qeHCM8dZSYuIeI5.svg"
-                                                 alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="assets/images/wfFwhh07T0uq7FdAHrfzx4QmBPtzD69gtKAdQnLb.svg"
-                                                 alt="">
-                                        </a>
-                                    </li>
+
+                                    @foreach($social_links as $social)
+                                        <li>
+                                            <a href="{{$social->url}}">
+                                                <img src="{{Storage::url($social->image)}}"
+                                                     alt="image">
+                                            </a>
+                                        </li>
+                                    @endforeach
+
                                 </ul>
                             </div>
                         </div>
@@ -229,8 +200,7 @@
             <div class="row footer__row">
                 <div class="col-12 col-md-12 col-lg-4 footer__col">
                     <p>
-                        MChJ "RWC" (Perfectum savdo belgisi) | Xizmatlar litsenziyaga ega | Narxlar qo'shimcha
-                        soliqlarni hisobga olganda.
+                        {{translator('app', 'footer_copyright')}}
                     </p>
                 </div>
             </div>
@@ -262,7 +232,8 @@
                                         <rect width="16" height="16" fill="white"></rect>
                                     </clippath>
                                 </defs>
-                            </svg> +998 98 127 0077 </a>
+                            </svg>
+                            +998 98 127 0077 </a>
                     </li>
                     <li>
                         <a href="tel:+998 98 305 1111">+998 98 305 1111</a>
@@ -423,7 +394,8 @@
                                 <path
                                     d="M11.5613 8.50081C12.2532 7.79867 12.7222 6.90766 12.9092 5.93976C13.0962 4.97187 12.9929 3.97029 12.6124 3.06092C12.2318 2.15155 11.5909 1.37497 10.7703 0.828794C9.94959 0.282614 8.98579 -0.00878906 8 -0.00878906C7.01421 -0.00878906 6.05041 0.282614 5.22975 0.828794C4.40909 1.37497 3.7682 2.15155 3.38763 3.06092C3.00705 3.97029 2.90378 4.97187 3.0908 5.93976C3.27782 6.90766 3.74677 7.79867 4.43872 8.50081C3.13259 9.01425 2.01096 9.90847 1.21944 11.0674C0.427922 12.2263 0.00305709 13.5964 1.60752e-07 14.9998C-7.43302e-05 15.1312 0.0257406 15.2612 0.0759689 15.3826C0.126197 15.504 0.199854 15.6142 0.292727 15.7071C0.385601 15.8 0.495869 15.8736 0.617229 15.9239C0.738588 15.9741 0.868657 15.9999 1 15.9998H15C15.1313 15.9999 15.2614 15.9741 15.3828 15.9239C15.5041 15.8736 15.6144 15.8 15.7073 15.7071C15.8001 15.6142 15.8738 15.504 15.924 15.3826C15.9743 15.2612 16.0001 15.1312 16 14.9998C15.9969 13.5964 15.5721 12.2263 14.7806 11.0674C13.989 9.90847 12.8674 9.01425 11.5613 8.50081ZM8 1.99982C8.59334 1.99982 9.17336 2.17577 9.66671 2.50541C10.1601 2.83506 10.5446 3.3036 10.7716 3.85177C10.9987 4.39995 11.0581 5.00315 10.9424 5.58509C10.8266 6.16704 10.5409 6.70159 10.1213 7.12114C9.70176 7.5407 9.16721 7.82642 8.58527 7.94218C8.00333 8.05794 7.40013 7.99853 6.85195 7.77146C6.30377 7.5444 5.83524 7.15988 5.50559 6.66653C5.17595 6.17319 5 5.59317 5 4.99982C5.00088 4.20444 5.31724 3.4419 5.87965 2.87948C6.44207 2.31706 7.20462 2.00071 8 1.99982ZM2.09962 13.9998C2.33197 12.8713 2.94618 11.8573 3.83877 11.1287C4.73137 10.4001 5.8478 10.0015 7 9.99982H9C10.1522 10.0015 11.2686 10.4001 12.1612 11.1287C13.0538 11.8573 13.668 12.8713 13.9004 13.9998H2.09962Z"
                                     fill="#3E3E3E"></path>
-                            </svg> Shaxsiy kabinet </a>
+                            </svg>
+                            Shaxsiy kabinet </a>
                     </li>
                     <li>
                         <a class="gazButton gazButton--red" href="static-pages/kak-podklyucitsya.html">Ulanish</a>

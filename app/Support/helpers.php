@@ -77,18 +77,19 @@ if (! function_exists('translator')) {
 
         $cacheKey = "translator.{$category}.{$key}";
 
-        $row = Cache::remember($cacheKey, 86400, fn () => SiteTranslation::query()
-            ->where('category', $category)
-            ->where('key', $key)
-            ->where('is_published', true)
-            ->first()
-        );
+        $value = Cache::remember($cacheKey, 86400, function () use ($category, $key) {
+            $row = SiteTranslation::query()
+                ->where('category', $category)
+                ->where('key', $key)
+                ->where('is_published', true)
+                ->first();
 
-        if (! $row) {
+            return $row?->value;
+        });
+
+        if ($value === null) {
             return $key;
         }
-
-        $value = $row->value;
 
         if (is_array($value)) {
             $value = $value[$locale] ?? reset($value);

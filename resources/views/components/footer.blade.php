@@ -181,12 +181,14 @@
                                 <ul>
 
                                     @foreach($social_links as $social)
-                                        <li>
-                                            <a href="{{$social->url}}">
-                                                <img src="{{Storage::url($social->image)}}"
-                                                     alt="image">
-                                            </a>
-                                        </li>
+                                        @if($social->image)
+                                            <li>
+                                                <a href="{{ $social->url }}" target="_blank" rel="noopener">
+                                                    <img src="{{ Storage::url($social->image) }}"
+                                                         alt="{{ $social->name }}">
+                                                </a>
+                                            </li>
+                                        @endif
                                     @endforeach
 
                                 </ul>

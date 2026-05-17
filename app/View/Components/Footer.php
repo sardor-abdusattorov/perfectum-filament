@@ -27,6 +27,6 @@ class Footer extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.footer', compact('social_links'));
+        return view('components.footer');
     }
 }

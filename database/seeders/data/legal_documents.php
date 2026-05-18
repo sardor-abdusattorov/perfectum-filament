@@ -1,8 +1,17 @@
 <?php
 
 // 7 legal-document placeholders matching the legacy
-// /static-pages/yuridiceskie-dokumenty grid. Content and PDF files
-// are intentionally left empty — admins upload them via Filament.
+// /static-pages/yuridiceskie-dokumenty grid.
+//
+// Each entry may add:
+//   'image'        => 'images/<basename>'          // legacy flat path
+//   'files'        => [ ['name' => '...', 'file' => 'files/<basename>'], ... ]
+//   'published_at' => 'Y-m-d H:i:s'                // drives the Y/m subfolder
+//
+// The seeder copies images into uploads/images/legal_documents/Y/m/
+// and files into uploads/files/legal_documents/Y/m/ — same layout
+// Filament's ImageUpload/DocumentUpload produces. If the source isn't
+// in storage/app/public the field is left null and admins upload it.
 
 return [
     [

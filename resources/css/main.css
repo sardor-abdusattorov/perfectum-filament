@@ -4987,7 +4987,9 @@ p {
   transition: 0.3s;
 }
 
-.accordion__list .link__title:hover {
+.accordion__list .link:hover,
+.accordion__list .link:hover .link__title,
+.accordion__list .link:hover .fa {
   color: var(--main-color);
 }
 

@@ -178,7 +178,7 @@ return [
         'news' => 'Yangiliklar',
         'actions' => 'Aksiyalar',
         'dealers' => 'Dilerlar',
-        'faq' => 'Savol-javoblar',
+        'faq' => 'Tez-tez beriladigan savollar',
         'legal_documents' => 'Yuridik hujjatlar',
         'coverage' => 'Qamrov hududi',
         'free_numbers' => 'Bo‘sh raqamlar',

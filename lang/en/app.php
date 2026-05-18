@@ -178,7 +178,7 @@ return [
         'news' => 'News',
         'actions' => 'Promotions',
         'dealers' => 'Dealers',
-        'faq' => 'FAQ',
+        'faq' => 'Frequently asked questions',
         'legal_documents' => 'Legal documents',
         'coverage' => 'Coverage area',
         'free_numbers' => 'Free numbers',

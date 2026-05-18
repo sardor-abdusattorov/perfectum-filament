@@ -131,14 +131,14 @@ class PageSettingsSeeder extends Seeder
             ],
             PageSettingKey::Faq->value => [
                 'title' => [
-                    'ru' => 'Вопросы и ответы',
-                    'uz' => 'Savol-javoblar',
-                    'en' => 'FAQ',
+                    'ru' => 'Часто задаваемые вопросы',
+                    'uz' => 'Tez-tez beriladigan savollar',
+                    'en' => 'Frequently asked questions',
                 ],
                 'description' => [
-                    'ru' => 'Ответы на частые вопросы абонентов Perfectum.',
+                    'ru' => 'Ответы на часто задаваемые вопросы абонентов Perfectum.',
                     'uz' => 'Perfectum abonentlarining tez-tez beriladigan savollariga javoblar.',
-                    'en' => 'Answers to common questions from Perfectum subscribers.',
+                    'en' => 'Answers to frequently asked questions from Perfectum subscribers.',
                 ],
             ],
             PageSettingKey::Actions->value => [

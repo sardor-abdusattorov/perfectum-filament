@@ -43,13 +43,30 @@
     </div>
 
     <script>
-        document.querySelectorAll('#accordion-faq .accordion__list .link').forEach(function (link) {
-            link.addEventListener('click', function () {
-                var item = link.parentElement;
-                var content = item.querySelector('.accordion__content');
-                var isOpen = item.classList.toggle('open');
-                content.style.display = isOpen ? 'block' : '';
+        (function () {
+            var items = document.querySelectorAll('#accordion-faq .accordion__list');
+
+            items.forEach(function (item) {
+                var link = item.querySelector('.link');
+                if (! link) return;
+
+                link.addEventListener('click', function () {
+                    var willOpen = ! item.classList.contains('open');
+
+                    // Close all items, then open this one if it was closed.
+                    items.forEach(function (other) {
+                        other.classList.remove('open');
+                        var content = other.querySelector('.accordion__content');
+                        if (content) content.style.display = '';
+                    });
+
+                    if (willOpen) {
+                        item.classList.add('open');
+                        var content = item.querySelector('.accordion__content');
+                        if (content) content.style.display = 'block';
+                    }
+                });
             });
-        });
+        })();
     </script>
 @endsection

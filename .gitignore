@@ -18,6 +18,8 @@
 /public/fonts-manifest.dev.json
 /public/hot
 /public/storage
+/public/vendor/livewire
+/resources/views/vendor/livewire
 /storage/*.key
 /storage/pail
 /vendor

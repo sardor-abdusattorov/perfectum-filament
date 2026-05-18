@@ -153,6 +153,18 @@ class PageSettingsSeeder extends Seeder
                     'en' => 'Current Perfectum promotions and special offers.',
                 ],
             ],
+            PageSettingKey::LegalDocuments->value => [
+                'title' => [
+                    'ru' => 'Юридические документы',
+                    'uz' => 'Yuridik hujjatlar',
+                    'en' => 'Legal documents',
+                ],
+                'description' => [
+                    'ru' => 'Политики, лицензии, оферты и другие юридические документы Perfectum.',
+                    'uz' => 'Perfectum siyosatlari, litsenziyalari, ofertalari va boshqa yuridik hujjatlari.',
+                    'en' => 'Perfectum policies, licences, offers and other legal documents.',
+                ],
+            ],
             PageSettingKey::Coverage->value => [
                 'title' => [
                     'ru' => 'Зона покрытия',

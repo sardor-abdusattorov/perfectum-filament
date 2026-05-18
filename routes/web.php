@@ -6,6 +6,7 @@ use App\Http\Controllers\CareersController;
 use App\Http\Controllers\DealersController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LegalDocumentsController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ServicesController;
@@ -45,6 +46,11 @@ Route::group(
         Route::prefix('actions')->name('actions.')->group(function () {
             Route::get('/', [ActionsController::class, 'index'])->name('index');
             Route::get('/{slug}', [ActionsController::class, 'show'])->name('show');
+        });
+
+        Route::prefix('legal')->name('legal.')->group(function () {
+            Route::get('/', [LegalDocumentsController::class, 'index'])->name('index');
+            Route::get('/{slug}', [LegalDocumentsController::class, 'show'])->name('show');
         });
 
         Route::prefix('dealers')->name('dealers.')->group(function () {

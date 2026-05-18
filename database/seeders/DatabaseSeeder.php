@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             DealersSeeder::class,
             ServiceCategoriesSeeder::class,
             ServicesSeeder::class,
+            LegalDocumentsSeeder::class,
             MenusSeeder::class,
             SiteTranslationsSeeder::class,
         ]);

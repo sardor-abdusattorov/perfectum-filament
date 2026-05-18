@@ -1,6 +1,7 @@
 <?php
 
 use App\Enums\PageSection;
+use App\Http\Controllers\ActionsController;
 use App\Http\Controllers\CareersController;
 use App\Http\Controllers\DealersController;
 use App\Http\Controllers\FaqController;
@@ -39,6 +40,11 @@ Route::group(
         Route::prefix('news')->name('news.')->group(function () {
             Route::get('/', [NewsController::class, 'index'])->name('index');
             Route::get('/{slug}', [NewsController::class, 'show'])->name('show');
+        });
+
+        Route::prefix('actions')->name('actions.')->group(function () {
+            Route::get('/', [ActionsController::class, 'index'])->name('index');
+            Route::get('/{slug}', [ActionsController::class, 'show'])->name('show');
         });
 
         Route::prefix('dealers')->name('dealers.')->group(function () {

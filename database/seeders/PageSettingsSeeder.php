@@ -141,6 +141,18 @@ class PageSettingsSeeder extends Seeder
                     'en' => 'Answers to common questions from Perfectum subscribers.',
                 ],
             ],
+            PageSettingKey::Actions->value => [
+                'title' => [
+                    'ru' => 'Акции',
+                    'uz' => 'Aksiyalar',
+                    'en' => 'Promotions',
+                ],
+                'description' => [
+                    'ru' => 'Актуальные акции и специальные предложения Perfectum.',
+                    'uz' => 'Perfectum aksiyalari va maxsus takliflari.',
+                    'en' => 'Current Perfectum promotions and special offers.',
+                ],
+            ],
             PageSettingKey::Coverage->value => [
                 'title' => [
                     'ru' => 'Зона покрытия',

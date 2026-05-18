@@ -4,95 +4,86 @@
 
 @extends('layouts.primary')
 
-@section('title', $page?->title)
-@section('meta_description', $page?->meta_description)
+@section('title', $page?->meta_title ?: $page?->title)
+@section('meta_description', $page?->meta_description ?: $page?->description)
 
 @section('content')
     <div class="section__secondary section-bg">
         <div class="my-container">
+
+            <x-breadcrumbs :items="[['label' => $page?->title ?: __('app.label.actions_plural')]]" />
+
             <div class="section__top-secondary">
                 <h2 class="block__title">
-                    Акции
+                    {{ $page?->title ?: __('app.label.actions_plural') }}
                 </h2>
+
+                @if ($page?->description)
+                    <div class="content__text mb-24">
+                        {!! $page->description !!}
+                    </div>
+                @endif
             </div>
 
             <div class="section__grid">
-                <a href="#" class="card pa-0">
-                    <div class="card__photo"
-                         style="border-bottom-left-radius: 0!important; border-bottom-right-radius: 0!important;">
-                        <img src="assets/images/nYzPLBnKr2G0bfNoWAYSG0aYnocS5UTCIOzstQS3.png" alt="">
-                    </div>
+                @forelse ($actions as $action)
+                    <a href="{{ route('actions.show', $action->slug) }}" class="card pa-0">
+                        @if ($action->image)
+                            <div class="card__photo" style="border-bottom-left-radius: 0 !important; border-bottom-right-radius: 0 !important;">
+                                <img src="{{ Storage::disk('public')->url($action->image) }}" alt="{{ $action->title }}">
+                            </div>
+                        @endif
 
-                    <div class="card__content pa-20">
+                        <div class="card__content pa-20">
+                            @if ($action->published_at)
                                 <span class="card__date">
-12 мая, 2022
-</span>
+                                    {{ $action->published_at->day }}
+                                    {{ __('app.months.' . $action->published_at->month) }},
+                                    {{ $action->published_at->year }}
+                                </span>
+                            @endif
 
-                        <h3 class="card__title mb-10" style="font-weight: 700">
-                            &quot;1+1&quot;
-                        </h3>
+                            <h3 class="card__title mb-10" style="font-weight: 700">
+                                {{ $action->title }}
+                            </h3>
 
-                        <h4 class="card__subtitle">
-                            Интернет - пакент = Ночной бонус!
-                        </h4>
-                    </div>
-
-                </a>
-                <a href="actions-show/internet-bonus.html" class="card pa-0">
-                    <div class="card__photo"
-                         style="border-bottom-left-radius: 0!important; border-bottom-right-radius: 0!important;">
-                        <img src="assets/images/TsTRtX8RKL1jDRHSykeAa8lufWhqt0fQxuDsua11.png" alt="">
-                    </div>
-
-                    <div class="card__content pa-20">
-                                <span class="card__date">
-12 мая, 2022
-</span>
-
-                        <h3 class="card__title mb-10" style="font-weight: 700">
-                            &quot;Internet bonus&quot;
-                        </h3>
-
-                        <h4 class="card__subtitle">
-                            Акция
-                        </h4>
-                    </div>
-
-                </a>
-                <a href="actions-show/akciya-skidki-na-nomera-do-90.html" class="card pa-0">
-                    <div class="card__photo"
-                         style="border-bottom-left-radius: 0!important; border-bottom-right-radius: 0!important;">
-                        <img src="assets/images/Qmz4Akmfc8EPDxmGXCdl7P5ho4j0evbgxHoVRw0h.jpg" alt="">
-                    </div>
-
-                    <div class="card__content pa-20">
-                                <span class="card__date">
-1 декабря, 2024
-</span>
-
-                        <h3 class="card__title mb-10" style="font-weight: 700">
-                            Акция «Скидки на номера - до 90%!»
-                        </h3>
-
-                        <h4 class="card__subtitle">
-                            Акция
-                        </h4>
-                    </div>
-
-                </a>
+                            @if ($action->description)
+                                <h4 class="card__subtitle">
+                                    {{ $action->description }}
+                                </h4>
+                            @endif
+                        </div>
+                    </a>
+                @empty
+                    <p>{{ __('app.label.empty') }}</p>
+                @endforelse
             </div>
 
-            <div class="section__bottom">
+            @if ($actions->hasPages())
+                <div class="section__bottom">
+                    <div class="pagination">
+                        <ul class="pagination__wrap">
+                            @if (! $actions->onFirstPage())
+                                <li class="pagination__item">
+                                    <a href="{{ $actions->previousPageUrl() }}" class="pagination__link" rel="prev">&laquo;</a>
+                                </li>
+                            @endif
 
-                <div class="pagination">
+                            @foreach ($actions->getUrlRange(max(1, $actions->currentPage() - 2), min($actions->lastPage(), $actions->currentPage() + 2)) as $page => $url)
+                                <li class="pagination__item {{ $page === $actions->currentPage() ? 'active' : '' }}">
+                                    <a href="{{ $url }}" class="pagination__link">{{ $page }}</a>
+                                </li>
+                            @endforeach
 
+                            @if ($actions->hasMorePages())
+                                <li class="pagination__item">
+                                    <a href="{{ $actions->nextPageUrl() }}" class="pagination__link" rel="next">&raquo;</a>
+                                </li>
+                            @endif
+                        </ul>
+                    </div>
                 </div>
-
-            </div>
-
+            @endif
         </div>
     </div>
 @endsection
-
-
-

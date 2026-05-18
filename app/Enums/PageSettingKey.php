@@ -14,6 +14,7 @@ enum PageSettingKey: string implements HasLabel
     case Tariffs = 'tariffs';
     case Services = 'services';
     case News = 'news';
+    case Actions = 'actions';
     case Dealers = 'dealers';
     case Faq = 'faq';
 

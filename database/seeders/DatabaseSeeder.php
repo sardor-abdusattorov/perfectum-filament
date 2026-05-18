@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             CareersSeeder::class,
             TendersSeeder::class,
             NewsSeeder::class,
+            ActionsSeeder::class,
             DealersSeeder::class,
             ServiceCategoriesSeeder::class,
             ServicesSeeder::class,

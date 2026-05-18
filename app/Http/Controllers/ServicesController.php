@@ -7,11 +7,10 @@ use App\Models\PageSetting;
 use App\Models\Service;
 use App\Models\ServiceCategory;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\RedirectResponse;
 
 class ServicesController extends Controller
 {
-    public function index(?string $categorySlug = null): View|RedirectResponse
+    public function index(?string $categorySlug = null): View
     {
         $page = PageSetting::where('name', PageSettingKey::Services)->first();
 
@@ -22,15 +21,7 @@ class ServicesController extends Controller
 
         $activeCategory = $categorySlug
             ? $categories->firstWhere('slug', $categorySlug)
-            : null;
-
-        // /services → 301 to the first category so there is one canonical URL
-        // per category instead of two pages serving the same content.
-        if ($categorySlug === null && $categories->isNotEmpty()) {
-            return redirect()->route('services.category', $categories->first()->slug, 301);
-        }
-
-        $activeCategory ??= $categories->first();
+            : $categories->first();
 
         $services = Service::query()
             ->where('is_published', true)

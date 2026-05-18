@@ -1,0 +1,89 @@
+<?php
+
+namespace App\Filament\Resources\Actions\Schemas;
+
+use AbdulmajeedJamaan\FilamentTranslatableTabs\TranslatableTabs;
+use App\Filament\Support\DocumentUpload;
+use App\Filament\Support\ImageUpload;
+use App\Filament\Support\TextEditor;
+use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
+use Filament\Schemas\Components\Tabs;
+use Filament\Schemas\Schema;
+
+class ActionForm
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->components([
+                Tabs::make('action')
+                    ->columnSpanFull()
+                    ->schema([
+                        Tabs\Tab::make(__('app.label.basic_information'))
+                            ->schema([
+                                TextInput::make('slug')
+                                    ->label(__('app.label.slug'))
+                                    ->helperText(__('app.helper.page_slug'))
+                                    ->maxLength(255)
+                                    ->unique(ignoreRecord: true),
+
+                                TranslatableTabs::make('translations')
+                                    ->schema([
+                                        TextInput::make('title')
+                                            ->label(__('app.label.title'))
+                                            ->required(),
+
+                                        Textarea::make('description')
+                                            ->label(__('app.label.description'))
+                                            ->rows(2),
+
+                                        TextEditor::make('actions', 'content')
+                                            ->label(__('app.label.content'))
+                                            ->helperText(__('app.helper.text_displayed_on_site'))
+                                            ->extraInputAttributes([
+                                                'style' => 'min-height: 16rem; max-height: 60vh; overflow-y: auto;',
+                                            ]),
+                                    ]),
+
+                                ImageUpload::make('actions', field: 'image')
+                                    ->label(__('app.label.image')),
+
+                                DateTimePicker::make('published_at')
+                                    ->label(__('app.label.published_at'))
+                                    ->seconds(false)
+                                    ->default(now()),
+
+                                TextInput::make('sort')
+                                    ->label(__('app.label.sort'))
+                                    ->numeric()
+                                    ->default(0),
+
+                                Toggle::make('is_published')
+                                    ->label(__('app.label.show_on_site'))
+                                    ->helperText(__('app.helper.if_disabled_hidden'))
+                                    ->default(true),
+                            ]),
+
+                        Tabs\Tab::make(__('app.label.tab_files'))
+                            ->schema([
+                                Repeater::make('files')
+                                    ->relationship()
+                                    ->label(__('app.label.tab_files'))
+                                    ->schema([
+                                        DocumentUpload::make('actions')
+                                            ->storeFileNamesIn('name')
+                                            ->required(),
+                                    ])
+                                    ->orderColumn('sort')
+                                    ->reorderable()
+                                    ->defaultItems(0)
+                                    ->addActionLabel(__('app.label.add_file')),
+                            ]),
+                    ]),
+            ]);
+    }
+}

@@ -156,6 +156,33 @@ class MenusSeeder extends Seeder
                 'name' => ['ru' => 'Юридические документы', 'uz' => 'Yuridik hujjatlar', 'en' => 'Legal documents'],
                 'url' => '/legal', 'sort' => 4,
             ],
+
+            // ---- Header Main ----
+            [
+                'id' => 28, 'parent_id' => null, 'position' => MenuPosition::HeaderMain->value, 'footer_column' => null,
+                'name' => ['ru' => 'Домашний интернет', 'uz' => 'Uy interneti', 'en' => 'Home internet'],
+                'url' => '/#', 'sort' => 1,
+            ],
+            [
+                'id' => 29, 'parent_id' => null, 'position' => MenuPosition::HeaderMain->value, 'footer_column' => null,
+                'name' => ['ru' => 'Мобильная связь', 'uz' => 'Mobil aloqa', 'en' => 'Mobile'],
+                'url' => '/#', 'sort' => 2,
+            ],
+            [
+                'id' => 30, 'parent_id' => null, 'position' => MenuPosition::HeaderMain->value, 'footer_column' => null,
+                'name' => ['ru' => 'Офисы продаж', 'uz' => 'Savdo ofislari', 'en' => 'Sales offices'],
+                'url' => '/offices', 'sort' => 3,
+            ],
+            [
+                'id' => 31, 'parent_id' => null, 'position' => MenuPosition::HeaderMain->value, 'footer_column' => null,
+                'name' => ['ru' => 'Карта покрытия', 'uz' => 'Qamrov xaritasi', 'en' => 'Coverage map'],
+                'url' => '/coverage-area', 'sort' => 4,
+            ],
+            [
+                'id' => 32, 'parent_id' => null, 'position' => MenuPosition::HeaderMain->value, 'footer_column' => null,
+                'name' => ['ru' => 'Новости', 'uz' => 'Yangiliklar', 'en' => 'News'],
+                'url' => '/news', 'sort' => 5,
+            ],
         ];
 
         foreach ($menus as $row) {

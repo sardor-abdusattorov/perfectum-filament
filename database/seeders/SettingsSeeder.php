@@ -82,6 +82,7 @@ class SettingsSeeder extends Seeder
             'email_main' => 'info@perfectum.uz',
             'app_google_play' => 'https://play.google.com/store/apps/details?id=com.globalsolutions.perfectum&hl=ru&gl=US',
             'app_app_store' => 'https://apps.apple.com/us/app/perfectum/id1148581807',
+            'lk_url' => 'https://lk.perfectum.uz',
         ];
 
         foreach ($contacts as $name => $value) {

@@ -82,6 +82,22 @@ class SiteTranslationsSeeder extends Seeder
                     'en' => 'Information',
                 ],
             ],
+            [
+                'category' => 'app', 'key' => 'my_cabinet',
+                'value' => [
+                    'ru' => 'Личный кабинет',
+                    'uz' => 'Shaxsiy kabinet',
+                    'en' => 'My account',
+                ],
+            ],
+            [
+                'category' => 'app', 'key' => 'how_to_connect',
+                'value' => [
+                    'ru' => 'Подключение ',
+                    'uz' => 'Ulanish',
+                    'en' => 'Connect',
+                ],
+            ],
         ];
 
         foreach ($translations as $row) {

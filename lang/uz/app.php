@@ -173,6 +173,7 @@ return [
         'services' => 'Xizmatlar',
         'news' => 'Yangiliklar',
         'dealers' => 'Dilerlar',
+        'faq' => 'Savol-javoblar',
         'coverage' => 'Qamrov hududi',
         'free_numbers' => 'Bo‘sh raqamlar',
     ],

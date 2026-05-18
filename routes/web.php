@@ -3,6 +3,7 @@
 use App\Enums\PageSection;
 use App\Http\Controllers\CareersController;
 use App\Http\Controllers\DealersController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PagesController;
@@ -22,6 +23,8 @@ Route::group(
         Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts');
 
         Route::get('/about', [HomeController::class, 'about'])->name('about');
+
+        Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 
         Route::prefix('careers')->name('careers.')->group(function () {
             Route::get('/', [CareersController::class, 'index'])->name('index');

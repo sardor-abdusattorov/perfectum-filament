@@ -11,9 +11,11 @@ class SocialsSeeder extends Seeder
     public function run(): void
     {
         // legacy_basename = file stem in storage/app/public/social/<stem>.<ext>
-        // The seeder probes svg/png/webp/jpg in that order and copies the
-        // first match into storage/app/public/socials/<stem>.<ext>, mirroring
-        // the SocialResource ImageUpload target directory.
+        // (legacy singular folder). The seeder probes svg/png/webp/jpg and
+        // copies the first match into
+        //   storage/app/public/uploads/images/socials/Y/m/<stem>.<ext>
+        // which matches what ImageUpload::make('socials') writes for new
+        // uploads.
         $socials = [
             [
                 'name' => 'Facebook',
@@ -60,29 +62,25 @@ class SocialsSeeder extends Seeder
         $this->command?->info('Imported '.count($socials).' social links.');
     }
 
-    /**
-     * Look up storage/app/public/social/<basename>.<ext> (legacy layout)
-     * and copy it into storage/app/public/socials/<basename>.<ext> — the
-     * directory SocialResource uses for new uploads.
-     */
     private function relocateSocialIcon(string $basename, $disk): ?string
     {
         $extensions = ['svg', 'png', 'webp', 'jpg', 'jpeg'];
+        $folder = 'uploads/images/socials/'.date('Y/m');
 
-        // Already in place under the new path?
+        // Already in the new path?
         foreach ($extensions as $ext) {
-            $target = "socials/{$basename}.{$ext}";
+            $target = "{$folder}/{$basename}.{$ext}";
             if ($disk->exists($target)) {
                 return $target;
             }
         }
 
-        // Copy from legacy `social/` (singular) into `socials/` (plural).
+        // Copy from legacy `social/<basename>.<ext>` into the new path.
         foreach ($extensions as $ext) {
             $legacy = "social/{$basename}.{$ext}";
             if ($disk->exists($legacy)) {
-                $target = "socials/{$basename}.{$ext}";
-                $disk->makeDirectory('socials');
+                $target = "{$folder}/{$basename}.{$ext}";
+                $disk->makeDirectory($folder);
                 $disk->copy($legacy, $target);
 
                 return $target;

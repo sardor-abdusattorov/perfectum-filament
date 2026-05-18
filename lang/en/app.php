@@ -112,6 +112,7 @@ return [
         'content' => 'Content',
         'meta_title' => 'Meta title',
         'meta_description' => 'Meta description',
+        'meta_keywords' => 'Meta keywords',
         'seo' => 'SEO',
         'position' => 'Position',
         'footer_column' => 'Footer column',
@@ -182,6 +183,7 @@ return [
         'legal_documents' => 'Legal documents',
         'coverage' => 'Coverage area',
         'free_numbers' => 'Free numbers',
+        'home_internet' => 'Home internet',
     ],
     'menu_position' => [
         'header_top' => 'Top menu',

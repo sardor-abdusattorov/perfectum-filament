@@ -112,6 +112,7 @@ return [
         'content' => 'Kontent',
         'meta_title' => 'Meta sarlavha',
         'meta_description' => 'Meta tavsif',
+        'meta_keywords' => 'Meta kalit so‘zlar',
         'seo' => 'SEO',
         'position' => 'Joylashuv',
         'footer_column' => 'Futer ustuni',
@@ -182,6 +183,7 @@ return [
         'legal_documents' => 'Yuridik hujjatlar',
         'coverage' => 'Qamrov hududi',
         'free_numbers' => 'Bo‘sh raqamlar',
+        'home_internet' => 'Uy interneti',
     ],
     'menu_position' => [
         'header_top' => 'Yuqori menyu',

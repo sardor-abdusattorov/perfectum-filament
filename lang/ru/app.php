@@ -112,6 +112,7 @@ return [
         'content' => 'Контент',
         'meta_title' => 'Meta заголовок',
         'meta_description' => 'Meta описание',
+        'meta_keywords' => 'Meta ключевые слова',
         'seo' => 'SEO',
         'position' => 'Позиция',
         'footer_column' => 'Колонка футера',
@@ -182,6 +183,7 @@ return [
         'legal_documents' => 'Юридические документы',
         'coverage' => 'Зона покрытия',
         'free_numbers' => 'Свободные номера',
+        'home_internet' => 'Домашний интернет',
     ],
     'menu_position' => [
         'header_top' => 'Верхнее меню',

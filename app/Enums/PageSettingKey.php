@@ -21,6 +21,7 @@ enum PageSettingKey: string implements HasLabel
 
     case Coverage = 'coverage';
     case FreeNumbers = 'free_numbers';
+    case HomeInternet = 'home_internet';
 
     public function getLabel(): string
     {

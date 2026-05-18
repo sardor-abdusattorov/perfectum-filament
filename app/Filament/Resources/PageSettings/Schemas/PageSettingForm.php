@@ -45,6 +45,10 @@ class PageSettingForm
                                     ->label(__('app.label.meta_description'))
                                     ->required()
                                     ->rows(3),
+
+                                Textarea::make('meta_keywords')
+                                    ->label(__('app.label.meta_keywords'))
+                                    ->rows(2),
                             ]),
 
                         Toggle::make('is_published')

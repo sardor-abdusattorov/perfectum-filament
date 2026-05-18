@@ -15,6 +15,7 @@ return new class extends Migration
             $table->json('description')->nullable();
             $table->json('meta_title')->nullable();
             $table->json('meta_description')->nullable();
+            $table->json('meta_keywords')->nullable();
             $table->boolean('is_published')->default(true)->index();
             $table->timestamps();
         });

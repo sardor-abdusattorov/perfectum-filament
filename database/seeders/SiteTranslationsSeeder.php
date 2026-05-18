@@ -99,6 +99,14 @@ class SiteTranslationsSeeder extends Seeder
                 ],
             ],
             [
+                'category' => 'app', 'key' => 'help',
+                'value' => [
+                    'ru' => 'Помощь',
+                    'uz' => 'Yordam',
+                    'en' => 'Help',
+                ],
+            ],
+            [
                 'category' => 'app', 'key' => 'faq',
                 'value' => [
                     'ru' => 'Часто задаваемые вопросы',

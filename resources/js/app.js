@@ -19,3 +19,4 @@ L.Icon.Default.mergeOptions({
 });
 
 import './main.js';
+import './scripts.js';

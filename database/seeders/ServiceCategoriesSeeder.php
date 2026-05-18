@@ -16,6 +16,8 @@ class ServiceCategoriesSeeder extends Seeder
                 ['slug' => $row['slug']],
                 [
                     'title' => $row['title'],
+                    'meta_title' => $row['meta_title'] ?? null,
+                    'meta_description' => $row['meta_description'] ?? null,
                     'sort' => $row['sort'],
                     'is_published' => true,
                 ],

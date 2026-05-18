@@ -17,11 +17,13 @@ class ServiceCategory extends Model
         'slug',
         'title',
         'description',
+        'meta_title',
+        'meta_description',
         'sort',
         'is_published',
     ];
 
-    public $translatable = ['title', 'description'];
+    public $translatable = ['title', 'description', 'meta_title', 'meta_description'];
 
     protected $casts = [
         'is_published' => 'boolean',
@@ -31,5 +33,18 @@ class ServiceCategory extends Model
     public function services(): HasMany
     {
         return $this->hasMany(Service::class)->orderBy('sort');
+    }
+
+    public function getResolvedMetaTitleAttribute(): string
+    {
+        return $this->getTranslation('meta_title', app()->getLocale(), false)
+            ?: ($this->title.' | Perfectum');
+    }
+
+    public function getResolvedMetaDescriptionAttribute(): ?string
+    {
+        return $this->getTranslation('meta_description', app()->getLocale(), false)
+            ?: $this->getTranslation('description', app()->getLocale(), false)
+            ?: null;
     }
 }

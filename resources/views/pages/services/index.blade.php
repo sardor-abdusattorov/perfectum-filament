@@ -4,8 +4,8 @@
 
 @extends('layouts.primary')
 
-@section('title', $page?->meta_title ?: $page?->title)
-@section('meta_description', $page?->meta_description ?: $page?->description)
+@section('title', $activeCategory?->resolved_meta_title ?: ($page?->meta_title ?: $page?->title))
+@section('meta_description', $activeCategory?->resolved_meta_description ?: ($page?->meta_description ?: $page?->description))
 
 @section('content')
     <div class="section__secondary section-bg">

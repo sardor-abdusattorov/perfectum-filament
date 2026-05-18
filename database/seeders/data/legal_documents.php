@@ -134,4 +134,52 @@ return [
       ],
     ],
   ],
+  5 => [
+    'legacy_id' => 1148,
+    'slug' => 'cookie-policy',
+    'title' => [
+      'ru' => 'Политика использования Cookie-Файлов',
+      'uz' => 'Cookie-fayllardan foydalanish siyosati',
+      'en' => 'Cookie policy',
+    ],
+    'content' => null,
+    'image' => 'images/HTfRhOaNpNrBVSyxNCsZ4SYWuYleLVySMsVIaPS0.png',
+    'sort' => 2,
+    'is_published' => true,
+    'published_at' => '2026-05-05 19:00:00',
+    'files' => [
+      0 => [
+        'name' => 'Cookie-fayllardan foydalanish siyosati.pdf',
+        'file' => 'files/8xIZx86X2BFGNVsdoIOlAoL5rRP2yjqEDLwb1rPF.pdf',
+      ],
+      1 => [
+        'name' => 'Политика_использования_cookie_файлов_.pdf',
+        'file' => 'files/afIfaT1RP1SgxXksiHeGGbTpIOIiY49oHVS3dZTQ.pdf',
+      ],
+    ],
+  ],
+  6 => [
+    'legacy_id' => 1149,
+    'slug' => 'personal-data-policy',
+    'title' => [
+      'ru' => 'Политика обработки персональных данных пользователей',
+      'uz' => 'Foydalanuvchilarning shaxsga doir ma’lumotlariga ishlov berish siyosati',
+      'en' => 'Personal data processing policy',
+    ],
+    'content' => null,
+    'image' => 'images/MrrN6yptnr8OmQGWmkWKwP3m1VLPf8leE5n5A5Hp.png',
+    'sort' => 1,
+    'is_published' => true,
+    'published_at' => '2026-05-05 19:00:00',
+    'files' => [
+      0 => [
+        'name' => 'Foydalanuvchilarning_shaxsga_doir_ma’lumotlariga_ishlov_berish_siyosati.pdf',
+        'file' => 'files/6EkDVALl9ZVmDkxtCXiqqHaUhqitrhRuUsUfBXUL.pdf',
+      ],
+      1 => [
+        'name' => 'Политика_обработки_персональных_данных_пользователей.pdf',
+        'file' => 'files/kdCF8AhOkWD8v4fQ9zZ0CpnsN0RtLgFQYcuTgSCe.pdf',
+      ],
+    ],
+  ],
 ];

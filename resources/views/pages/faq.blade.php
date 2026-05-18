@@ -13,40 +13,43 @@
                 <x-help-sidebar active="faq"/>
 
                 <div class="content__main">
-                    <div class="block__wrap ml-0">
-                        <h3 class="content__main-title">
-                            {{ $page?->title ?: __('app.page_settings.faq') }}
-                        </h3>
-
-                        @if ($page?->description)
-                            <div class="content__text mb-24">
-                                {!! $page->description !!}
-                            </div>
-                        @endif
-
-                        @if ($faqs->isNotEmpty())
-                            <ul class="accordion services__accordion">
-                                @foreach ($faqs as $faq)
-                                    <li class="accordion__list">
-                                        <details>
-                                            <summary class="link">
-                                                <span class="link__title">{{ $faq->question }}</span>
-                                            </summary>
-                                            <div class="accordion__content">
-                                                <div class="content__text">
-                                                    {!! $faq->answer !!}
-                                                </div>
-                                            </div>
-                                        </details>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        @else
-                            <p>{{ __('app.label.empty') }}</p>
-                        @endif
+                    <div class="content__main-title">
+                        <i aria-hidden="true" class="fa fa-angle-left color-main mr-2 font-weight-bold"></i>
+                        {{ $page?->title ?: __('app.page_settings.faq') }}
                     </div>
+
+                    @if ($faqs->isNotEmpty())
+                        <ul id="accordion-faq" class="accordion services__accordion">
+                            @foreach ($faqs as $index => $faq)
+                                <li class="accordion__list{{ $index === 0 ? ' open' : '' }}">
+                                    <div class="link">
+                                        <span class="link__title" style="font-size: 18px;">{{ $faq->question }}</span>
+                                        <i class="fa fa-chevron-down"></i>
+                                    </div>
+                                    <div class="accordion__content"@if ($index === 0) style="display: block;"@endif>
+                                        <div class="content__text">
+                                            {!! $faq->answer !!}
+                                        </div>
+                                    </div>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @else
+                        <p>{{ __('app.label.empty') }}</p>
+                    @endif
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        document.querySelectorAll('#accordion-faq .accordion__list .link').forEach(function (link) {
+            link.addEventListener('click', function () {
+                var item = link.parentElement;
+                var content = item.querySelector('.accordion__content');
+                var isOpen = item.classList.toggle('open');
+                content.style.display = isOpen ? 'block' : '';
+            });
+        });
+    </script>
 @endsection

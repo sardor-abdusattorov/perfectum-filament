@@ -1,5 +1,5 @@
 @props([
-    'active' => null,  // 'faq' | 'free-numbers' | 'contacts'
+    'active' => null,
 ])
 
 @php
@@ -24,7 +24,7 @@
 
 <div class="content__sidebar">
     <h3 class="content__sidebar-title">
-        {{ translator('app.useful') }}
+        {{ translator('app.help') }}
     </h3>
     <ul class="content__sidebar-wrap">
         @foreach ($links as $link)

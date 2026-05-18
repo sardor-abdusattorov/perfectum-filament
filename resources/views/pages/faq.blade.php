@@ -14,7 +14,6 @@
 
                 <div class="content__main">
                     <div class="content__main-title">
-                        <i aria-hidden="true" class="fa fa-angle-left color-main mr-2 font-weight-bold"></i>
                         {{ $page?->title }}
                     </div>
 

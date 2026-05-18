@@ -4992,7 +4992,9 @@ p {
 .accordion__list .link:hover .fa {
   color: var(--color-main);
 }
-
+.accordion li.open .link span{
+    color: var(--color-main);
+}
 .accordion li:last-child .link {
   border-bottom: 0;
 }
@@ -5014,7 +5016,7 @@ p {
 .accordion li i.fa-chevron-down {
   right: 12px;
   left: auto;
-  font-size: 1.2em;
+  font-size: 2em;
 }
 
 .accordion li.open .link {

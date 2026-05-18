@@ -20,7 +20,7 @@
 
                 <div class="btn__group">
                     @foreach ($categories as $category)
-                        <a href="{{ route('services.index', ['category' => $category->slug]) }}"
+                        <a href="{{ route('services.category', $category->slug) }}"
                            class="secondary-btn {{ $activeCategory && $activeCategory->id === $category->id ? 'active' : '' }}">
                             {{ $category->title }}
                         </a>

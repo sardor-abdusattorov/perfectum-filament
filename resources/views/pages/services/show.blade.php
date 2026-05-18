@@ -18,7 +18,7 @@
                         ['label' => $page?->title ?: __('app.label.services_plural'), 'url' => route('services.index')],
                         $service->category ? [
                             'label' => $service->category->title,
-                            'url' => route('services.index', ['category' => $service->category->slug]),
+                            'url' => route('services.category', $service->category->slug),
                         ] : null,
                         ['label' => $service->title],
                     ]))" />

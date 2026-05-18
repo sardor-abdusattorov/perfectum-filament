@@ -45,6 +45,7 @@ Route::group(
 
         Route::prefix('services')->name('services.')->group(function () {
             Route::get('/', [ServicesController::class, 'index'])->name('index');
+            Route::get('/category/{categorySlug}', [ServicesController::class, 'index'])->name('category');
             Route::get('/{slug}', [ServicesController::class, 'show'])->name('show');
         });
 

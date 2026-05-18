@@ -7,11 +7,10 @@ use App\Models\PageSetting;
 use App\Models\Service;
 use App\Models\ServiceCategory;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\Request;
 
 class ServicesController extends Controller
 {
-    public function index(Request $request): View
+    public function index(?string $categorySlug = null): View
     {
         $page = PageSetting::where('name', PageSettingKey::Services)->first();
 
@@ -20,12 +19,9 @@ class ServicesController extends Controller
             ->orderBy('sort')
             ->get(['id', 'slug', 'title', 'sort']);
 
-        $activeCategory = null;
-        $categorySlug = $request->query('category');
-
-        if ($categorySlug) {
-            $activeCategory = $categories->firstWhere('slug', $categorySlug);
-        }
+        $activeCategory = $categorySlug
+            ? $categories->firstWhere('slug', $categorySlug)
+            : null;
 
         $activeCategory ??= $categories->first();
 

@@ -279,15 +279,17 @@
                         <div class="new-header__buttons">
                             <ul>
                                 <li>
-                                    <a class="gazButton " href="https://lk.perfectum.uz/ru/login"
+                                    <a class="gazButton " href="{{site_setting('lk_url')}}"
                                        target="_blank">
                                         <x-icon.user/>
-                                        Shaxsiy kabinet
+                                        {{translator('app', 'my_cabinet')}}
                                     </a>
                                 </li>
                                 <li>
                                     <a class="gazButton gazButton--red"
-                                       href="static-pages/kak-podklyucitsya.html">Ulanish</a>
+                                       href="static-pages/kak-podklyucitsya.html">
+                                        {{translator('app', 'how_to_connect')}}
+                                    </a>
                                 </li>
                             </ul>
                         </div>

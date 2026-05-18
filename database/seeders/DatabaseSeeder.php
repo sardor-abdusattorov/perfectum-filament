@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             ServiceCategoriesSeeder::class,
             ServicesSeeder::class,
             LegalDocumentsSeeder::class,
+            PagesSeeder::class,
             MenusSeeder::class,
             SiteTranslationsSeeder::class,
         ]);

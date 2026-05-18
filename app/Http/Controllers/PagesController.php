@@ -13,6 +13,7 @@ class PagesController extends Controller
             ->where('section', $section)
             ->where('slug', $slug)
             ->where('is_published', true)
+            ->with('files')
             ->firstOrFail();
 
         $view = "pages.{$page->template}";

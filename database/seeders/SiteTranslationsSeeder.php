@@ -99,6 +99,30 @@ class SiteTranslationsSeeder extends Seeder
                 ],
             ],
             [
+                'category' => 'app', 'key' => 'faq',
+                'value' => [
+                    'ru' => 'Часто задаваемые вопросы',
+                    'uz' => 'Tez-tez beriladigan savollar',
+                    'en' => 'Frequently asked questions',
+                ],
+            ],
+            [
+                'category' => 'app', 'key' => 'free_numbers',
+                'value' => [
+                    'ru' => 'Свободные номера',
+                    'uz' => 'Bo‘sh raqamlar',
+                    'en' => 'Available numbers',
+                ],
+            ],
+            [
+                'category' => 'app', 'key' => 'contacts',
+                'value' => [
+                    'ru' => 'Связь с нами',
+                    'uz' => 'Biz bilan bog‘lanish',
+                    'en' => 'Contact us',
+                ],
+            ],
+            [
                 'category' => 'app', 'key' => 'tender_text',
                 'value' => [
                     'ru' => '<p style="text-align: right; line-height: normal;">Подписывайтесь на наш <a href="https://t.me/Perfectum_Zakupki"><b>Телеграм канал</b></a> и <a href="https://www.facebook.com/groups/1103621480683219"><b>Facebook группу</b></a> <br>чтобы получать актуальную информацию о закупках компании</p>',

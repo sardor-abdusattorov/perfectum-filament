@@ -7,7 +7,7 @@
     <div class="section__secondary">
         <div class="my-container">
 
-            <x-breadcrumbs :items="[['label' => $page?->title ?: __('app.page_settings.faq')]]" />
+            <x-breadcrumbs :items="[['label' => $page?->title]]" />
 
             <div class="content__holder">
                 <x-help-sidebar active="faq"/>
@@ -15,7 +15,7 @@
                 <div class="content__main">
                     <div class="content__main-title">
                         <i aria-hidden="true" class="fa fa-angle-left color-main mr-2 font-weight-bold"></i>
-                        {{ $page?->title ?: __('app.page_settings.faq') }}
+                        {{ $page?->title }}
                     </div>
 
                     @if ($faqs->isNotEmpty())

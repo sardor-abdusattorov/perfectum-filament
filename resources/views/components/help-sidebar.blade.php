@@ -6,17 +6,17 @@
     $links = [
         [
             'key' => 'faq',
-            'label' => translator('app.faq') ?: __('app.page_settings.faq'),
+            'label' => translator('app.faq'),
             'url' => route('faq'),
         ],
         [
             'key' => 'free-numbers',
-            'label' => __('app.page_settings.free_numbers'),
+            'label' => translator('app.free_numbers'),
             'url' => '#',
         ],
         [
             'key' => 'contacts',
-            'label' => __('app.page_settings.contacts'),
+            'label' => translator('app.contacts'),
             'url' => route('contacts'),
         ],
     ];
@@ -24,7 +24,7 @@
 
 <div class="content__sidebar">
     <h3 class="content__sidebar-title">
-        {{ translator('app.useful') ?: __('app.page_settings.helpers') }}
+        {{ translator('app.useful') }}
     </h3>
     <ul class="content__sidebar-wrap">
         @foreach ($links as $link)

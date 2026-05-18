@@ -98,6 +98,14 @@ class SiteTranslationsSeeder extends Seeder
                     'en' => 'Connect',
                 ],
             ],
+            [
+                'category' => 'app', 'key' => 'tender_text',
+                'value' => [
+                    'ru' => '<p style="text-align: right; line-height: normal;">Подписывайтесь на наш <a href="https://t.me/Perfectum_Zakupki"><b>Телеграм канал</b></a> и <a href="https://www.facebook.com/groups/1103621480683219"><b>Facebook группу</b></a> <br>чтобы получать актуальную информацию о закупках компании</p>',
+                    'uz' => '<p style="text-align: right; line-height: normal;">Kompaniyaning xaridlari haqida dolzarb ma‘lumotlarni olish uchun <a href="https://t.me/Perfectum_Zakupki"><b>Telegram kanalimizga</b></a> va <a href="https://www.facebook.com/groups/1103621480683219"><b>Facebook guruhimizga</b></a> <br>obuna bo‘ling.</p>',
+                    'en' => '<p style="text-align: right; line-height: normal;">Follow our <a href="https://t.me/Perfectum_Zakupki"><b>Telegram channel</b></a> and <a href="https://www.facebook.com/groups/1103621480683219"><b>Facebook group</b></a> <br>to receive up-to-date information about company procurements.</p>',
+                ],
+            ],
         ];
 
         foreach ($translations as $row) {

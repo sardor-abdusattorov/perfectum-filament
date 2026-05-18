@@ -16,7 +16,7 @@
                 <div class="block__wrap">
 
                     <x-breadcrumbs :items="[
-                        ['label' => $page?->title, 'url' => route('dealers.index')],
+                        ['label' => $page?->title ?: __('app.label.dealers_plural'), 'url' => route('dealers.index')],
                         ['label' => $dealer?->title],
                     ]"/>
 

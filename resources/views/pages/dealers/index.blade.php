@@ -8,11 +8,11 @@
     <div class="section__secondary section-bg">
         <div class="my-container">
 
-            <x-breadcrumbs :items="[['label' => $page?->title]]" />
+            <x-breadcrumbs :items="[['label' => $page?->title ?: __('app.label.dealers_plural')]]" />
 
             <div class="section__top-secondary section__top-flex">
                 <h2 class="block__title">
-                    {{ $page?->title }}
+                    {{ $page?->title ?: __('app.label.dealers_plural') }}
                 </h2>
 
                 @if ($page?->description)

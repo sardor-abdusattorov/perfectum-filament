@@ -13,6 +13,8 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->json('title');
             $table->json('description')->nullable();
+            $table->json('meta_title')->nullable();
+            $table->json('meta_description')->nullable();
             $table->unsignedInteger('sort')->default(0);
             $table->boolean('is_published')->default(true);
             $table->timestamps();

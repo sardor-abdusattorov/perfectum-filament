@@ -3,13 +3,14 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Concerns\CleansUpAttachedFiles;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Facades\Storage;
 use Spatie\Translatable\HasTranslations;
 
 class Tender extends Model
 {
-    use HasTranslations;
+    use CleansUpAttachedFiles, HasTranslations;
 
     protected $table = 'tenders';
 

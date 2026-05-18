@@ -4,12 +4,13 @@ namespace App\Models;
 
 use App\Enums\PageSettingKey;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Concerns\CleansUpAttachedFiles;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Spatie\Translatable\HasTranslations;
 
 class PageBlock extends Model
 {
-    use HasTranslations;
+    use CleansUpAttachedFiles, HasTranslations;
 
     protected $table = 'page_blocks';
 

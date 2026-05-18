@@ -4,12 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Concerns\CleansUpAttachedFiles;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Spatie\Translatable\HasTranslations;
 
 class LegalDocument extends Model
 {
-    use HasFactory, HasTranslations;
+    use CleansUpAttachedFiles, HasFactory, HasTranslations;
 
     protected $table = 'legal_documents';
 

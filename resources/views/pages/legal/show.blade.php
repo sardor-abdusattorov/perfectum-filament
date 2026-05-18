@@ -15,9 +15,17 @@
                 <div class="block__wrap">
 
                     <x-breadcrumbs :items="[
-                        ['label' => $page?->title ?: __('app.label.legal_documents_plural'), 'url' => route('legal.index')],
+                        ['label' => $page?->title, 'url' => route('legal.index')],
                         ['label' => $document?->title],
                     ]" />
+
+                    @if ($document->published_at)
+                        <h5 class="card__date mb-20">
+                            {{ $document->published_at->day }}
+                            {{ __('app.months.' . $document->published_at->month) }},
+                            {{ $document->published_at->year }}
+                        </h5>
+                    @endif
 
                     <h2 class="block__title mb-20">{{ $document->title }}</h2>
 

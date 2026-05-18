@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Enums\PageSection;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Concerns\CleansUpAttachedFiles;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
@@ -11,7 +12,7 @@ use Spatie\Translatable\HasTranslations;
 
 class Page extends Model
 {
-    use HasTranslations;
+    use CleansUpAttachedFiles, HasTranslations;
 
     protected $table = 'pages';
 

@@ -4,13 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Concerns\CleansUpAttachedFiles;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Spatie\Translatable\HasTranslations;
 
 class Service extends Model
 {
-    use HasFactory, HasTranslations;
+    use CleansUpAttachedFiles, HasFactory, HasTranslations;
 
     protected $table = 'services';
 

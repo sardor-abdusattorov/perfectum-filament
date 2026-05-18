@@ -34,13 +34,14 @@ class ServicesController extends Controller
         return view('pages.services.index', compact('page', 'categories', 'activeCategory', 'services'));
     }
 
-    public function show(string $slug): View
+    public function show(string $categorySlug, string $slug): View
     {
         $page = PageSetting::where('name', PageSettingKey::Services)->first();
 
         $service = Service::query()
             ->where('slug', $slug)
             ->where('is_published', true)
+            ->whereHas('category', fn ($q) => $q->where('slug', $categorySlug))
             ->with(['category', 'files'])
             ->first();
 

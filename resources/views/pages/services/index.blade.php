@@ -30,7 +30,7 @@
 
             <div class="services-wrapper">
                 @forelse ($services as $service)
-                    <a href="{{ route('services.show', $service->slug) }}" class="services-item">
+                    <a href="{{ route('services.show', [$activeCategory->slug, $service->slug]) }}" class="services-item">
                         <div class="services-item__left">
                             @if ($service->icon)
                                 <img src="{{ Storage::disk('public')->url($service->icon) }}" alt="{{ $service->title }}">

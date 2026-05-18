@@ -173,6 +173,7 @@ return [
         'services' => 'Services',
         'news' => 'News',
         'dealers' => 'Dealers',
+        'faq' => 'FAQ',
         'coverage' => 'Coverage area',
         'free_numbers' => 'Free numbers',
     ],

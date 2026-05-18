@@ -129,6 +129,18 @@ class PageSettingsSeeder extends Seeder
                     'en' => 'Perfectum dealer locations across Uzbekistan',
                 ],
             ],
+            PageSettingKey::Faq->value => [
+                'title' => [
+                    'ru' => 'Вопросы и ответы',
+                    'uz' => 'Savol-javoblar',
+                    'en' => 'FAQ',
+                ],
+                'description' => [
+                    'ru' => 'Ответы на частые вопросы абонентов Perfectum.',
+                    'uz' => 'Perfectum abonentlarining tez-tez beriladigan savollariga javoblar.',
+                    'en' => 'Answers to common questions from Perfectum subscribers.',
+                ],
+            ],
             PageSettingKey::Coverage->value => [
                 'title' => [
                     'ru' => 'Зона покрытия',

@@ -20,6 +20,11 @@
                         ['label' => $tender?->title],
                     ]"/>
 
+                    <div class="tender-description my-4 text-end">
+                        {!! translator('app', 'tender_text') !!}
+                    </div>
+
+
                     <h2 class="block__title mb-20">{{ $tender->title }}</h2>
 
                     @if ($tender->published_at)

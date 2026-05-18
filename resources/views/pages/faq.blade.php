@@ -52,7 +52,6 @@
                 link.addEventListener('click', function () {
                     var willOpen = ! item.classList.contains('open');
 
-                    // Close all items, then open this one if it was closed.
                     items.forEach(function (other) {
                         other.classList.remove('open');
                         var content = other.querySelector('.accordion__content');

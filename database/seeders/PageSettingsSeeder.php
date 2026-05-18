@@ -117,6 +117,18 @@ class PageSettingsSeeder extends Seeder
                     'en' => 'Latest company news and events',
                 ],
             ],
+            PageSettingKey::Dealers->value => [
+                'title' => [
+                    'ru' => 'Дилеры',
+                    'uz' => 'Dilerlar',
+                    'en' => 'Dealers',
+                ],
+                'description' => [
+                    'ru' => 'Адреса дилеров Perfectum по регионам Узбекистана',
+                    'uz' => 'O‘zbekiston bo‘ylab Perfectum dilerlari manzillari',
+                    'en' => 'Perfectum dealer locations across Uzbekistan',
+                ],
+            ],
             PageSettingKey::Coverage->value => [
                 'title' => [
                     'ru' => 'Зона покрытия',

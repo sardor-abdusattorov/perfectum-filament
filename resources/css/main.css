@@ -8982,3 +8982,14 @@ figure.table table {
     width: 100%;
   }
 }
+
+.files_download {
+  display: inline-block;
+  margin-top: 12px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.files_download:hover {
+  color: #fd500a;
+}

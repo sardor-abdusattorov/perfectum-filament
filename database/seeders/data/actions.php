@@ -14,7 +14,7 @@
 
 return [
     [
-        'slug' => 'kasko-avtostraxovanie-do-50',
+        'slug' => 'kasko-insurance-discount',
         'title' => [
             'ru' => '«КАСКО (автострахование) до -50%»!',
             'uz' => '«KASKO (avtosug\'urta) aksiyasi: -50%» gacha!',
@@ -60,7 +60,7 @@ HTML,
         'published_at' => '2021-09-19 19:00:00',
     ],
     [
-        'slug' => 'internet-paket-nochnoj-bonus',
+        'slug' => 'internet-1-plus-1-night-bonus',
         'title' => [
             'ru' => '"1+1"',
             'uz' => '"1+1"',
@@ -140,7 +140,7 @@ HTML,
         'published_at' => '2022-05-11 19:00:00',
     ],
     [
-        'slug' => 'akciya-novey',
+        'slug' => 'novey-phone-promo',
         'title' => [
             'ru' => 'Акция «Novey»!',
             'uz' => '«Novey» aksiyasi!',
@@ -168,7 +168,7 @@ HTML,
         'published_at' => '2023-04-11 19:00:00',
     ],
     [
-        'slug' => 'novyi-tarif-oquvchi-i-100-cashback-za-telefon-ot-perfectum',
+        'slug' => 'oquvchi-tariff-cashback',
         'title' => [
             'ru' => 'Новый тариф «O`quvchi» и «100% Cashback за телефон» от Perfectum!',
             'uz' => 'Perfectumdan yangi "O`quvchi" tarifi va "Telefon uchun 100% Cashback"!',
@@ -198,7 +198,7 @@ HTML,
         'published_at' => '2023-10-25 19:00:00',
     ],
     [
-        'slug' => 'novogodnie-skidki-na-krasivye-nomera',
+        'slug' => 'new-year-numbers-discount',
         'title' => [
             'ru' => '🎄 Новогодние скидки на красивые номера! 🎉',
             'uz' => '🎄 Yangi yil chegirmalari chiroyli raqamlarga! 🎉',
@@ -225,7 +225,7 @@ HTML,
         'published_at' => '2025-12-11 19:00:00',
     ],
     [
-        'slug' => 'akciya-skidki-na-nomera-do-90',
+        'slug' => 'numbers-discount-90',
         'title' => [
             'ru' => 'Акция «Скидки на номера — до 90%!»',
             'uz' => 'Aksiya "Raqamlarga chegirmalar — 90% gacha!"',

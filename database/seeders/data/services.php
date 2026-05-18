@@ -9,7 +9,7 @@ return [
   0 => [
     'legacy_id' => 13,
     'legacy_service_type_id' => 1,
-    'slug' => 'konferenc-svyaz',
+    'slug' => 'conference-call',
     'title' => [
       'ru' => 'Конференц-связь',
       'uz' => 'Konferens-aloqa',
@@ -30,7 +30,7 @@ return [
   1 => [
     'legacy_id' => 14,
     'legacy_service_type_id' => 1,
-    'slug' => 'ne-bespokoit',
+    'slug' => 'do-not-disturb',
     'title' => [
       'ru' => 'Не беспокоить',
       'uz' => 'Bezovta qilmaslik',
@@ -54,7 +54,7 @@ return [
   2 => [
     'legacy_id' => 15,
     'legacy_service_type_id' => 1,
-    'slug' => 'ogranicenie-isxodyashhix-zvonkov',
+    'slug' => 'outgoing-call-restriction',
     'title' => [
       'ru' => 'Ограничение исходящих звонков',
       'uz' => 'Chiqish qo\'ng\'iroqlarini cheklash',
@@ -77,7 +77,7 @@ return [
   3 => [
     'legacy_id' => 16,
     'legacy_service_type_id' => 1,
-    'slug' => 'ogranicenie-mezdunarodnyx-zvonkov',
+    'slug' => 'international-call-restriction',
     'title' => [
       'ru' => 'Ограничение международных звонков',
       'uz' => 'Xalqaro qo\'ng\'iroqlarini parol bilan cheklash',
@@ -98,7 +98,7 @@ return [
   4 => [
     'legacy_id' => 17,
     'legacy_service_type_id' => 1,
-    'slug' => 'ozidanie-vyzova',
+    'slug' => 'call-waiting',
     'title' => [
       'ru' => 'Ожидание вызова',
       'uz' => 'Chaqiriqni kutish',
@@ -119,7 +119,7 @@ return [
   5 => [
     'legacy_id' => 18,
     'legacy_service_type_id' => 1,
-    'slug' => 'opredelitel-nomera',
+    'slug' => 'caller-id',
     'title' => [
       'ru' => 'Определитель номера',
       'uz' => 'Raqamni aniqlash',
@@ -143,7 +143,7 @@ return [
   6 => [
     'legacy_id' => 19,
     'legacy_service_type_id' => 1,
-    'slug' => 'pereadresaciya-vyzovov',
+    'slug' => 'call-forwarding',
     'title' => [
       'ru' => 'Переадресация вызовов',
       'uz' => 'Qo`ng`iroqlarni qayta manzillash',
@@ -166,7 +166,7 @@ return [
   7 => [
     'legacy_id' => 20,
     'legacy_service_type_id' => 1,
-    'slug' => 'upravlyaemyi-antiaon-1',
+    'slug' => 'managed-anti-caller-id-1',
     'title' => [
       'ru' => 'Управляемый АнтиАОН 1',
       'uz' => 'Boshqariladigan Anti ARA 1',
@@ -189,7 +189,7 @@ return [
   8 => [
     'legacy_id' => 21,
     'legacy_service_type_id' => 1,
-    'slug' => 'upravlyaemyi-antiaon-2',
+    'slug' => 'managed-anti-caller-id-2',
     'title' => [
       'ru' => 'Управляемый АнтиАОН 2',
       'uz' => 'Boshqariladigan Anti ARA 2',
@@ -258,7 +258,7 @@ return [
   11 => [
     'legacy_id' => 26,
     'legacy_service_type_id' => 2,
-    'slug' => 'sms-nick',
+    'slug' => 'sms-nickname',
     'title' => [
       'ru' => 'SMS-NICK',
       'uz' => 'SMS-NICK',
@@ -282,7 +282,7 @@ return [
   12 => [
     'legacy_id' => 28,
     'legacy_service_type_id' => 2,
-    'slug' => 'sms-servisy',
+    'slug' => 'premium-sms-services',
     'title' => [
       'ru' => 'SMS-сервисы',
       'uz' => 'SMS-servislar',
@@ -305,7 +305,7 @@ return [
   13 => [
     'legacy_id' => 29,
     'legacy_service_type_id' => 2,
-    'slug' => 'bezlimitnye-noci',
+    'slug' => 'unlimited-nights',
     'title' => [
       'ru' => 'Безлимитные ночи',
       'uz' => 'Limitsiz tunlar',
@@ -328,7 +328,7 @@ return [
   14 => [
     'legacy_id' => 31,
     'legacy_service_type_id' => 2,
-    'slug' => 'v-zasade',
+    'slug' => 'busy-callback',
     'title' => [
       'ru' => 'В засаде',
       'uz' => 'Pistirmada',
@@ -351,7 +351,7 @@ return [
   15 => [
     'legacy_id' => 32,
     'legacy_service_type_id' => 2,
-    'slug' => 'vam-zvonili',
+    'slug' => 'missed-call-alert',
     'title' => [
       'ru' => 'Вам звонили',
       'uz' => 'Sizga qo\'ng\'iroq qilishdi',
@@ -374,7 +374,7 @@ return [
   16 => [
     'legacy_id' => 33,
     'legacy_service_type_id' => 2,
-    'slug' => 'golosovye-pakety',
+    'slug' => 'voice-packs',
     'title' => [
       'ru' => 'Голосовые пакеты',
       'uz' => 'Ovozli paketlar',
@@ -397,7 +397,7 @@ return [
   17 => [
     'legacy_id' => 34,
     'legacy_service_type_id' => 2,
-    'slug' => 'deneznyi-perevod',
+    'slug' => 'money-transfer',
     'title' => [
       'ru' => 'Денежный перевод',
       'uz' => 'Pul o\'tkazmasi',
@@ -420,7 +420,7 @@ return [
   18 => [
     'legacy_id' => 35,
     'legacy_service_type_id' => 2,
-    'slug' => 'zvonok-za-scet-druga',
+    'slug' => 'friend-pays-call',
     'title' => [
       'ru' => 'Звонок за счет друга',
       'uz' => 'Do\'st hisobidan qo\'ng\'iroq',
@@ -443,7 +443,7 @@ return [
   19 => [
     'legacy_id' => 36,
     'legacy_service_type_id' => 2,
-    'slug' => 'internet-pakety',
+    'slug' => 'internet-packs',
     'title' => [
       'ru' => 'Интернет пакеты',
       'uz' => 'Internet-paketlar',
@@ -466,7 +466,7 @@ return [
   20 => [
     'legacy_id' => 37,
     'legacy_service_type_id' => 2,
-    'slug' => 'mobilnyi-bank',
+    'slug' => 'mobile-bank',
     'title' => [
       'ru' => 'Мобильный Банк',
       'uz' => 'Mobil bank',
@@ -489,7 +489,7 @@ return [
   21 => [
     'legacy_id' => 38,
     'legacy_service_type_id' => 2,
-    'slug' => 'nomer-v-rassrocku',
+    'slug' => 'number-installment',
     'title' => [
       'ru' => 'Номер в рассрочку',
       'uz' => 'Muddatli to`lovga - raqam',
@@ -510,7 +510,7 @@ return [
   22 => [
     'legacy_id' => 39,
     'legacy_service_type_id' => 2,
-    'slug' => 'nocnye-zvonki',
+    'slug' => 'night-calls',
     'title' => [
       'ru' => 'Ночные звонки',
       'uz' => 'Tungi qo`ng`iroqlar',
@@ -531,7 +531,7 @@ return [
   23 => [
     'legacy_id' => 40,
     'legacy_service_type_id' => 2,
-    'slug' => 'pozvoni-mne',
+    'slug' => 'call-me-back',
     'title' => [
       'ru' => 'Позвони мне',
       'uz' => 'Menga qo`ng`iroq qil',
@@ -552,7 +552,7 @@ return [
   24 => [
     'legacy_id' => 41,
     'legacy_service_type_id' => 2,
-    'slug' => 'svoi-na-svyazi',
+    'slug' => 'friends-on-net',
     'title' => [
       'ru' => 'Свои на связи',
       'uz' => 'O`zimiznikilar aloqada',
@@ -576,7 +576,7 @@ return [
   25 => [
     'legacy_id' => 42,
     'legacy_service_type_id' => 2,
-    'slug' => 'skrytyi-zvonok',
+    'slug' => 'anonymous-call',
     'title' => [
       'ru' => 'Скрытый звонок',
       'uz' => 'Yashirin qo`ng`iroq',
@@ -599,7 +599,7 @@ return [
   26 => [
     'legacy_id' => 43,
     'legacy_service_type_id' => 2,
-    'slug' => 'tarifnyi-paket',
+    'slug' => 'tariff-pack',
     'title' => [
       'ru' => 'Тарифный пакет',
       'uz' => 'Tarifli paket',
@@ -623,7 +623,7 @@ return [
   27 => [
     'legacy_id' => 44,
     'legacy_service_type_id' => 2,
-    'slug' => 'avtoinformator-099',
+    'slug' => 'auto-info-099',
     'title' => [
       'ru' => 'Автоинформатор "099"',
       'uz' => 'Avtoinformator "099"',
@@ -647,7 +647,7 @@ return [
   28 => [
     'legacy_id' => 46,
     'legacy_service_type_id' => 2,
-    'slug' => 'golosovaya-pocta',
+    'slug' => 'voicemail',
     'title' => [
       'ru' => 'Голосовая почта',
       'uz' => 'Ovozli pochta',
@@ -671,7 +671,7 @@ return [
   29 => [
     'legacy_id' => 47,
     'legacy_service_type_id' => 2,
-    'slug' => 'popolnenie-svoego-balansa',
+    'slug' => 'self-top-up',
     'title' => [
       'ru' => 'Пополнение своего баланса',
       'uz' => 'Hisobingizni ekspress-to`lov kartalar orqali to`ldirish',
@@ -695,7 +695,7 @@ return [
   30 => [
     'legacy_id' => 48,
     'legacy_service_type_id' => 4,
-    'slug' => 'mobilnyi-kabinet',
+    'slug' => 'mobile-account',
     'title' => [
       'ru' => 'Мобильный кабинет',
       'uz' => 'Mobil kabineti',
@@ -719,7 +719,7 @@ return [
   31 => [
     'legacy_id' => 49,
     'legacy_service_type_id' => 5,
-    'slug' => 'programma-loyalnost',
+    'slug' => 'loyalty-program',
     'title' => [
       'ru' => 'Программа "Лояльность"',
       'uz' => '"Ishonch" dasturi',
@@ -745,7 +745,7 @@ return [
   32 => [
     'legacy_id' => 50,
     'legacy_service_type_id' => 6,
-    'slug' => 'uznat-balans',
+    'slug' => 'check-balance',
     'title' => [
       'ru' => 'Узнать баланс',
       'uz' => 'Balansingizni bilib olish',
@@ -769,7 +769,7 @@ return [
   33 => [
     'legacy_id' => 51,
     'legacy_service_type_id' => 7,
-    'slug' => 'abonentskie-uslugi',
+    'slug' => 'subscriber-services',
     'title' => [
       'ru' => 'Абонентские услуги',
       'uz' => 'Abonent xizmatlari',
@@ -790,7 +790,7 @@ return [
   34 => [
     'legacy_id' => 52,
     'legacy_service_type_id' => 8,
-    'slug' => 'mezdunarodnaya-svyaz',
+    'slug' => 'international-calls',
     'title' => [
       'ru' => 'Международная связь',
       'uz' => 'Xalqaro aloqa',
@@ -811,7 +811,7 @@ return [
   35 => [
     'legacy_id' => 54,
     'legacy_service_type_id' => 9,
-    'slug' => 'golosovye-uslugi',
+    'slug' => 'voice-services',
     'title' => [
       'ru' => 'Голосовые услуги',
       'uz' => 'Ovozli xizmatlar',
@@ -834,7 +834,7 @@ return [
   36 => [
     'legacy_id' => 55,
     'legacy_service_type_id' => 9,
-    'slug' => 'sms-informirovanie',
+    'slug' => 'sms-notifications',
     'title' => [
       'ru' => 'SMS - Информирование',
       'uz' => 'SMS - MA\'LUMOT BERISH',
@@ -855,7 +855,7 @@ return [
   37 => [
     'legacy_id' => 56,
     'legacy_service_type_id' => 9,
-    'slug' => 'sms-uslugi',
+    'slug' => 'sms-services',
     'title' => [
       'ru' => 'СМС - УСЛУГИ',
       'uz' => 'SMS - XIZMATLAR',
@@ -878,7 +878,7 @@ return [
   38 => [
     'legacy_id' => 57,
     'legacy_service_type_id' => 9,
-    'slug' => 'sms-golosovanie-i-pozelaniya-na-tv',
+    'slug' => 'sms-tv-voting',
     'title' => [
       'ru' => 'СМС – ГОЛОСОВАНИЕ и ПОЖЕЛАНИЯ на ТВ',
       'uz' => 'SMS - OVOZLAR va TV-dagi TILAKLAR',
@@ -901,7 +901,7 @@ return [
   39 => [
     'legacy_id' => 60,
     'legacy_service_type_id' => 2,
-    'slug' => 'sms-pakety',
+    'slug' => 'sms-packs',
     'title' => [
       'ru' => 'SMS-пакеты',
       'uz' => 'SMS-paketlar',
@@ -925,7 +925,7 @@ return [
   40 => [
     'legacy_id' => 61,
     'legacy_service_type_id' => 2,
-    'slug' => 'detalizaciya-uslug-svyazi',
+    'slug' => 'call-details',
     'title' => [
       'ru' => 'Детализация услуг связи',
       'uz' => 'Aloqa xizmatini detalizatsiyasi.',
@@ -949,7 +949,7 @@ return [
   41 => [
     'legacy_id' => 62,
     'legacy_service_type_id' => 9,
-    'slug' => 'tematiceskie-uslugi-uzru',
+    'slug' => 'themed-services',
     'title' => [
       'ru' => 'ТЕМАТИЧЕСКИЕ УСЛУГИ (UZ/RU)',
       'uz' => 'TEMATIK XIZMATLAR (UZ/RU)',
@@ -972,7 +972,7 @@ return [
   42 => [
     'legacy_id' => 63,
     'legacy_service_type_id' => 9,
-    'slug' => 'akcii',
+    'slug' => 'promotions-info',
     'title' => [
       'ru' => 'Акции',
       'uz' => 'Aksiyalar',
@@ -1010,7 +1010,7 @@ return [
   44 => [
     'legacy_id' => 65,
     'legacy_service_type_id' => 10,
-    'slug' => 'uslugi-edinogo-okna',
+    'slug' => 'single-window-services',
     'title' => [
       'ru' => 'Услуги Единого Окна',
     ],
@@ -1027,7 +1027,7 @@ return [
   45 => [
     'legacy_id' => 66,
     'legacy_service_type_id' => 10,
-    'slug' => 'notarius-i-zags',
+    'slug' => 'notary-and-registry',
     'title' => [
       'ru' => 'Нотариус и ЗАГС',
     ],
@@ -1044,7 +1044,7 @@ return [
   46 => [
     'legacy_id' => 67,
     'legacy_service_type_id' => 10,
-    'slug' => 'strafy-gubbd',
+    'slug' => 'traffic-fines',
     'title' => [
       'ru' => 'Штрафы ГУББД',
     ],
@@ -1061,7 +1061,7 @@ return [
   47 => [
     'legacy_id' => 68,
     'legacy_service_type_id' => 10,
-    'slug' => 'oplata-za-dokumenty-gubdd',
+    'slug' => 'traffic-document-payments',
     'title' => [
       'ru' => 'Оплата за документы ГУБДД',
       'uz' => 'Оплата за документы ГУБДД',
@@ -1079,7 +1079,7 @@ return [
   48 => [
     'legacy_id' => 70,
     'legacy_service_type_id' => 10,
-    'slug' => 'gnk-ruz',
+    'slug' => 'tax-payments',
     'title' => [
       'ru' => 'ГНК РУз',
     ],
@@ -1096,7 +1096,7 @@ return [
   49 => [
     'legacy_id' => 71,
     'legacy_service_type_id' => 10,
-    'slug' => 'sudy-sudebnye-platezi',
+    'slug' => 'court-payments',
     'title' => [
       'ru' => 'Суды (Судебные платежи)',
     ],
@@ -1113,7 +1113,7 @@ return [
   50 => [
     'legacy_id' => 72,
     'legacy_service_type_id' => 10,
-    'slug' => 'mvd-ovir',
+    'slug' => 'mvd-visa-passport',
     'title' => [
       'ru' => 'МВД ОВИР',
     ],
@@ -1130,7 +1130,7 @@ return [
   51 => [
     'legacy_id' => 73,
     'legacy_service_type_id' => 10,
-    'slug' => 'mvd-oplata-strafov-1',
+    'slug' => 'mvd-fines',
     'title' => [
       'ru' => 'МВД Оплата Штрафов',
     ],
@@ -1147,7 +1147,7 @@ return [
   52 => [
     'legacy_id' => 74,
     'legacy_service_type_id' => 10,
-    'slug' => 'kaznaceistvo',
+    'slug' => 'treasury-payments',
     'title' => [
       'ru' => 'КАЗНАЧЕЙСТВО',
     ],
@@ -1164,7 +1164,7 @@ return [
   53 => [
     'legacy_id' => 75,
     'legacy_service_type_id' => 2,
-    'slug' => 'golosovoi-paket-30-minut-avans',
+    'slug' => 'voice-pack-30-min-advance',
     'title' => [
       'ru' => 'Голосовой Пакет «30 минут» (аванс)',
       'uz' => '"30 daqiqa" (avans) ovozli Paketi',
@@ -1188,7 +1188,7 @@ return [
   54 => [
     'legacy_id' => 76,
     'legacy_service_type_id' => 9,
-    'slug' => 'uslugi-predostavlyaemye-kontent-provaiderami',
+    'slug' => 'content-provider-services',
     'title' => [
       'ru' => 'Услуги, предоставляемые Контент-провайдерами',
       'uz' => 'Kontent provayderlari tomonidan taqdim etiladigan xizmatlar:',
@@ -1209,7 +1209,7 @@ return [
   55 => [
     'legacy_id' => 79,
     'legacy_service_type_id' => 4,
-    'slug' => 'personalnyi-kabinet-dlya-cdma',
+    'slug' => 'personal-cabinet-cdma',
     'title' => [
       'ru' => 'Персональный кабинет ㅤㅤㅤ для CDMA',
       'uz' => 'CDMA Shaxsiy kabinet',
@@ -1230,7 +1230,7 @@ return [
   56 => [
     'legacy_id' => 81,
     'legacy_service_type_id' => 13,
-    'slug' => 'usluga-staticeskii-ip-adres',
+    'slug' => 'static-ip-address',
     'title' => [
       'ru' => 'Услуга «Статический IP-адрес»',
       'uz' => 'Xizmat “Statik IP-manzil”',

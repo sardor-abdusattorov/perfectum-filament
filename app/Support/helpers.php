@@ -75,24 +75,28 @@ if (! function_exists('translator')) {
             return $category;
         }
 
-        $cacheKey = "translator.{$category}.{$key}";
+        $cacheKey = "translator.{$category}.{$key}.{$locale}";
 
-        $value = Cache::remember($cacheKey, 86400, function () use ($category, $key) {
+        $value = Cache::remember($cacheKey, 86400, function () use ($category, $key, $locale) {
             $row = SiteTranslation::query()
                 ->where('category', $category)
                 ->where('key', $key)
                 ->where('is_published', true)
                 ->first();
 
-            return $row?->value;
+            if ($row === null) {
+                return null;
+            }
+
+            $translations = $row->getTranslations('value');
+
+            return $translations[$locale]
+                ?? $translations[config('app.fallback_locale')]
+                ?? (reset($translations) ?: null);
         });
 
         if ($value === null) {
             return $key;
-        }
-
-        if (is_array($value)) {
-            $value = $value[$locale] ?? reset($value);
         }
 
         foreach ($replace as $k => $v) {
@@ -106,8 +110,16 @@ if (! function_exists('translator')) {
 if (! function_exists('clear_translator_cache')) {
     function clear_translator_cache(?string $category = null, ?string $key = null): void
     {
+        $locales = array_keys(config('laravellocalization.supportedLocales', []));
+        if (empty($locales)) {
+            $locales = [config('app.locale', 'en')];
+        }
+
         if ($category && $key) {
-            Cache::forget("translator.{$category}.{$key}");
+            foreach ($locales as $loc) {
+                Cache::forget("translator.{$category}.{$key}.{$loc}");
+            }
+
             return;
         }
 
@@ -119,6 +131,10 @@ if (! function_exists('clear_translator_cache')) {
 
         $query->select(['category', 'key'])
             ->get()
-            ->each(fn ($row) => Cache::forget("translator.{$row->category}.{$row->key}"));
+            ->each(function ($row) use ($locales) {
+                foreach ($locales as $loc) {
+                    Cache::forget("translator.{$row->category}.{$row->key}.{$loc}");
+                }
+            });
     }
 }

@@ -4990,7 +4990,7 @@ p {
 .accordion__list .link:hover,
 .accordion__list .link:hover .link__title,
 .accordion__list .link:hover .fa {
-  color: var(--main-color);
+  color: var(--color-main);
 }
 
 .accordion li:last-child .link {

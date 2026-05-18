@@ -6,6 +6,7 @@ use App\Http\Controllers\DealersController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\TendersController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -40,6 +41,11 @@ Route::group(
         Route::prefix('dealers')->name('dealers.')->group(function () {
             Route::get('/', [DealersController::class, 'index'])->name('index');
             Route::get('/{slug}', [DealersController::class, 'show'])->name('show');
+        });
+
+        Route::prefix('services')->name('services.')->group(function () {
+            Route::get('/', [ServicesController::class, 'index'])->name('index');
+            Route::get('/{slug}', [ServicesController::class, 'show'])->name('show');
         });
 
         Route::get('/{section}/{slug}', [PagesController::class, 'show'])

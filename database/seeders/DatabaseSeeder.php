@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
             TendersSeeder::class,
             NewsSeeder::class,
             DealersSeeder::class,
+            ServiceCategoriesSeeder::class,
+            ServicesSeeder::class,
             MenusSeeder::class,
             SiteTranslationsSeeder::class,
         ]);
